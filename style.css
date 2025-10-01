@@ -1,27 +1,36 @@
-/* Global Styles */
+/* ---------------------------
+   General Reset
+--------------------------- */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
-  color: #2F4F4F; /* charcoal for text */
+  color: #2F4F4F; /* charcoal for default text */
   line-height: 1.6;
 }
 
-/* Header */
+/* ---------------------------
+   Header
+--------------------------- */
 header {
-  background-color: #98FF98; /* mint green */
-  color: #2F4F4F;
+  background-color: #ffffff;
   padding: 20px;
   text-align: center;
   border-bottom: 4px solid #FFD700; /* gold accent line */
 }
 
-header h1 {/* Tagline (About page) */
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #2F4F4F; /* charcoal */
+}
+
+/* Tagline (About page) */
 h2 {
-  color: #2F4F4F;          /* charcoal for text */
-  font-size: 2em;          /* bigger than normal */
-  text-align: center;      /* centered on the page */
+  color: #2F4F4F;             /* charcoal for text */
+  font-size: 2em;             /* bigger than normal */
+  text-align: center;         /* centered on the page */
   margin-top: 20px;
   margin-bottom: 10px;
   border-bottom: 3px solid #FFD700; /* gold underline accent */
@@ -30,36 +39,36 @@ h2 {
 }
 
 h2 span {
-  color: #98FF98;          /* mint highlight for key words if you want */
+  color: #98FF98; /* mint highlight for key words */
 }
 
-  margin: 0;
-  font-size: 2.5em;
-}
-
+/* ---------------------------
+   Navigation
+--------------------------- */
 header nav a {
-  color: #2F4F4F;
+  color: #2F4F4F; /* charcoal */
   text-decoration: none;
   margin: 0 10px;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 header nav a:hover {
-  color: #FFD700; /* gold hover */
+  color: #FFD700; /* gold on hover */
 }
 
-/* Section Headings */
-h2 {
-  color: #2F4F4F;
-  text-align: center;
-  margin-top: 30px;
-  font-size: 2em;
+/* ---------------------------
+   Main Content
+--------------------------- */
+main {
+  padding: 20px;
 }
 
 h3 {
-  color: #FFD700; /* gold pops */
-  margin-top: 20px;
-  font-size: 1.5em;
+  color: #2F4F4F; /* charcoal for headings */
+  margin-top: 30px;
+  border-left: 5px solid #98FF98; /* mint accent bar */
+  padding-left: 10px;
 }
 
 /* Paragraphs */
@@ -70,16 +79,21 @@ p {
   max-width: 800px;
 }
 
-/* Links */
+/* ---------------------------
+   Links
+--------------------------- */
 a {
   color: #FFD700; /* gold links */
+  text-decoration: none;
 }
 
 a:hover {
   color: #98FF98; /* mint on hover */
 }
 
-/* Footer */
+/* ---------------------------
+   Footer
+--------------------------- */
 footer {
   background-color: #2F4F4F; /* charcoal footer */
   color: #ffffff;
@@ -87,4 +101,13 @@ footer {
   padding: 15px;
   margin-top: 40px;
   font-size: 0.9em;
+}
+
+footer a {
+  color: #FFD700; /* gold links in footer */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #98FF98; /* mint hover in footer */
 }
