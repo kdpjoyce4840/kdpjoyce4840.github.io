@@ -1,9 +1,9 @@
 /* ------------------------------
    Colors
    Tiffany Blue: #0ABAB5
-   Charcoal:     #2F4F4F
-   Navy:         #001F3F
--------------------------------- */
+   Charcoal: #2F4F4F
+   Navy: #001F3F
+------------------------------ */
 
 /* Base */
 body {
@@ -17,83 +17,72 @@ body {
 
 /* Header */
 header {
-  background-color: #0ABAB5;           /* Tiffany blue */
+  background-color: #0ABAB5; /* Tiffany blue */
   padding: 20px;
   text-align: center;
-  border-bottom: 4px solid #001F3F;    /* navy accent line */
+  border-bottom: 4px solid #001F3F; /* navy accent line */
 }
 
 header h1 {
-  color: #2F4F4F;                       /* charcoal */
+  color: #2F4F4F; /* charcoal */
   font-size: 2.5em;
   margin: 0;
 }
 
-/* Navigation */
 header nav a {
-  color: #2F4F4F;                       /* charcoal links */
+  color: #2F4F4F; /* charcoal links */
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
 }
 
 header nav a:hover {
-  color: #001F3F;                       /* navy hover */
+  color: #001F3F; /* navy hover */
 }
 
-/* Page Tagline */
-h2 {
-  color: #2F4F4F;                       /* charcoal */
-  font-size: 2em;
+/* Tagline */
+.tagline {
+  margin-top: 40px; /* consistent space below header */
   text-align: center;
-  margin: 20px auto 10px auto;
-  width: 80%;
-  max-width: 900px;
+  padding: 10px 20px;
+}
+
+.tagline h2 {
+  color: #2F4F4F;
+  font-size: 2em;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #001F3F; /* navy underline */
+  display: inline-block;
   padding-bottom: 5px;
-  border-bottom: 3px solid #001F3F;     /* navy underline */
-  font-weight: 600;
 }
 
-h2 span {
-  color: #0ABAB5;                       /* mint/tiffany highlight between words */
-}
-
-/* Intro paragraph under h2 */
-.intro {
+/* Sections */
+section {
+  margin: 50px auto; /* consistent spacing above & below sections */
   width: 80%;
   max-width: 900px;
-  margin: 10px auto 30px auto;
-  font-size: 1.1em;
+  padding: 10px 20px;
 }
 
-/* Section heading */
-h3 {
+section h3 {
   text-align: center;
   font-size: 1.5em;
   color: #2F4F4F;
-  margin-top: 30px;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #001F3F; /* navy line under section headings */
+  padding-bottom: 10px;
 }
 
-/* Optional rule between sections */
-.section-rule {
-  border: 0;
-  border-top: 2px solid #001F3F;        /* navy line */
-  width: 90%;
-  margin: 25px auto;
-}
-
-/* Body copy */
-p {
-  width: 80%;
-  max-width: 900px;
-  margin: 15px auto;
-  font-size: 1.05em;
+/* Paragraphs */
+section p {
+  font-size: 1.1em;
+  text-align: justify;
+  margin: 0 auto 20px;
 }
 
 /* Footer */
 footer {
-  background-color: #001F3F;            /* navy footer */
+  background-color: #001F3F; /* navy footer */
   color: #ffffff;
   text-align: center;
   padding: 15px;
