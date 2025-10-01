@@ -46,9 +46,9 @@ h2 {
     font-size: 2em;
     text-align: center;
     margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px; /* increased bottom spacing */
     border-bottom: 3px solid #001F3F; /* navy underline */
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     font-weight: 600;
 }
 
@@ -67,7 +67,7 @@ h3 {
 p {
     font-size: 1.1em;
     line-height: 1.8;  /* better readability */
-    margin: 0 auto 25px auto; /* adds spacing below each paragraph */
+    margin: 0 auto 25px auto; /* spacing below each paragraph */
     width: 80%;
     max-width: 800px;
     color: #2F4F4F;
