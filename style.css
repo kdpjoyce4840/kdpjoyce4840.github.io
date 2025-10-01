@@ -1,20 +1,22 @@
 /* ---------------------------
-   General Reset
+   Colors
+   Tiffany Blue: #0ABAB5
+   Charcoal: #2F4F4F
+   Gold: #FFD700
 --------------------------- */
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
-  color: #2F4F4F; /* charcoal for default text */
+  color: #2F4F4F; /* charcoal */
   line-height: 1.6;
 }
 
-/* ---------------------------
-   Header
---------------------------- */
+/* Header */
 header {
-  background-color: #ffffff;
+  background-color: #0ABAB5; /* Tiffany blue header */
   padding: 20px;
   text-align: center;
   border-bottom: 4px solid #FFD700; /* gold accent line */
@@ -23,30 +25,28 @@ header {
 header h1 {
   margin: 0;
   font-size: 2.5em;
-  color: #2F4F4F; /* charcoal */
+  color: #2F4F4F;
 }
 
-/* Tagline (About page) */
+/* Tagline */
 h2 {
-  color: #2F4F4F;             /* charcoal for text */
-  font-size: 2em;             /* bigger than normal */
-  text-align: center;         /* centered on the page */
+  color: #2F4F4F;
+  font-size: 2em;
+  text-align: center;
   margin-top: 20px;
   margin-bottom: 10px;
-  border-bottom: 3px solid #FFD700; /* gold underline accent */
+  border-bottom: 3px solid #FFD700;
   padding-bottom: 5px;
   font-weight: 600;
 }
 
 h2 span {
-  color: #98FF98; /* mint highlight for key words */
+  color: #0ABAB5; /* Tiffany Blue highlight for keywords */
 }
 
-/* ---------------------------
-   Navigation
---------------------------- */
+/* Nav */
 header nav a {
-  color: #2F4F4F; /* charcoal */
+  color: #2F4F4F;
   text-decoration: none;
   margin: 0 10px;
   font-weight: bold;
@@ -54,21 +54,20 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #FFD700; /* gold on hover */
+  color: #FFD700;
 }
 
-/* ---------------------------
-   Main Content
---------------------------- */
+/* Main */
 main {
   padding: 20px;
 }
 
 h3 {
-  color: #2F4F4F; /* charcoal for headings */
+  color: #2F4F4F;
   margin-top: 30px;
-  border-left: 5px solid #98FF98; /* mint accent bar */
-  padding-left: 10px;
+  text-align: center; /* headings centered */
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 5px;
 }
 
 /* Paragraphs */
@@ -77,25 +76,22 @@ p {
   margin: 15px auto;
   width: 80%;
   max-width: 800px;
+  line-height: 1.8;
 }
 
-/* ---------------------------
-   Links
---------------------------- */
+/* Links */
 a {
-  color: #FFD700; /* gold links */
+  color: #FFD700;
   text-decoration: none;
 }
 
 a:hover {
-  color: #98FF98; /* mint on hover */
+  color: #0ABAB5; /* Tiffany hover */
 }
 
-/* ---------------------------
-   Footer
---------------------------- */
+/* Footer */
 footer {
-  background-color: #2F4F4F; /* charcoal footer */
+  background-color: #2F4F4F;
   color: #ffffff;
   text-align: center;
   padding: 15px;
@@ -104,10 +100,9 @@ footer {
 }
 
 footer a {
-  color: #FFD700; /* gold links in footer */
-  text-decoration: none;
+  color: #FFD700;
 }
 
 footer a:hover {
-  color: #98FF98; /* mint hover in footer */
+  color: #0ABAB5;
 }
