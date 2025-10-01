@@ -3,15 +3,14 @@
    Tiffany Blue: #0ABAB5
    Charcoal: #2F4F4F
    Navy: #001F3F
-------------------------- */
+-------------------------- */
 
-/* Base */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
-  color: #2F4F4F; /* charcoal */
+  color: #2F4F4F; /* charcoal text */
   line-height: 1.6;
 }
 
@@ -30,6 +29,10 @@ header h1 {
 }
 
 /* Navigation */
+header nav {
+  margin-top: 10px;
+}
+
 header nav a {
   color: #2F4F4F; /* charcoal links */
   text-decoration: none;
@@ -38,44 +41,54 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #001F3F; /* navy on hover */
+  color: #001F3F; /* navy hover */
 }
 
-/* Tagline (main subtitle on About page) */
-h2 {
+/* Tagline */
+.tagline {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.tagline h2 {
   color: #2F4F4F;
   font-size: 2em;
-  text-align: center;
-  margin-top: 20px;
   margin-bottom: 10px;
   border-bottom: 3px solid #001F3F; /* navy underline */
+  display: inline-block;
   padding-bottom: 5px;
-  font-weight: 600;
 }
 
-/* Paragraphs */
-p {
-  font-size: 1.1em;
-  margin: 15px auto;
-  width: 80%;
+.tagline p {
   max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1em;
 }
 
-/* Section Headings */
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
 h3 {
   text-align: center;
   font-size: 1.5em;
   color: #2F4F4F;
-  margin-top: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border-top: 2px solid #001F3F; /* navy line */
   padding-top: 10px;
-  font-weight: bold;
+}
+
+p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
 }
 
 /* Footer */
 footer {
-  background-color: #001F3F; /* navy footer */
+  background-color: #001F3F; /* navy */
   color: #ffffff;
   text-align: center;
   padding: 15px;
