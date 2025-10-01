@@ -1,5 +1,5 @@
-/* -------------------------
-   Colors
+/* ------------------------
+   Color Palette
    Tiffany Blue: #0ABAB5
    Charcoal: #2F4F4F
    Navy: #001F3F
@@ -16,7 +16,7 @@ body {
 
 /* Header */
 header {
-  background-color: #0ABAB5; /* Tiffany blue header */
+  background-color: #0ABAB5; /* Tiffany blue */
   padding: 20px;
   text-align: center;
   border-bottom: 4px solid #001F3F; /* navy accent line */
@@ -25,62 +25,16 @@ header {
 header h1 {
   margin: 0;
   font-size: 2.5em;
+  color: #2F4F4F; /* charcoal */
 }
 
+/* Navigation */
 header nav a {
-  color: #2F4F4F;
+  color: #2F4F4F; /* charcoal links */
   text-decoration: none;
+  margin: 0 15px;
   font-weight: bold;
-  margin: 0 10px;
 }
 
 header nav a:hover {
-  color: #001F3F; /* navy hover */
-}
-
-/* Section Headings */
-h2 {
-  color: #2F4F4F;
-  font-size: 2em;
-  text-align: center;
-  margin: 20px 0 10px;
-  border-bottom: 3px solid #001F3F; /* navy underline accent */
-  padding-bottom: 5px;
-  font-weight: 600;
-}
-
-h3 {
-  color: #2F4F4F;
-  font-size: 1.4em;
-  margin-top: 20px;
-  text-align: center;
-  border-bottom: 2px solid #001F3F; /* navy accent */
-  padding-bottom: 5px;
-}
-
-/* Paragraphs */
-p {
-  font-size: 1.1em;
-  margin: 15px auto;
-  width: 80%;
-  max-width: 800px;
-}
-
-/* Links */
-a {
-  color: #001F3F; /* navy links */
-}
-
-a:hover {
-  color: #0ABAB5; /* Tiffany blue on hover */
-}
-
-/* Footer */
-footer {
-  background-color: #001F3F; /* navy footer */
-  color: #ffffff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  font-size: 0.9em;
-}
+  color: #001F3F; /
