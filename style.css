@@ -1,10 +1,11 @@
-/* ------------------------
+/* -------------------------
    Color Palette
    Tiffany Blue: #0ABAB5
    Charcoal: #2F4F4F
    Navy: #001F3F
 ------------------------- */
 
+/* Base */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -19,13 +20,13 @@ header {
   background-color: #0ABAB5; /* Tiffany blue */
   padding: 20px;
   text-align: center;
-  border-bottom: 4px solid #001F3F; /* navy accent line */
+  border-bottom: 4px solid #001F3F; /* navy accent */
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2.5em;
   color: #2F4F4F; /* charcoal */
+  font-size: 2.5em;
+  margin: 0;
 }
 
 /* Navigation */
@@ -37,4 +38,47 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #001F3F; /
+  color: #001F3F; /* navy on hover */
+}
+
+/* Tagline (main subtitle on About page) */
+h2 {
+  color: #2F4F4F;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #001F3F; /* navy underline */
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.1em;
+  margin: 15px auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+/* Section Headings */
+h3 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #2F4F4F;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  border-top: 2px solid #001F3F; /* navy line */
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #001F3F; /* navy footer */
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
