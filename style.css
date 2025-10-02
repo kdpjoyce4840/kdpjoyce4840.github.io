@@ -136,15 +136,30 @@ a:hover { opacity: 0.85; }
   border: 3px solid #004d4d;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
-/* Profile Headshot Styling */
+/* Intro Section */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px auto;
+  max-width: 900px;
+  gap: 20px;
+}
+
+/* Intro Text */
+.intro-text {
+  flex: 1;
+}
+
+/* Headshot Floated Right */
 .headshot {
   width: 200px;
   height: 200px;
-  border-radius: 50%;   /* makes it round */
-  object-fit: cover;    /* ensures it fills nicely */
-  display: block;
-  margin: 20px auto;    /* centers image */
+  border-radius: 50%;
+  object-fit: cover;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-left: 20px;
 }
+
 
 }
