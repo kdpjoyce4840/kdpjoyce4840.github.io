@@ -129,4 +129,12 @@ a:hover { opacity: 0.85; }
   h2 { font-size: 1.7rem; }
   p { font-size: 1.05rem; }
   .content, .tagline .intro { max-width: 92%; }
+
+.intro-image img {
+  max-width: 200px;
+  border-radius: 50%;
+  border: 3px solid #004d4d;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
 }
