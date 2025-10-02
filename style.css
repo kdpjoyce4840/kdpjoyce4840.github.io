@@ -1,37 +1,33 @@
-/* ===== Reset ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ===== Global Styles ===== */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #2c3e50;
-  background: #fdfdfd;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
 }
 
-/* ===== Header ===== */
 header {
   background: #009999;
   color: white;
-  text-align: center;
   padding: 20px 0;
-  border-bottom: 4px solid #0a3d62;
+  text-align: center;
 }
 
 header h1 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
+  margin: 0;
+  font-size: 2.5em;
+}
+
+nav {
+  margin-top: 10px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 12px;
+  margin: 0 10px;
   font-weight: bold;
 }
 
@@ -39,110 +35,76 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ===== Section Headings ===== */
-h2 {
-  font-size: 1.8rem;
-  margin: 20px 0 10px;
-  color: #2c3e50;
-  text-align: center;
+main {
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
-h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #2c3e50;
-}
-
-p {
-  margin-bottom: 16px;
-}
-
-/* ===== Intro Section (Welcome + Headshot) ===== */
+/* ===== Intro Section ===== */
 .intro {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 20px auto;
-  max-width: 1000px;
-  padding: 0 20px;
+  align-items: flex-start;
+  margin-bottom: 30px;
 }
 
-.intro-text {
-  flex: 1;
-}
-
+/* Headshot Floated Left with More Space */
 .headshot {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  margin-left: 20px;
+  margin-right: 30px;   /* more space between image and text */
+  margin-left: 10px;    /* float a little more left */
+  float: left;
 }
 
-/* ===== Highlights List ===== */
-ul {
-  margin: 10px 0 20px 20px;
+.intro-text {
+  flex: 1;
+}
+
+/* ===== Highlights Section ===== */
+.highlights {
+  margin-left: 250px;   /* shift highlights right for balance */
+  padding-top: 10px;
+}
+
+.highlights h3 {
+  margin-top: 0;
+}
+
+.highlights ul {
   list-style-type: disc;
-}
-
-/* ===== Projects & Reflections ===== */
-main {
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 0 20px;
-}
-
-main h2 {
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-main h3 {
-  color: #34495e;
-}
-
-main ul li {
-  margin-bottom: 8px;
+  margin-left: 20px;
 }
 
 /* ===== Footer ===== */
 footer {
   text-align: center;
+  margin-top: 40px;
   padding: 20px;
   background: #f4f4f4;
-  border-top: 1px solid #ccc;
-  margin-top: 30px;
+  font-size: 0.9em;
+  color: #555;
 }
 
-footer a {
-  color: #009999;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Responsive ===== */
+/* ===== Responsive Design ===== */
 @media (max-width: 720px) {
   .intro {
-    flex-direction: column;
+    flex-direction: column;   /* stack intro items */
     align-items: center;
-    text-align: center;
-    gap: 16px;
   }
 
   .headshot {
     width: 160px;
     height: 160px;
-    margin-left: 0;
+    margin: 0 0 20px 0;   /* reset margins for mobile */
+    float: none;
   }
 
-  nav a {
-    display: inline-block;
-    margin: 6px;
+  .highlights {
+    margin-left: 0;       /* reset highlights for mobile */
+    padding: 0;
   }
 }
