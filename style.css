@@ -160,6 +160,19 @@ a:hover { opacity: 0.85; }
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   margin-left: 20px;
 }
+/* ===== Responsive: stack intro on small screens ===== */
+@media (max-width: 720px) {
+  .intro {
+    flex-direction: column;      /* stack items */
+    align-items: flex-start;     /* keep text left-aligned */
+    gap: 16px;
+  }
 
+  .headshot {
+    width: 160px;
+    height: 160px;
+    margin-left: 0;              /* remove desktop left margin */
+  }
+}
 
 }
