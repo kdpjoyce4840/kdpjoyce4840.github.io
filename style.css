@@ -136,5 +136,15 @@ a:hover { opacity: 0.85; }
   border: 3px solid #004d4d;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
+/* Profile Headshot Styling */
+.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;   /* makes it round */
+  object-fit: cover;    /* ensures it fills nicely */
+  display: block;
+  margin: 20px auto;    /* centers image */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
 
 }
