@@ -37,9 +37,10 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
-/* HERO */
+
+/* ===== HERO ===== */
 .hero {
-  background: linear-gradient(180deg, #f7f9fc 0%, #e9f0ff 100%); /* or use a photo */
+  background: linear-gradient(180deg, #f7f9fc 0%, #e9f0ff 100%);
   padding: 6rem 1.25rem;
   border-bottom: 1px solid #dbe3f8;
 }
@@ -53,13 +54,13 @@ nav a:hover {
 .hero h1 {
   font-size: clamp(2rem, 3.5vw, 3rem);
   line-height: 1.15;
-  color: #0f172a; /* headline color */
+  color: #0f172a;
   margin: 0 0 1rem;
 }
 
 .hero p {
   font-size: clamp(1rem, 2.2vw, 1.15rem);
-  color: #334155; /* paragraph color */
+  color: #334155;
   max-width: 60ch;
   margin: 0 auto 2rem;
 }
@@ -77,7 +78,7 @@ nav a:hover {
 
 .btn:hover,
 .btn:focus {
-  background: #163fb0;              /* hover color change */
+  background: #163fb0;
   box-shadow: 0 10px 18px rgba(0,0,0,0.12);
   transform: translateY(-1px);
 }
@@ -93,7 +94,7 @@ main, section {
 .intro {
   display: flex;
   align-items: center;
-  gap: 28px;                /* space between photo and text */
+  gap: 28px;
   padding: 18px 0 8px;
 }
 
@@ -103,8 +104,8 @@ main, section {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0,0,0,.18);
-  margin-left: 4px;         /* pull the picture a bit to the left */
-  margin-right: 28px;       /* add space between photo and heading */
+  margin-left: 4px;
+  margin-right: 28px;
 }
 
 .intro-text {
@@ -120,8 +121,8 @@ main, section {
 /* ===== Highlights block ===== */
 .highlights {
   margin-top: 6px;
-  margin-left: 240px;       /* indent to balance with the headshot */
-  max-width: 850px;         /* keep line length comfortable */
+  margin-left: 240px;
+  max-width: 850px;
 }
 
 .highlights h3 {
@@ -130,7 +131,7 @@ main, section {
 
 .highlights ul {
   margin: 8px 0 0 0;
-  padding-left: 22px;       /* bullet indent */
+  padding-left: 22px;
 }
 
 /* ===== Footer ===== */
@@ -151,11 +152,11 @@ footer {
   .headshot {
     width: 160px;
     height: 160px;
-    margin: 0 0 8px 0;      /* remove left/right margins on small screens */
+    margin: 0 0 8px 0;
   }
 
   .highlights {
-    margin-left: 0;         /* no indent on small screens */
+    margin-left: 0;
     max-width: 100%;
   }
 }
