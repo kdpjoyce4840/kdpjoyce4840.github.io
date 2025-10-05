@@ -37,6 +37,50 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+/* HERO */
+.hero {
+  background: linear-gradient(180deg, #f7f9fc 0%, #e9f0ff 100%); /* or use a photo */
+  padding: 6rem 1.25rem;
+  border-bottom: 1px solid #dbe3f8;
+}
+
+.hero-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.15;
+  color: #0f172a; /* headline color */
+  margin: 0 0 1rem;
+}
+
+.hero p {
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  color: #334155; /* paragraph color */
+  max-width: 60ch;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.25rem;
+  border-radius: 0.5rem;
+  background: #1d4ed8;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #163fb0;              /* hover color change */
+  box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+  transform: translateY(-1px);
+}
 
 /* ===== Page Layout ===== */
 main, section {
