@@ -1,4 +1,4 @@
-/* ===== Global Styles ===== */
+/* ===== Global ===== */
 * { box-sizing: border-box; }
 
 body {
@@ -23,30 +23,178 @@ header h1 {
   font-size: 2.5rem;
 }
 
-nav {
-  margin-top: 6px;
-}
+nav { margin-top: 6px; }
 
 nav a {
   color: #fff;
   text-decoration: none;
   margin: 0 12px;
   font-weight: bold;
-  /* ===== Resume Button ===== */
+}
+
+nav a:hover { text-decoration: underline; }
+
+/* ===== Buttons (generic) ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .05s ease, box-shadow .2s ease, background .2s ease;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+
+.btn:active { transform: translateY(1px); }
+
+.btn-primary {
+  background: #009999;
+  color: #fff;
+  border: 1px solid #008989;
+}
+.btn-primary:hover {
+  background: #00a9a9;
+  box-shadow: 0 6px 18px rgba(0,153,153,0.22);
+}
+
+.btn-ghost {
+  background: #fff;
+  color: #006e6e;
+  border: 1px solid #cfecec;
+}
+.btn-ghost:hover {
+  background: #f8ffff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+/* Optional: a generic .button link (if you use <a class="button">) */
 a.button {
   display: inline-block;
   background: #009999;
-  color: white;
+  color: #fff;
   padding: 10px 20px;
-  margin-top: 10px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s ease;
 }
+a.button:hover { background: #007777; }
 
-a.button:hover {
-  background: #007777;
+/* ===== Hero (refreshed) ===== */
+.hero {
+  /* soft pattern + gradient that complements your header color */
+  background:
+    radial-gradient(1200px 400px at 8% -10%, rgba(0,153,153,0.18), transparent 55%),
+    linear-gradient(180deg, rgba(0,153,153,0.06), transparent 40%);
+  padding: 56px 0;
+  border-bottom: 1px solid #e8eef0;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-text { flex: 1; min-width: 280px; }
+
+.kicker {
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: #007f7f;
+  background: #e8f7f7;
+  border: 1px solid #cfecec;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.hero h1, .hero h2 {
+  margin: 8px 0 10px;
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  line-height: 1.25;
+  color: #223;
+}
+
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #344;
+  max-width: 60ch;
+  margin-bottom: 18px;
+}
+
+.cta { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ===== Page width ===== */
+main, section {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== Intro row (photo + text) ===== */
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 18px 0 8px;
+}
+
+.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  margin: 0;
+}
+
+.intro-text { flex: 1; min-width: 260px; }
+
+.intro-text h2 {
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+}
+
+/* ===== Highlights block ===== */
+.highlights {
+  margin-top: 6px;
+  margin-left: 240px;
+  max-width: 850px;
+}
+
+.highlights h3 { margin: 0 0 8px 0; }
+
+.highlights ul {
+  margin: 8px 0 0 0;
+  padding-left: 22px;
+}
+
+/* ===== Resume link (big centered button) ===== */
+.resume-link {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 12px 20px;
+  background-color: #009999;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #007777;
+  border-radius: 6px;
+  text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.resume-link:hover {
+  background-color: #007777;
+  border-color: #005555;
 }
 
 /* ===== Contact Form ===== */
@@ -76,7 +224,7 @@ a.button:hover {
 
 .contact-form button {
   background: #009999;
-  color: white;
+  color: #fff;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -90,128 +238,6 @@ a.button:hover {
   margin-top: -10px;
 }
 
-/* ===== Hero Section Polish ===== */
-.hero {
-  background: linear-gradient(180deg, #f7f9fc 0%, #e9f0ff 100%);
-  padding: 4rem 1.25rem;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 15px;
-  color: #009999;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto;
-  color: #444;
-}
-
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* ===== HERO ===== */
-.hero {
-  background: linear-gradient(180deg, #f7f9fc 0%, #e9f0ff 100%);
-  padding: 6rem 1.25rem;
-  border-bottom: 1px solid #dbe3f8;
-}
-
-.hero-inner {
-  max-width: 980px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  line-height: 1.15;
-  color: #0f172a;
-  margin: 0 0 1rem;
-}
-
-.hero p {
-  font-size: clamp(1rem, 2.2vw, 1.15rem);
-  color: #334155;
-  max-width: 60ch;
-  margin: 0 auto 2rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.85rem 1.25rem;
-  border-radius: 0.5rem;
-  background: #1d4ed8;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-}
-
-.btn:hover,
-.btn:focus {
-  background: #163fb0;
-  box-shadow: 0 10px 18px rgba(0,0,0,0.12);
-  transform: translateY(-1px);
-}
-
-/* ===== Page Layout ===== */
-main, section {
-  width: 92%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* ===== Intro row (photo + text) ===== */
-.intro {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  padding: 18px 0 8px;
-}
-
-.headshot {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,.18);
-  margin-left: 4px;
-  margin-right: 28px;
-}
-
-.intro-text {
-  flex: 1;
-  min-width: 260px;
-}
-
-.intro-text h2 {
-  margin: 0 0 10px 0;
-  font-size: 2rem;
-}
-
-/* ===== Highlights block ===== */
-.highlights {
-  margin-top: 6px;
-  margin-left: 240px;
-  max-width: 850px;
-}
-
-.highlights h3 {
-  margin: 0 0 8px 0;
-}
-
-.highlights ul {
-  margin: 8px 0 0 0;
-  padding-left: 22px;
-}
-
 /* ===== Footer ===== */
 footer {
   text-align: center;
@@ -219,178 +245,28 @@ footer {
   color: #666;
 }
 
-/* ===== Responsive (stack on small screens) ===== */
+/* ===== Responsive ===== */
 @media (max-width: 900px) {
   .intro {
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
   }
-
   .headshot {
     width: 160px;
     height: 160px;
     margin: 0 0 8px 0;
   }
-
   .highlights {
     margin-left: 0;
     max-width: 100%;
   }
-/* ===== Hero refresh ===== */
-.hero {
-  /* soft pattern + gradient that complements your header color (#009999) */
-  background:
-    radial-gradient(1200px 400px at 8% -10%, rgba(0,153,153,0.18), transparent 55%),
-    linear-gradient(180deg, rgba(0,153,153,0.06), transparent 40%);
-  padding: 56px 0;
-  border-bottom: 1px solid #e8eef0;
 }
 
-.hero-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.hero-text {
-  flex: 1;
-  min-width: 280px;
-}
-
-.kicker {
-  display: inline-block;
-  font-size: 0.9rem;
-  letter-spacing: .03em;
-  text-transform: uppercase;
-  color: #007f7f;              /* deeper teal accent */
-  background: #e8f7f7;         /* pale teal chip */
-  border: 1px solid #cfecec;
-  padding: 6px 10px;
-  border-radius: 999px;
-  margin-bottom: 10px;
-}
-
-.hero h2 {
-  margin: 8px 0 10px;
-  font-size: 2rem;
-  line-height: 1.25;
-  color: #223;                 /* slightly darker than body for contrast */
-}
-
-.lead {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #344;
-  max-width: 60ch;
-  margin-bottom: 18px;
-}
-
-/* CTA buttons */
-.cta {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 16px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform .05s ease, box-shadow .2s ease;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
-}
-
-.btn:active {
-  transform: translateY(1px);
-}
-
-.btn-primary {
-  background: #009999;          /* your header teal */
-  color: #fff;
-  border: 1px solid #008989;
-}
-
-.btn-primary:hover {
-  background: #00a9a9;
-  box-shadow: 0 6px 18px rgba(0,153,153,0.22);
-}
-
-.btn-ghost {
-  background: #fff;
-  color: #006e6e;
-  border: 1px solid #cfecec;
-}
-
-.btn-ghost:hover {
-  background: #f8ffff;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-}
-
-/* Headshot (reuses your existing .headshot size but polishes the layout) */
-.headshot {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-  margin: 0; /* remove left margin from earlier rule if present */
-}
-
-/* Responsive: stack and center on small screens */
 @media (max-width: 720px) {
   .hero-inner {
     flex-direction: column;
     text-align: center;
   }
-  .cta {
-    justify-content: center;
-  }
-}
-.resume-link {
-  display: block;            /* makes it act like a block element */
-  width: fit-content;        /* button will size to the text */
-  margin: 20px auto;         /* centers it horizontally */
-  padding: 12px 20px;
-  background-color: #009999; /* matches your header */
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border: 2px solid #007777;
-  border-radius: 6px;
-  text-align: center;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.resume-link:hover {
-  background-color: #007777;
-  border-color: #005555;
-}
-.resume-link {
-  display: block;            /* makes it act like a block element */
-  width: fit-content;        /* button will size to the text */
-  margin: 20px auto;         /* centers it horizontally */
-  padding: 12px 20px;
-  background-color: #009999; /* matches your header */
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border: 2px solid #007777;
-  border-radius: 6px;
-  text-align: center;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.resume-link:hover {
-  background-color: #007777;
-  border-color: #005555;
-}
-
-
+  .cta { justify-content: center; }
 }
