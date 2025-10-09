@@ -237,4 +237,121 @@ footer {
     margin-left: 0;
     max-width: 100%;
   }
+/* ===== Hero refresh ===== */
+.hero {
+  /* soft pattern + gradient that complements your header color (#009999) */
+  background:
+    radial-gradient(1200px 400px at 8% -10%, rgba(0,153,153,0.18), transparent 55%),
+    linear-gradient(180deg, rgba(0,153,153,0.06), transparent 40%);
+  padding: 56px 0;
+  border-bottom: 1px solid #e8eef0;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.kicker {
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: #007f7f;              /* deeper teal accent */
+  background: #e8f7f7;         /* pale teal chip */
+  border: 1px solid #cfecec;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  margin: 8px 0 10px;
+  font-size: 2rem;
+  line-height: 1.25;
+  color: #223;                 /* slightly darker than body for contrast */
+}
+
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #344;
+  max-width: 60ch;
+  margin-bottom: 18px;
+}
+
+/* CTA buttons */
+.cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .05s ease, box-shadow .2s ease;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: #009999;          /* your header teal */
+  color: #fff;
+  border: 1px solid #008989;
+}
+
+.btn-primary:hover {
+  background: #00a9a9;
+  box-shadow: 0 6px 18px rgba(0,153,153,0.22);
+}
+
+.btn-ghost {
+  background: #fff;
+  color: #006e6e;
+  border: 1px solid #cfecec;
+}
+
+.btn-ghost:hover {
+  background: #f8ffff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+/* Headshot (reuses your existing .headshot size but polishes the layout) */
+.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  margin: 0; /* remove left margin from earlier rule if present */
+}
+
+/* Responsive: stack and center on small screens */
+@media (max-width: 720px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cta {
+    justify-content: center;
+  }
+}
+
 }
