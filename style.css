@@ -270,3 +270,40 @@ footer {
   }
   .cta { justify-content: center; }
 }
+/* ===== Resume PDF Box (Box Model requirement) ===== */
+.pdf-card {
+  display: inline-block;             /* shrink-wrap around content */
+  background: #f5ffff;               /* subtle background */
+  border: 2px solid #009999;         /* visible border */
+  border-radius: 12px;               /* rounded corners */
+  padding: 16px 20px;                /* padding (box model) */
+  margin: 16px 0 28px;               /* margin (box model) */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06); /* optional depth */
+}
+
+.pdf-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  color: #004c4c;
+}
+
+.pdf-card p {
+  margin: 0 0 12px;
+  color: #355;
+}
+
+a.pdf-btn {
+  display: inline-block;
+  background: #009999;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #008989;
+  font-weight: 700;
+  transition: background .2s ease, box-shadow .2s ease;
+}
+a.pdf-btn:hover {
+  background: #00a9a9;
+  box-shadow: 0 6px 18px rgba(0,153,153,0.22);
+}
