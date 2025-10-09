@@ -307,3 +307,13 @@ a.pdf-btn:hover {
   background: #00a9a9;
   box-shadow: 0 6px 18px rgba(0,153,153,0.22);
 }
+ul {
+  list-style-type: square;
+  font-size: 1.05rem;
+  margin: 18px 0;
+  padding-left: 22px;
+}
+
+ul li:hover {
+  color: #009999;
+  font-weight: bold
