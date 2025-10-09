@@ -353,5 +353,19 @@ footer {
     justify-content: center;
   }
 }
+.resume-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 15px 0;
+  background-color: #009999; /* matches your header color */
+  color: white;
+  text-decoration: none;
+  border: 2px solid #007777;
+  border-radius: 8px; /* optional for rounded corners */
+}
+
+.resume-link:hover {
+  background-color: #007777;
+}
 
 }
