@@ -354,18 +354,43 @@ footer {
   }
 }
 .resume-link {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 15px 0;
-  background-color: #009999; /* matches your header color */
+  display: block;            /* makes it act like a block element */
+  width: fit-content;        /* button will size to the text */
+  margin: 20px auto;         /* centers it horizontally */
+  padding: 12px 20px;
+  background-color: #009999; /* matches your header */
   color: white;
+  font-weight: bold;
   text-decoration: none;
   border: 2px solid #007777;
-  border-radius: 8px; /* optional for rounded corners */
+  border-radius: 6px;
+  text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .resume-link:hover {
   background-color: #007777;
+  border-color: #005555;
 }
+.resume-link {
+  display: block;            /* makes it act like a block element */
+  width: fit-content;        /* button will size to the text */
+  margin: 20px auto;         /* centers it horizontally */
+  padding: 12px 20px;
+  background-color: #009999; /* matches your header */
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #007777;
+  border-radius: 6px;
+  text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.resume-link:hover {
+  background-color: #007777;
+  border-color: #005555;
+}
+
 
 }
