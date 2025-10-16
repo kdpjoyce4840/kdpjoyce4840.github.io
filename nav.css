@@ -1,0 +1,50 @@
+/* nav.css — Flexbox-based primary nav */
+header {
+  padding: 0.5rem 1rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* space brand and links */
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.navbar .brand img {
+  height: 40px;            /* adjust as you like */
+  width: auto;
+  vertical-align: middle;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;           /* FLEXBOX requirement */
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+/* Hover/focus styles (style checklist) */
+.navbar a:hover,
+.navbar a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Readable across screen sizes */
+@media (max-width: 640px) {
+  .navbar {
+    justify-content: center;
+  }
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
