@@ -3,19 +3,6 @@
 /* keep images responsive everywhere */
 img { max-width: 100%; height: auto; display: block; }
 
-/* hero layout polish */
-.hero-media {
-  flex: 0 0 240px;
-  display: flex;
-  justify-content: center;
-}
-.hero .headshot {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
 /* soft breathing room under the header on all screens */
 main { padding-top: 14px; }
 
@@ -39,14 +26,132 @@ main { padding-top: 14px; }
 .project-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: .5rem; }
 hr { border: 0; border-top: 1px solid #e8eef0; margin: 1.25rem 0; }
 
-/* small-screen tweaks only */
-@media (max-width: 720px) {
-  .hero-media { margin-top: 10px; }
+/* ----------------------------------------------------------
+   HERO LAYOUT — buttons on the right (under the headshot)
+   ---------------------------------------------------------- */
+
+/* Optional hero bg/padding (nice on home page) */
+.hero { background: #f9fdfd; padding: 2rem 0; }
+
+/* side-by-side layout */
+.hero-inner {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;         /* stack on small screens */
+  gap: 2rem;
 }
 
-/* ===== NEW: Reflections page requirements ===== */
+/* text column */
+.hero-text { flex: 1; min-width: 260px; }
+
+/* media column holds image + buttons */
+.hero-media {
+  flex: 0 0 260px;         /* fixed-ish column on desktop */
+  display: flex;
+  flex-direction: column;  /* image then buttons */
+  align-items: center;
+  justify-content: center;
+}
+
+/* headshot */
+.hero .headshot {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+/* buttons stacked under the image */
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  width: 100%;
+  max-width: 240px;
+}
+
+/* Generic button look (also used for resume links) */
+.btn,
+.hero-buttons a,
+.pdf-btn,
+.resume-link {
+  display: inline-block;
+  text-align: center;
+  padding: .55rem 1rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  font-weight: 600;
+  background: #009999;
+  color: #fff;
+  border: 1px solid #008989;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  transition: background .2s ease, box-shadow .2s ease, transform .05s ease;
+}
+
+.btn:hover,
+.hero-buttons a:hover,
+.pdf-btn:hover,
+.resume-link:hover {
+  background: #00a9a9;
+  box-shadow: 0 6px 16px rgba(0,153,153,0.22);
+}
+
+.btn:active,
+.hero-buttons a:active,
+.pdf-btn:active,
+.resume-link:active {
+  transform: translateY(1px);
+}
+
+/* if you still use these on other pages, keep them */
+.btn-primary { background: #009999; color: #fff; border-color: #008989; }
+.btn-ghost   { background: #fff; color: #006e6e; border: 1px solid #cfecec; }
+.btn-ghost:hover { background: #f8ffff; }
+
+/* small-screen tweaks only */
+@media (max-width: 720px) {
+  .hero-inner { flex-direction: column-reverse; text-align: center; }
+  .hero-media { margin-top: 10px; }
+  .hero-buttons { max-width: 280px; width: 100%; }
+}
+
+/* ----------------------------------------------------------
+   REFLECTIONS PAGE REQUIREMENTS
+   ---------------------------------------------------------- */
+
 /* Box model wrapper around reflection paragraphs */
 .ref-block {
-  background: #f5ffff;            /* subtle background */
-  border: 2px solid #009999;      /* visible border (box model) */
+  background: #f5ffff;              /* subtle background */
+  border: 2px solid #009999;        /* visible border (box model) */
   border-radius: 12px;
+  padding: 16px 20px;               /* padding (box model) */
+  margin: 16px 0 24px;              /* margin (box model) */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06); /* optional depth */
+}
+
+/* Pseudo-element: style the FIRST LETTER of the first paragraph in each block */
+.ref-block p:first-of-type::first-letter {
+  font-size: 2.2rem;
+  line-height: 1;
+  float: left;
+  padding-right: 6px;
+  color: #007777;
+  font-weight: 700;
+}
+
+/* Indent the first line of every OTHER paragraph (2nd, 4th, …) */
+.ref-block p:nth-of-type(even) {
+  text-indent: 1.25em;
+}
+
+/* Keep lists tidy inside reflection blocks */
+.ref-block ul,
+.ref-block ol {
+  margin: 12px 0 0 0;
+  padding-left: 22px;
+}
