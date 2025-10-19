@@ -25,9 +25,11 @@ main { padding-top: 14px; }
 
 /* ===== Hero Section ===== */
 .hero {
-  background: linear-gradient(135deg, #e6f9f9, #ffffff); /* soft gradient */
-  padding: 3rem 2rem;
-  border-bottom: 3px solid #009999;
+  background: linear-gradient(180deg, #008c8c 0%, #007777 100%); /* darker teal gradient */
+  color: #fff;
+  padding: 3.25rem 2rem;
+  border-bottom: 0;
+  box-shadow: 0 2px 18px rgba(0,0,0,.12);
 }
 
 .hero-inner {
@@ -44,17 +46,33 @@ main { padding-top: 14px; }
   flex: 1 1 50%;
 }
 
-.hero-text h1 {
-  font-size: 2.5rem;
+.hero-text h1 { 
+  font-size: 2.8rem; 
   margin-bottom: 1rem;
-  color: #003333;
+  color: #fff; 
+  letter-spacing: .2px;
 }
 
 .hero-text .lead {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #f3ffff;
+  opacity: .95;
+}
+
+/* kicker label above headline */
+.kicker {
+  display: inline-block;
+  font-size: .9rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color: #e6ffff;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
 }
 
 .hero-media {
@@ -67,7 +85,9 @@ main { padding-top: 14px; }
   height: 240px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  outline: 3px solid rgba(255,255,255,.45);
+  outline-offset: 4px;
 }
 
 /* CTA buttons inside hero */
@@ -76,14 +96,24 @@ main { padding-top: 14px; }
   margin: 0.5rem;
   padding: 0.75rem 1.25rem;
   border-radius: 0.5rem;
-  background: #009999;
+  background: #00b3b3;
+  border: 1px solid rgba(255,255,255,.35);
   color: #fff;
   font-weight: bold;
   text-decoration: none;
   font-size: 1rem;
   transition: background 0.2s ease;
 }
-.cta a:hover { background: #00a9a9; }
+.cta a:hover { background: #00c3c3; }
+
+.btn.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.6);
+  color: #fff;
+}
+.btn.btn-ghost:hover {
+  background: rgba(255,255,255,.12);
+}
 
 /* Small screen hero */
 @media (max-width: 720px) {
