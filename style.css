@@ -2,23 +2,22 @@
 img { max-width: 100%; height: auto; display: block; }
 
 /* hero layout polish */
-.hero-media { 
-  flex: 0 0 240px; 
-  display: flex; 
-  justify-content: center; 
+.hero-media {
+  flex: 0 0 240px;
+  display: flex;
+  justify-content: center;
 }
-.hero .headshot { 
-  width: 220px; 
-  height: 220px; 
-  border-radius: 50%; 
-  object-fit: cover; 
+.hero .headshot {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-/* small-screen stacking already handled; ensure centering */
-@media (max-width: 720px) {
-  .hero-media { margin-top: 10px; }
-  main { padding-top: 14px; }  /* soft breathing room under the header */
-  /* optional: buttons for project links */
+/* soft breathing room under the header on all screens */
+main { padding-top: 14px; }
+
+/* optional: buttons for project links (apply on all screens) */
 .project-links a {
   display: inline-block;
   margin-right: .5rem;
@@ -30,12 +29,15 @@ img { max-width: 100%; height: auto; display: block; }
   color: #fff;
   font-weight: 600;
 }
-.project-links a:hover { background:#00a9a9; }
-/* Projects page polish */
+.project-links a:hover { background: #00a9a9; }
+
+/* Projects page polish (all screens) */
 .project { margin-bottom: 1.5rem; }
 .project h3 { margin-top: .25rem; }
 .project-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: .5rem; }
-
 hr { border: 0; border-top: 1px solid #e8eef0; margin: 1.25rem 0; }
 
+/* small-screen tweaks only */
+@media (max-width: 720px) {
+  .hero-media { margin-top: 10px; }
 }
