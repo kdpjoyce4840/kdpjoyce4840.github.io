@@ -18,5 +18,19 @@ img { max-width: 100%; height: auto; display: block; }
 @media (max-width: 720px) {
   .hero-media { margin-top: 10px; }
   main { padding-top: 14px; }  /* soft breathing room under the header */
+  /* optional: buttons for project links */
+.project-links a {
+  display: inline-block;
+  margin-right: .5rem;
+  padding: .45rem .75rem;
+  border-radius: .5rem;
+  border: 1px solid #008989;
+  text-decoration: none;
+  background: #009999;
+  color: #fff;
+  font-weight: 600;
+}
+.project-links a:hover { background:#00a9a9; }
+
 
 }
