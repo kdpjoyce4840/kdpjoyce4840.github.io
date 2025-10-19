@@ -1,85 +1,84 @@
-<!--
-  Krystal Joyce
-  File: reflections.html
--->
+<!-- Krystal Joyce — reflections.html -->
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reflections | Krystal Joyce</title>
 
-  <!-- Required stylesheets on every page -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="nav.css" />
-
-  <!-- Page-specific styles to satisfy assignment requirements -->
-  <style>
-    /* Box model around each reflection group */
-    .ref-block {
-      background: #f5ffff;
-      border: 2px solid #009999;   /* border = box model */
-      border-radius: 12px;
-      padding: 16px 20px;          /* padding = box model */
-      margin: 16px 0 24px;         /* margin = box model */
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-    }
-    /* Pseudo-element: first letter of the FIRST paragraph in each block */
-    .ref-block p:first-of-type::first-letter {
-      font-size: 2.2rem;
-      line-height: 1;
-      float: left;
-      padding-right: 6px;
-      color: #007777;
-      font-weight: 700;
-    }
-    /* Indent the first line of every OTHER paragraph (2nd, 4th, …) */
-    .ref-block p:nth-of-type(even) {
-      text-indent: 1.25em;
-    }
-    /* Minor spacing polish */
-    main h1 { margin: .25rem 0 0.25rem; }
-    main h2, main h3 { margin-top: 1rem; }
-  </style>
+  <!-- Link BOTH stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav.css">
 </head>
 <body>
+<header>
+  <nav class="navbar" aria-label="Primary">
+    <a href="index.html" class="brand">KJ Portfolio</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li class="active"><a href="reflections.html">Reflections</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Resume10.2.25.pdf" target="_blank">Resume (PDF)</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- ===== Header / Primary Nav ===== -->
-  <header>
-    <nav class="navbar" aria-label="Primary">
-      <a href="index.html" class="brand">KJ Portfolio</a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li class="active"><a href="reflections.html" aria-current="page">Reflections</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html#resume-section">Resume</a></li>
-      </ul>
-    </nav>
-  </header>
+<main>
+  <h2>Reflections</h2>
+  <p>
+    These reflections highlight what I’m learning as I develop skills in instructional design and educational technology—what worked, what I’d change, and how I’m applying research-informed practices to create accessible, engaging learning experiences.
+  </p>
 
-  <!-- ===== Main ===== -->
-  <main>
-    <section class="tagline section-divider">
-      <h1>Reflections</h1>
-      <p class="intro">
-        These reflections highlight what I’m learning as I develop skills in instructional
-        design and educational technology—what worked, what I’d change, and how I’m applying
-        research-informed practices to create accessible, engaging learning experiences.
-      </p>
-    </section>
+  <!-- Section 1 -->
+  <section class="reflection box">
+    <h3>Designing for Accessibility First</h3>
+    <p>
+      I’ve adopted an accessibility-first mindset. For each page and activity, I walk through a quick checklist that includes descriptive titles and logical heading order, sufficient color contrast, meaningful alt text, keyboard navigability with visible focus states, and clear link styles and microcopy.
+    </p>
+    <p>
+      This approach improves clarity and reduces cognitive load for all learners—not just those who rely on assistive technology.
+    </p>
+  </section>
 
-    <!-- 1. Accessibility -->
-    <section class="content section-divider" aria-labelledby="r-access">
-      <h2 id="r-access">Designing for Accessibility First</h2>
-      <div class="ref-block">
-        <p>
-          I’ve adopted an accessibility-first mindset. For each page and activity, I walk through
-          a quick checklist that includes descriptive titles and logical heading order, sufficient
-          color contrast, meaningful alt text, keyboard navigability with visible focus states,
-          and clear link styles and microcopy.
-        </p>
-        <ul>
-          <li>Descriptive page titles and meaningful headings (H1 → H2 → H3)</li>
-          <li
+  <!-- Section 2 -->
+  <section class="reflection box">
+    <h3>Structuring Content for Sense-Making</h3>
+    <p>
+      I’m experimenting with chunking, advance organizers, and progressive disclosure to support comprehension. A consistent layout with short intros, clear objectives, and small, “do-able” tasks helps learners know exactly where they are and what’s next.
+    </p>
+    <p>
+      I’ve also tightened typography and spacing to make scanning easier, using gentle dividers and consistent margins to guide the eye.
+    </p>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="reflection box">
+    <h3>Iterating with Feedback</h3>
+    <p>
+      Peer and instructor feedback shapes my process. I prototype quickly, test with a few users, and iterate: sketch for structure, style for look and feel, then refine language and verify accessibility. This keeps me focused on learner needs while improving quality each cycle.
+    </p>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="reflection box">
+    <h3>What’s Next</h3>
+    <p>
+      I plan to extend this site with interactive learning components and richer project write-ups, including rationale, standards alignment, and evidence of impact. If you’d like to collaborate or discuss ideas, feel free to reach out.
+    </p>
+    <p>
+      Connect on LinkedIn:
+      <a href="https://www.linkedin.com/in/krystal-joyce-b64b69166/" target="_blank" rel="noopener">Krystal Joyce</a>
+      &nbsp;|&nbsp; Email:
+      <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Krystal Joyce — <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a></p>
+</footer>
+</body>
+</html>
+
