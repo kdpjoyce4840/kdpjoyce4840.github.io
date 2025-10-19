@@ -1,18 +1,15 @@
-<!-- Krystal Joyce — about.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Krystal Joyce</title>
-
-  <!-- Link BOTH stylesheets -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="nav.css" />
 </head>
 <body>
 
-  <!-- ===== Header / Primary Nav ===== -->
+  <!-- ===== Header / Nav ===== -->
   <header>
     <nav class="navbar" aria-label="Primary">
       <a href="index.html" class="brand">KJ Portfolio</a>
@@ -22,7 +19,8 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="reflections.html">Reflections</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html#resume-section">Resume</a></li>
+        <!-- Direct PDF link -->
+        <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
       </ul>
     </nav>
   </header>
@@ -49,4 +47,64 @@
         substance-use challenges and eventually serving as a supervisor.
       </p>
       <p>
-        Currently, I am pursuing a Master’s in Learning Technologies and Design at the University of Missouri
+        Currently, I am pursuing a Master’s in Learning Technologies and Design at the University of Missouri,
+        where I’m building skills in instructional design, technology integration, and creating accessible
+        learning experiences.
+      </p>
+    </section>
+
+    <!-- Highlights -->
+    <section class="content section-divider" aria-labelledby="highlights-title">
+      <h3 id="highlights-title">Highlights</h3>
+      <ul class="highlights-list">
+        <li>10+ years teaching (elementary, multiple grades)</li>
+        <li>Nonprofit adolescent counseling & supervision</li>
+        <li>L1 Support Technician, SightView Software (2023–Present)</li>
+        <li>Currently pursuing M.S. in Learning Technologies & Design (MU)</li>
+      </ul>
+    </section>
+
+    <!-- Resume Section (with Box Model card) -->
+    <section class="content section-divider" id="resume-section" aria-labelledby="resume-title">
+      <h2 id="resume-title">Resume</h2>
+      <p>You can view or download my full resume below:</p>
+
+      <!-- Box model wrapper -->
+      <div class="pdf-card" role="region" aria-labelledby="resume-download-title">
+        <h3 id="resume-download-title">Download Resume (PDF)</h3>
+        <p>Download a PDF copy of my current resume for a detailed overview of my education, experience, and skills.</p>
+        <a class="pdf-btn" href="Resume10.2.25.pdf" target="_blank" rel="noopener">
+          Open PDF
+        </a>
+      </div>
+    </section>
+
+    <!-- Educational Experiences -->
+    <section class="content section-divider">
+      <h3>Educational Experiences</h3>
+      <p>
+        BSE in Elementary Education (Arkansas State University, 2010) • 10 years classroom teaching (K, 1st, 6th) •
+        Nonprofit adolescent counselor & supervisor (2015–2023) • Frontline healthcare/vision care support (2018–2020) •
+        L1 Support Technician, SightView Software (2023–Present) • M.S. in Learning Technologies & Design,
+        University of Missouri (Expected 2027)
+      </p>
+    </section>
+
+    <!-- Reflections -->
+    <section class="content section-divider">
+      <h3>Reflections</h3>
+      <p>
+        My work is guided by a belief in the power of education and technology to create meaningful change.
+        I strive to design learning experiences that are inclusive, engaging, and impactful for all learners.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 Krystal Joyce — <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
