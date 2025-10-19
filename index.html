@@ -6,97 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home | Krystal Joyce</title>
 
+  <!-- External Stylesheets -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="nav.css">
-
-  <style>
-    /* === HERO FIXES === */
-    .hero {
-      padding: 2rem;
-      background: #f9fdfd;
-    }
-    .hero-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap; /* stacks on small screens */
-      text-align: left;
-    }
-    .hero-media {
-      flex: 0 0 240px;
-      display: flex;
-      justify-content: center;
-    }
-    .hero .headshot {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    .hero-text {
-      flex: 1;
-      max-width: 500px;
-    }
-    .cta {
-      margin-top: 1rem;
-      display: flex;
-      gap: 1rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: .6rem 1.2rem;
-      border-radius: .5rem;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .btn-primary {
-      background: #009999;
-      color: #fff;
-      border: 1px solid #009999;
-    }
-    .btn-primary:hover { background: #00a9a9; }
-    .btn-ghost {
-      border: 1px solid #009999;
-      color: #009999;
-    }
-    .btn-ghost:hover {
-      background: #009999;
-      color: #fff;
-    }
-    @media (max-width: 720px) {
-      .hero-inner { flex-direction: column; text-align: center; }
-      .cta { justify-content: center; }
-    }
-  </style>
 </head>
 <body>
 
   <!-- ===== Header / Primary Nav ===== -->
-<header>
-  <nav class="navbar" aria-label="Primary">
-    <a href="index.html" class="active">KJ Portfolio</a>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li class="active"><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="reflections.html">Reflections</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="about.html#resume-section">Resume</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <nav class="navbar" aria-label="Primary">
+      <a href="index.html" class="brand">KJ Portfolio</a>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="reflections.html">Reflections</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html#resume-section">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- ===== Hero ===== -->
   <section class="hero">
     <div class="hero-inner">
-
-      <!-- Left: Headshot -->
-      <figure class="hero-media" aria-hidden="true">
-        <img src="headshot.jpg" alt="Krystal Joyce headshot" class="headshot">
-      </figure>
-
-      <!-- Right: Text + Buttons -->
       <div class="hero-text">
         <span class="kicker">Instructional Design • Web Design & Dev</span>
         <h1>Hi, I’m Krystal Joyce.</h1>
@@ -110,12 +43,16 @@
         </div>
       </div>
 
+      <!-- Hero Image -->
+      <figure class="hero-media" aria-hidden="true">
+        <img src="headshot.jpg" alt="Portrait of Krystal Joyce" class="headshot">
+      </figure>
     </div>
   </section>
 
   <!-- ===== Main ===== -->
   <main>
-    <!-- Intro (text only now) -->
+    <!-- Intro -->
     <section class="intro">
       <div class="intro-text">
         <h2>Design with empathy. Iterate with evidence.</h2>
@@ -151,6 +88,7 @@
       </div>
     </section>
 
+    <!-- Resume link -->
     <section>
       <a class="resume-link" href="about.html#resume-section">Go to Resume Section</a>
     </section>
