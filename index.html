@@ -1,64 +1,105 @@
-<!DOCTYPE html>
+<<!-- Krystal Joyce — index.html -->
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome | Krystal Joyce</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Krystal Joyce</title>
+
+  <!-- Link BOTH stylesheets on every page -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav.css">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- ===== Header / Primary Nav ===== -->
   <header>
-    <h1>Welcome</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="projects.html">Projects</a> |
-      <a href="reflections.html">Reflections</a> |
-      <a href="contact.html">Contact</a> |
-      <a href="about.html#resume-section">Resume</a>
+    <nav class="navbar" aria-label="Primary">
+      <a href="index.html" class="brand">KJ Portfolio</a>
+      <ul>
+        <li class="active"><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="reflections.html">Reflections</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html#resume-section">Resume</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- ===== Hero ===== -->
   <section class="hero">
     <div class="hero-inner">
-      <img src="headshot.jpg" alt="Krystal Joyce headshot" class="headshot" />
-
       <div class="hero-text">
-        <span class="kicker">Hi, I’m Krystal Joyce</span>
-        <h2>Instructional Design | Education | Technology</h2>
-
+        <span class="kicker">Instructional Design • Web Design & Dev</span>
+        <h1>Hi, I’m Krystal Joyce.</h1>
         <p class="lead">
-          I design clear, human-centered learning experiences that blend
-          accessibility, research, and great UX. Explore my background, projects,
-          and reflections as I grow in this field.
+          I design clear, accessible learning experiences. My work blends research-informed
+          practice with clean, usable interfaces—so learners can focus on what matters.
         </p>
-
         <div class="cta">
           <a class="btn btn-primary" href="projects.html">View Projects</a>
-          <a class="btn btn-ghost" href="Resume10.2.25.pdf" target="_blank" rel="noopener">
-            Download Résumé
-          </a>
+          <a class="btn btn-ghost" href="reflections.html">Read Reflections</a>
         </div>
       </div>
+
+      <!-- Optional brand/logo or headshot (use whichever you prefer) -->
+      <figure style="margin:0;">
+        <img src="headshot.jpg" alt="Krystal Joyce headshot" class="headshot">
+      </figure>
     </div>
   </section>
 
-  <!-- Highlights -->
-  <section class="highlights">
-    <h3>Highlights</h3>
-    <ul>
-      <li>10+ years teaching (elementary, multiple grades)</li>
-      <li>Nonprofit adolescent counseling &amp; supervision</li>
-      <li>Currently pursuing M.S. in Learning Technologies &amp; Design (MU)</li>
-    </ul>
-  </section>
+  <!-- ===== Main ===== -->
+  <main>
 
-  <!-- Footer -->
+    <!-- Intro row (photo + text) -->
+    <section class="intro">
+      <img src="headshot.jpg" alt="Krystal Joyce" class="headshot" />
+      <div class="intro-text">
+        <h2>Design with empathy. Iterate with evidence.</h2>
+        <p>
+          I’ve worked across education and behavioral health, which taught me the value of
+          compassionate communication and pragmatic design. I’m currently pursuing an M.S.
+          in Learning Technologies & Design at the University of Missouri.
+        </p>
+        <p>
+          On this site you’ll find projects, reflections, and resources that show how I approach
+          accessibility, structure, and continuous improvement.
+        </p>
+      </div>
+    </section>
+
+    <!-- Highlights block -->
+    <section class="highlights">
+      <h3>What I’m focused on</h3>
+      <ul>
+        <li>Accessibility-first design: headings, contrast, alt text, keyboard access</li>
+        <li>Clear information architecture and progressive disclosure</li>
+        <li>Prototyping & rapid iteration based on feedback</li>
+        <li>Practical, measurable outcomes for learners and staff</li>
+      </ul>
+    </section>
+
+    <!-- Resume PDF “card” (box-model example) -->
+    <section>
+      <div class="pdf-card" role="region" aria-label="Resume download">
+        <h3>Resume (PDF)</h3>
+        <p>A quick overview of my background, skills, and recent work.</p>
+        <a class="pdf-btn" href="Resume10.2.25.pdf" target="_blank" rel="noopener">Open Resume</a>
+      </div>
+    </section>
+
+    <!-- Simple callouts -->
+    <section>
+      <a class="resume-link" href="about.html#resume-section">Go to Resume Section</a>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
   <footer>
-    <p>© 2025 Krystal Joyce — All Rights Reserved</p>
+    <p>© 2025 Krystal Joyce — <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a></p>
   </footer>
 
 </body>
