@@ -17,4 +17,6 @@ img { max-width: 100%; height: auto; display: block; }
 /* small-screen stacking already handled; ensure centering */
 @media (max-width: 720px) {
   .hero-media { margin-top: 10px; }
+  main { padding-top: 14px; }  /* soft breathing room under the header */
+
 }
