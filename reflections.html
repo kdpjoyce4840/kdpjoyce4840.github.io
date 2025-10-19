@@ -1,84 +1,103 @@
-<!-- Krystal Joyce — reflections.html -->
+<!-- Krystal Joyce — index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Reflections | Krystal Joyce</title>
+  <title>Home | Krystal Joyce</title>
 
-  <!-- Link BOTH stylesheets -->
+  <!-- External Stylesheets -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="nav.css">
 </head>
 <body>
-<header>
-  <nav class="navbar" aria-label="Primary">
-    <a href="index.html" class="brand">KJ Portfolio</a>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li class="active"><a href="reflections.html">Reflections</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="Resume10.2.25.pdf" target="_blank">Resume (PDF)</a></li>
-    </ul>
-  </nav>
-</header>
 
-<main>
-  <h2>Reflections</h2>
-  <p>
-    These reflections highlight what I’m learning as I develop skills in instructional design and educational technology—what worked, what I’d change, and how I’m applying research-informed practices to create accessible, engaging learning experiences.
-  </p>
+  <!-- ===== Header / Primary Nav ===== -->
+  <header>
+    <nav class="navbar" aria-label="Primary">
+      <a href="index.html" class="brand">KJ Portfolio</a>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="reflections.html">Reflections</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html#resume-section">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Section 1 -->
-  <section class="reflection box">
-    <h3>Designing for Accessibility First</h3>
-    <p>
-      I’ve adopted an accessibility-first mindset. For each page and activity, I walk through a quick checklist that includes descriptive titles and logical heading order, sufficient color contrast, meaningful alt text, keyboard navigability with visible focus states, and clear link styles and microcopy.
-    </p>
-    <p>
-      This approach improves clarity and reduces cognitive load for all learners—not just those who rely on assistive technology.
-    </p>
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="kicker">Instructional Design • Web Design & Dev</span>
+        <h1>Hi, I’m Krystal Joyce.</h1>
+        <p class="lead">
+          I design clear, accessible learning experiences. My work blends research-informed
+          practice with clean, usable interfaces—so learners can focus on what matters.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="projects.html">View Projects</a>
+          <a class="btn btn-ghost" href="reflections.html">Read Reflections</a>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <figure class="hero-media" aria-hidden="true">
+        <img src="headshot.jpg" alt="Portrait of Krystal Joyce" class="headshot">
+      </figure>
+    </div>
   </section>
 
-  <!-- Section 2 -->
-  <section class="reflection box">
-    <h3>Structuring Content for Sense-Making</h3>
-    <p>
-      I’m experimenting with chunking, advance organizers, and progressive disclosure to support comprehension. A consistent layout with short intros, clear objectives, and small, “do-able” tasks helps learners know exactly where they are and what’s next.
-    </p>
-    <p>
-      I’ve also tightened typography and spacing to make scanning easier, using gentle dividers and consistent margins to guide the eye.
-    </p>
-  </section>
+  <!-- ===== Main ===== -->
+  <main>
+    <!-- Intro -->
+    <section class="intro">
+      <div class="intro-text">
+        <h2>Design with empathy. Iterate with evidence.</h2>
+        <p>
+          I’ve worked across education and behavioral health, which taught me the value of
+          compassionate communication and pragmatic design. I’m currently pursuing an M.S.
+          in Learning Technologies & Design at the University of Missouri.
+        </p>
+        <p>
+          On this site you’ll find projects, reflections, and resources that show how I approach
+          accessibility, structure, and continuous improvement.
+        </p>
+      </div>
+    </section>
 
-  <!-- Section 3 -->
-  <section class="reflection box">
-    <h3>Iterating with Feedback</h3>
-    <p>
-      Peer and instructor feedback shapes my process. I prototype quickly, test with a few users, and iterate: sketch for structure, style for look and feel, then refine language and verify accessibility. This keeps me focused on learner needs while improving quality each cycle.
-    </p>
-  </section>
+    <!-- Highlights -->
+    <section class="highlights">
+      <h3>What I’m focused on</h3>
+      <ul>
+        <li>Accessibility-first design: headings, contrast, alt text, keyboard access</li>
+        <li>Clear information architecture and progressive disclosure</li>
+        <li>Prototyping & rapid iteration based on feedback</li>
+        <li>Practical, measurable outcomes for learners and staff</li>
+      </ul>
+    </section>
 
-  <!-- Section 4 -->
-  <section class="reflection box">
-    <h3>What’s Next</h3>
-    <p>
-      I plan to extend this site with interactive learning components and richer project write-ups, including rationale, standards alignment, and evidence of impact. If you’d like to collaborate or discuss ideas, feel free to reach out.
-    </p>
-    <p>
-      Connect on LinkedIn:
-      <a href="https://www.linkedin.com/in/krystal-joyce-b64b69166/" target="_blank" rel="noopener">Krystal Joyce</a>
-      &nbsp;|&nbsp; Email:
-      <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
-    </p>
-  </section>
-</main>
+    <!-- Resume PDF card -->
+    <section>
+      <div class="pdf-card" role="region" aria-label="Resume download">
+        <h3>Resume (PDF)</h3>
+        <p>A quick overview of my background, skills, and recent work.</p>
+        <a class="pdf-btn" href="Resume10.2.25.pdf" target="_blank" rel="noopener">Open Resume</a>
+      </div>
+    </section>
 
-<footer>
-  <p>© 2025 Krystal Joyce — <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a></p>
-</footer>
+    <!-- Resume link -->
+    <section>
+      <a class="resume-link" href="about.html#resume-section">Go to Resume Section</a>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 Krystal Joyce — <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a></p>
+  </footer>
+
 </body>
 </html>
-
