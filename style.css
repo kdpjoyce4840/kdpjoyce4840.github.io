@@ -1,3 +1,5 @@
+/* ===== Your existing rules (kept as-is) ===== */
+
 /* keep images responsive everywhere */
 img { max-width: 100%; height: auto; display: block; }
 
@@ -41,3 +43,10 @@ hr { border: 0; border-top: 1px solid #e8eef0; margin: 1.25rem 0; }
 @media (max-width: 720px) {
   .hero-media { margin-top: 10px; }
 }
+
+/* ===== NEW: Reflections page requirements ===== */
+/* Box model wrapper around reflection paragraphs */
+.ref-block {
+  background: #f5ffff;            /* subtle background */
+  border: 2px solid #009999;      /* visible border (box model) */
+  border-radius: 12px;
