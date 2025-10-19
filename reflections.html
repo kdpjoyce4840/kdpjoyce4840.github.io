@@ -1,14 +1,27 @@
-<!-- Krystal Joyce — index.html -->
+<!-- Krystal Joyce — reflections.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home | Krystal Joyce</title>
+  <title>Reflections | Krystal Joyce</title>
 
-  <!-- External Stylesheets -->
+  <!-- Link BOTH stylesheets -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="nav.css">
+
+  <!-- Page-scoped tweaks to satisfy rubric exactly -->
+  <style>
+    /* Ensure only the first paragraph gets the big first-letter style,
+       and alternate paragraphs are indented */
+    .ref-block p { text-indent: 0; }                 /* reset any global indent */
+    .ref-block p.ref-other { text-indent: 1.5em; }   /* indent alternates */
+    .ref-first::first-letter {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #006666;
+    }
+  </style>
 </head>
 <body>
 
@@ -17,87 +30,79 @@
     <nav class="navbar" aria-label="Primary">
       <a href="index.html" class="brand">KJ Portfolio</a>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="reflections.html">Reflections</a></li>
+        <li class="active"><a href="reflections.html" aria-current="page">Reflections</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html#resume-section">Resume</a></li>
+        <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ===== Hero ===== -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <span class="kicker">Instructional Design • Web Design & Dev</span>
-        <h1>Hi, I’m Krystal Joyce.</h1>
-        <p class="lead">
-          I design clear, accessible learning experiences. My work blends research-informed
-          practice with clean, usable interfaces—so learners can focus on what matters.
-        </p>
-        <div class="cta">
-          <a class="btn btn-primary" href="projects.html">View Projects</a>
-          <a class="btn btn-ghost" href="reflections.html">Read Reflections</a>
-        </div>
-      </div>
-
-      <!-- Hero Image -->
-      <figure class="hero-media" aria-hidden="true">
-        <img src="headshot.jpg" alt="Portrait of Krystal Joyce" class="headshot">
-      </figure>
-    </div>
-  </section>
-
-  <!-- ===== Main ===== -->
   <main>
-    <!-- Intro -->
-    <section class="intro">
-      <div class="intro-text">
-        <h2>Design with empathy. Iterate with evidence.</h2>
-        <p>
-          I’ve worked across education and behavioral health, which taught me the value of
-          compassionate communication and pragmatic design. I’m currently pursuing an M.S.
-          in Learning Technologies & Design at the University of Missouri.
-        </p>
-        <p>
-          On this site you’ll find projects, reflections, and resources that show how I approach
-          accessibility, structure, and continuous improvement.
-        </p>
-      </div>
+    <h1>Reflections</h1>
+    <p class="tagline">Learning, practice, and growth across design and technology.</p>
+
+    <!-- Each section below wraps paragraphs inside a “box model” element -->
+    <section class="ref-block" aria-labelledby="acc-first">
+      <h2 id="acc-first">Designing for Accessibility First</h2>
+      <p class="ref-first">
+        I’ve adopted an accessibility-first mindset. On every page and activity, I run a quick checklist so that clarity and access aren’t “nice to haves” but the default.
+      </p>
+      <p class="ref-other">
+        My checklist includes descriptive page titles, a logical heading order (H1 → H2 → H3), strong color contrast, meaningful alt text, keyboard navigability with visible focus states, and clear, consistent link styles.
+      </p>
+      <p class="ref-other">
+        The impact has been visible: fewer questions about “where to click,” easier scanning for all users, and content that holds up better on small screens or assistive tech.
+      </p>
     </section>
 
-    <!-- Highlights -->
-    <section class="highlights">
-      <h3>What I’m focused on</h3>
-      <ul>
-        <li>Accessibility-first design: headings, contrast, alt text, keyboard access</li>
-        <li>Clear information architecture and progressive disclosure</li>
-        <li>Prototyping & rapid iteration based on feedback</li>
-        <li>Practical, measurable outcomes for learners and staff</li>
-      </ul>
+    <section class="ref-block" aria-labelledby="structure">
+      <h2 id="structure">Structuring Content for Sense-Making</h2>
+      <p class="ref-first">
+        I’ve leaned into chunking and progressive disclosure—short intros, explicit objectives, and “do-able” steps that reduce cognitive load.
+      </p>
+      <p class="ref-other">
+        Using consistent spacing, gentle dividers, and predictable patterns makes the interface feel calmer. Learners don’t spend energy figuring out the layout; they spend it on the task.
+      </p>
     </section>
 
-    <!-- Resume PDF card -->
-    <section>
-      <div class="pdf-card" role="region" aria-label="Resume download">
-        <h3>Resume (PDF)</h3>
-        <p>A quick overview of my background, skills, and recent work.</p>
-        <a class="pdf-btn" href="Resume10.2.25.pdf" target="_blank" rel="noopener">Open Resume</a>
-      </div>
+    <section class="ref-block" aria-labelledby="feedback">
+      <h2 id="feedback">Iterating with Feedback</h2>
+      <p class="ref-first">
+        Feedback loops are now part of my normal workflow. I prototype quickly, test with a few people, and iterate in tight cycles.
+      </p>
+      <p class="ref-other">
+        My rhythm looks like this: sketch for structure → apply palette and spacing for style → refine language and interactions → verify accessibility. Each pass gets me closer to something that’s clear and usable.
+      </p>
     </section>
 
-    <!-- Resume link -->
-    <section>
-      <a class="resume-link" href="about.html#resume-section">Go to Resume Section</a>
+    <section class="ref-block" aria-labelledby="tools">
+      <h2 id="tools">Tools & Workflow</h2>
+      <p class="ref-first">
+        Beyond HTML/CSS and GitHub Pages, I’m building a small toolkit for reliable delivery: version control with Git, quick wireframes in Figma (or pencil!), contrast checks, keyboard testing, and lightweight style guides.
+      </p>
+      <p class="ref-other">
+        The goal is speed with quality—get something in front of users fast, then keep polishing.
+      </p>
+    </section>
+
+    <section class="ref-block" aria-labelledby="next">
+      <h2 id="next">What’s Next</h2>
+      <p class="ref-first">
+        I plan to extend this site with interactive learning components, richer project write-ups, and clearer links to standards and outcomes.
+      </p>
+      <p class="ref-other">
+        If you’re interested in collaborating or trading ideas, I’d love to connect:
+        <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/krystal-joyce-b64b69166/" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
   <footer>
     <p>© 2025 Krystal Joyce — <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a></p>
   </footer>
-
 </body>
 </html>
