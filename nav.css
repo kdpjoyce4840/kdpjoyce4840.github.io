@@ -1,44 +1,68 @@
-/* nav.css — Flexbox-based primary nav */
+/* nav.css — Krystal Joyce */
+
+/* Header container */
 header {
-  padding: 0.5rem 1rem;
+  background-color: #009999;   /* teal header */
+  color: #fff;
+  padding: 1rem 1.25rem;
 }
 
+/* Branding/logo area */
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* space brand and links */
+  justify-content: space-between; /* brand on left, links on right */
   gap: 1rem;
   flex-wrap: wrap;
 }
 
+/* Brand image or text */
 .navbar .brand img {
-  height: 40px;            /* adjust as you like */
+  height: 40px;
   width: auto;
   vertical-align: middle;
 }
+.navbar .brand {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+}
 
+/* Navigation list */
 .navbar ul {
   list-style: none;
-  display: flex;           /* FLEXBOX requirement */
+  display: flex;               /* FLEXBOX requirement */
   gap: 1rem;
   margin: 0;
   padding: 0;
 }
 
+/* Navigation links */
 .navbar a {
   text-decoration: none;
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
+  font-weight: 600;
+  color: #fff;
+  transition: background 0.2s ease-in-out;
 }
 
-/* Hover/focus styles (style checklist) */
+/* Hover & focus styles (accessibility) */
 .navbar a:hover,
 .navbar a:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+  background: rgba(255, 255, 255, 0.15);
+  outline: none;
 }
 
-/* Readable across screen sizes */
+/* Active link styling */
+.navbar .active a,
+.navbar a[aria-current="page"] {
+  background: #007777;
+  font-weight: 700;
+}
+
+/* Mobile responsive adjustments */
 @media (max-width: 640px) {
   .navbar {
     justify-content: center;
