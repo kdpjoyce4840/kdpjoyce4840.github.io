@@ -1,84 +1,53 @@
-<!DOCTYPE html>
+<!-- Krystal Joyce — projects.html -->
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects | Krystal Joyce</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Same CSS as other pages -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav.css">
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header / Primary Nav -->
   <header>
-    <h1>Projects</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="projects.html">Projects</a> |
-      <a href="reflections.html">Reflections</a> |
-      <a href="contact.html">Contact</a> |
-      <a href="about.html#resume-section">Resume</a>
+    <nav class="navbar" aria-label="Primary">
+      <a href="index.html" class="brand">KJ Portfolio</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="active"><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="reflections.html">Reflections</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <section class="content section-divider">
-      <h2>Selected Work</h2>
+    <section class="tagline section-divider">
+      <h1>Selected Work</h1>
       <p>
-        Below are a few instructional design and learning-technology projects I’m proud of. 
-        Each project demonstrates how I combine accessibility, clarity, and learner-centered design.
+        A few instructional design and learning-technology projects I’m proud of—each one focused on accessibility,
+        clarity, and learner-centered outcomes.
       </p>
     </section>
 
-    <!-- Project 1: ISLT 7361 Web-Based Portfolio -->
     <section class="content section-divider">
+      <h2>Portfolio Items</h2>
+
+      <!-- Project 1 -->
       <article class="project">
         <h3>ISLT 7361 · Web-Based Portfolio</h3>
         <p>
-          A course portfolio demonstrating an online learning experience. Includes topic intro, learning objectives, 
-          integrated media (text, video, and interactive elements), tool choices, and connections from artifacts to outcomes.
+          A course portfolio demonstrating an online learning experience with objectives, content sequencing,
+          and integrated media. I explain media principles, tool choices, and how artifacts map to outcomes.
         </p>
         <ul>
           <li>Introduces the topic & learner</li>
           <li>States learning objectives</li>
-          <li>Integrates images, audio/video I created</li>
-          <li>Explains media principles and tool selection</li>
-        </ul>
-        <p>
-          <a class="btn btn-primary" href="index.html">View Project</a>
-        </p>
-        <p class="hint" style="margin-top:-8px;">Note: This portfolio site is the live outcome for the project.</p>
-      </article>
-    </section>
-
-    <!-- Project 2: Grandfamilies / Grandparents Study -->
-    <section class="content section-divider">
-      <article class="project">
-        <h3>Grandfamilies Study (Adolescents Raised by Grandparents)</h3>
-        <p>
-          A mixed-methods proposal focused on adolescents raised by grandparents due to parental incarceration and/or 
-          substance use. The project explores learner context, equity, and supports that improve outcomes for youth in 
-          custodial grandparent households.
-        </p>
-        <ul>
-          <li>Defines research questions and learner needs</li>
-          <li>Outlines qualitative + quantitative data collection</li>
-          <li>Maps ethical considerations and accessibility</li>
-          <li>Connects findings to instructional recommendations</li>
-        </ul>
-        <p class="cta" style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn btn-primary" href="final-proposal.html">Read Summary</a>
-          <a class="btn btn-ghost" href="final-proposal.pdf" target="_blank" rel="noopener">Open Full Proposal (PDF)</a>
-        </p>
-        <p class="hint" style="margin-top:-8px;">If your PDF file has a different name, just update the link above.</p>
-      </article>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>© 2025 Krystal Joyce — <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a></p>
-  </footer>
-
-</body>
-</html>
+          <li>Integrates images and audio/video I created</li>
+          <li>Explains media principles and tool
