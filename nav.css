@@ -1,74 +1,61 @@
-/* nav.css — Krystal Joyce */
-
-/* Header container */
+/* nav.css — unified nav for all pages */
 header {
-  background-color: #009999;   /* teal header */
+  background-color: #009999;
   color: #fff;
   padding: 1rem 1.25rem;
 }
 
-/* Branding/logo area */
+/* main bar */
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* brand on left, links on right */
+  justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-/* Brand image or text */
-.navbar .brand img {
-  height: 40px;
-  width: auto;
-  vertical-align: middle;
-}
+/* brand */
 .navbar .brand {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.25rem;
   color: #fff;
   text-decoration: none;
 }
 
-/* Navigation list */
-.navbar ul {
-  list-style: none;
-  display: flex;               /* FLEXBOX requirement */
+/* ensure nav lists never inherit your global UL styles */
+.navbar ul,
+.nav {                     /* also covers <ul class="nav"> if you use it anywhere */
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;           /* horizontal layout */
   gap: 1rem;
-  margin: 0;
-  padding: 0;
 }
 
-/* Navigation links */
+/* links */
 .navbar a {
+  color: #fff;
   text-decoration: none;
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
   font-weight: 600;
-  color: #fff;
-  transition: background 0.2s ease-in-out;
 }
 
-/* Hover & focus styles (accessibility) */
 .navbar a:hover,
 .navbar a:focus-visible {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255,255,255,.15);
   outline: none;
 }
 
-/* Active link styling */
+/* highlight current page */
 .navbar .active a,
 .navbar a[aria-current="page"] {
   background: #007777;
   font-weight: 700;
 }
 
-/* Mobile responsive adjustments */
+/* responsive */
 @media (max-width: 640px) {
-  .navbar {
-    justify-content: center;
-  }
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  .navbar { justify-content: center; }
+  .navbar ul { flex-wrap: wrap; justify-content: center; }
 }
