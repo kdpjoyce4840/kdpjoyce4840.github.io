@@ -1,125 +1,20 @@
-/* ===== Global ===== */
-* { box-sizing: border-box; }
+/* keep images responsive everywhere */
+img { max-width: 100%; height: auto; display: block; }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  color: #333;
+/* hero layout polish */
+.hero-media { 
+  flex: 0 0 240px; 
+  display: flex; 
+  justify-content: center; 
+}
+.hero .headshot { 
+  width: 220px; 
+  height: 220px; 
+  border-radius: 50%; 
+  object-fit: cover; 
 }
 
-/* ===== Header / Nav ===== */
-header {
-  background: #009999;
-  color: #fff;
-  text-align: center;
-  padding: 22px 0 14px;
+/* small-screen stacking already handled; ensure centering */
+@media (max-width: 720px) {
+  .hero-media { margin-top: 10px; }
 }
-
-header h1 {
-  margin: 0 0 8px 0;
-  font-size: 2.5rem;
-}
-
-nav { margin-top: 6px; }
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: bold;
-}
-
-nav a:hover { text-decoration: underline; }
-
-/* ===== Buttons (generic) ===== */
-.btn {
-  display: inline-block;
-  padding: 10px 16px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform .05s ease, box-shadow .2s ease, background .2s ease;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
-}
-.btn:active { transform: translateY(1px); }
-
-.btn-primary {
-  background: #009999;
-  color: #fff;
-  border: 1px solid #008989;
-}
-.btn-primary:hover {
-  background: #00a9a9;
-  box-shadow: 0 6px 18px rgba(0,153,153,0.22);
-}
-
-.btn-ghost {
-  background: #fff;
-  color: #006e6e;
-  border: 1px solid #cfecec;
-}
-.btn-ghost:hover {
-  background: #f8ffff;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
-}
-
-/* Optional: a generic .button link (if you use <a class="button">) */
-a.button {
-  display: inline-block;
-  background: #009999;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-a.button:hover { background: #007777; }
-
-/* ===== Hero (refreshed) ===== */
-.hero {
-  /* soft pattern + gradient that complements your header color */
-  background:
-    radial-gradient(1200px 400px at 8% -10%, rgba(0,153,153,0.18), transparent 55%),
-    linear-gradient(180deg, rgba(0,153,153,0.06), transparent 40%);
-  padding: 56px 0;
-  border-bottom: 1px solid #e8eef0;
-}
-
-.hero-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.hero-text { flex: 1; min-width: 280px; }
-
-.kicker {
-  display: inline-block;
-  font-size: 0.9rem;
-  letter-spacing: .03em;
-  text-transform: uppercase;
-  color: #007f7f;
-  background: #e8f7f7;
-  border: 1px solid #cfecec;
-  padding: 6px 10px;
-  border-radius: 999px;
-  margin-bottom: 10px;
-}
-
-.hero h1, .hero h2 {
-  margin: 8px 0 10px;
-  font-size: clamp(2rem, 3.2vw, 2.6rem);
-  line-height: 1.25;
-  color: #223;
-}
-
-.lead {
-  font-
