@@ -31,6 +31,11 @@ img { max-width: 100%; height: auto; display: block; }
   font-weight: 600;
 }
 .project-links a:hover { background:#00a9a9; }
+/* Projects page polish */
+.project { margin-bottom: 1.5rem; }
+.project h3 { margin-top: .25rem; }
+.project-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: .5rem; }
 
+hr { border: 0; border-top: 1px solid #e8eef0; margin: 1.25rem 0; }
 
 }
