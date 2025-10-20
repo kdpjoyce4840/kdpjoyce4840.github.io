@@ -1,11 +1,15 @@
-/* nav.css — unified nav for all pages */
+/* ===========================
+   nav.css — Global Navigation
+   =========================== */
+
+/* Header bar */
 header {
   background-color: #009999;
   color: #fff;
   padding: 1rem 1.25rem;
 }
 
-/* main bar */
+/* Main nav container */
 .navbar {
   display: flex;
   align-items: center;
@@ -14,7 +18,7 @@ header {
   flex-wrap: wrap;
 }
 
-/* brand */
+/* Brand */
 .navbar .brand {
   font-weight: 700;
   font-size: 1.25rem;
@@ -22,23 +26,37 @@ header {
   text-decoration: none;
 }
 
-/* ensure nav lists never inherit your global UL styles */
-.navbar ul,
-.nav {                     /* also covers <ul class="nav"> if you use it anywhere */
-  list-style: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  display: flex;           /* horizontal layout */
+/* Top-level list — supports both .menu and any .navbar ul as fallback */
+.navbar .menu,
+.navbar > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
   gap: 1rem;
 }
 
-/* links */
+/* Ensure nested uls inside navbar are also reset */
+.navbar ul ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Top-level items */
+.navbar .menu > li,
+.navbar > ul > li {
+  position: relative;           /* needed for positioned submenus */
+}
+
+/* Links (all levels) */
 .navbar a {
   color: #fff;
   text-decoration: none;
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
   font-weight: 600;
+  line-height: 1;
 }
 
 .navbar a:hover,
@@ -47,15 +65,96 @@ header {
   outline: none;
 }
 
-/* highlight current page */
-.navbar .active a,
+/* Current page indicator */
+.navbar .active > a,
 .navbar a[aria-current="page"] {
   background: #007777;
   font-weight: 700;
 }
 
-/* responsive */
-@media (max-width: 640px) {
+/* ===========================
+   Dropdowns (2-tier)
+   =========================== */
+
+.navbar .submenu {
+  list-style: none;
+  margin: .25rem 0 0 0;
+  padding: .5rem 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: #0c7f7f;
+  border-radius: .5rem;
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  z-index: 50;
+  display: none;
+}
+
+.navbar .submenu li { position: relative; }
+
+.navbar .submenu a {
+  display: block;
+  padding: .6rem .9rem;
+  color: #fff;
+  white-space: nowrap;
+  border-radius: 0;
+}
+
+.navbar .submenu a:hover,
+.navbar .submenu a:focus-visible {
+  background: rgba(255,255,255,.12);
+  outline: none;
+}
+
+/* Show submenu on hover OR keyboard focus */
+.navbar .has-submenu:hover > .submenu,
+.navbar .has-submenu:focus-within > .submenu {
+  display: block;
+}
+
+/* Second tier flies out to the right */
+.navbar .submenu .has-submenu > .submenu {
+  top: 0;
+  left: 100%;
+  margin-left: .25rem;
+}
+
+/* Optional caret indicators */
+.navbar .has-submenu > a::after {
+  content: "▾";
+  margin-left: .4rem;
+  font-size: .8em;
+}
+.navbar .submenu .has-submenu > a::after {
+  content: "▸";
+  margin-left: .5rem;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 680px) {
   .navbar { justify-content: center; }
-  .navbar ul { flex-wrap: wrap; justify-content: center; }
+  .navbar .menu,
+  .navbar > ul { flex-wrap: wrap; justify-content: center; gap: .5rem 1rem; }
+
+  /* Stack dropdowns in-flow for easy tapping */
+  .navbar .submenu {
+    position: static;
+    display: block;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar .submenu a {
+    background: rgba(0,0,0,.08);
+    border-radius: .4rem;
+    margin: .15rem 0;
+    padding: .5rem .75rem;
+  }
+
+  .navbar .submenu .submenu a { padding-left: 1.5rem; }
 }
