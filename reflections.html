@@ -25,39 +25,30 @@
 </head>
 <body>
 
-  <!-- ===== Header / Primary Nav w/ 2-tier dropdown ===== -->
-  <header>
-    <nav class="navbar" aria-label="Primary">
-      <a href="index.html" class="brand">KJ Portfolio</a>
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+  <header class="site-header">
+  <nav class="site-nav">
+    <a class="brand" href="index.html">KJ Portfolio</a>
 
-        <!-- 2-tier dropdown START -->
-        <li class="has-submenu">
-          <a href="projects.html" aria-haspopup="true" aria-expanded="false">Projects</a>
-          <ul class="submenu" aria-label="Projects submenu">
-            <li><a href="projects.html#portfolio">Portfolio Items</a></li>
+    <ul class="menu" role="menubar">
+      <li><a href="index.html" role="menuitem">Home</a></li>
+      <li><a href="about.html" role="menuitem">About</a></li>
 
-            <!-- second tier inside Projects → Learn -->
-            <li class="has-submenu">
-              <a href="projects.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
-              <ul class="submenu">
-                <li><a href="final-proposal.html">Research Proposal (page)</a></li>
-                <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
-                <li><a href="https://sites.google.com/view/krystalislt7361/home" target="_blank" rel="noopener">Web-Based Portfolio</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <!-- 2-tier dropdown END -->
+      <!-- Dropdown (two-tier) -->
+      <li class="has-sub" aria-haspopup="true">
+        <a href="projects.html" role="menuitem" aria-expanded="false">Projects</a>
+        <ul class="sub" role="menu">
+          <li><a href="projects.html#islt7361" role="menuitem">ISLT 7361 Web Portfolio</a></li>
+          <li><a href="final-proposal.html" role="menuitem">Final Proposal (HTML)</a></li>
+          <li><a href="final-proposal.pdf" role="menuitem" target="_blank" rel="noopener">Final Proposal (PDF)</a></li>
+        </ul>
+      </li>
 
-        <li class="active"><a href="reflections.html" aria-current="page">Reflections</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
-      </ul>
-    </nav>
-  </header>
+      <li><a href="reflections.html" role="menuitem">Reflections</a></li>
+      <li><a href="contact.html" role="menuitem">Contact</a></li>
+      <li><a class="resume" href="Resume10.2.25.pdf" role="menuitem" target="_blank" rel="noopener">Resume (PDF)</a></li>
+    </ul>
+  </nav>
+</header>
 
   <main>
     <h1>Reflections</h1>
