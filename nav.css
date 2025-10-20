@@ -1,13 +1,11 @@
 /* nav.css — unified nav for all pages */
-
-/* ===== Header container ===== */
 header {
   background-color: #009999;
   color: #fff;
   padding: 1rem 1.25rem;
 }
 
-/* ===== Main bar ===== */
+/* main bar */
 .navbar {
   display: flex;
   align-items: center;
@@ -16,7 +14,7 @@ header {
   flex-wrap: wrap;
 }
 
-/* Brand */
+/* brand */
 .navbar .brand {
   font-weight: 700;
   font-size: 1.25rem;
@@ -24,7 +22,7 @@ header {
   text-decoration: none;
 }
 
-/* Ensure nav lists never inherit global UL styles */
+/* ensure nav lists never inherit your global UL styles */
 .navbar ul,
 .nav {                     /* also covers <ul class="nav"> if you use it anywhere */
   list-style: none !important;
@@ -34,7 +32,7 @@ header {
   gap: 1rem;
 }
 
-/* Links */
+/* links */
 .navbar a {
   color: #fff;
   text-decoration: none;
@@ -49,84 +47,15 @@ header {
   outline: none;
 }
 
-/* Highlight current page */
-.navbar .active > a,
+/* highlight current page */
+.navbar .active a,
 .navbar a[aria-current="page"] {
   background: #007777;
   font-weight: 700;
 }
 
-/* ===== Dropdowns (2-tier) ===== */
-/* Works with: <ul class="menu"> ... <li class="has-submenu"> <ul class="submenu"> ... */
-
-.navbar .menu > li {             /* top-level items */
-  position: relative;
-}
-
-/* First-level submenu */
-.navbar .submenu {
-  list-style: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  min-width: 220px;
-  background: #0c7f7f;
-  border-radius: .5rem;
-  padding: .5rem 0;
-  margin: .25rem 0 0 0;
-  display: none;                 /* hidden by default */
-  z-index: 20;
-  box-shadow: 0 10px 24px rgba(0,0,0,.18);
-}
-
-.navbar .submenu li a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  padding: .5rem .9rem;
-  white-space: nowrap;
-}
-
-/* Show submenu on hover OR keyboard focus */
-.navbar li:hover > .submenu,
-.navbar li:focus-within > .submenu {
-  display: block;
-}
-
-/* Second-tier submenu (flies out to the right) */
-.navbar .submenu .has-submenu { position: relative; }
-.navbar .submenu .has-submenu > .submenu {
-  top: 0;
-  left: 100%;
-  margin-left: .25rem;
-}
-
-/* Hover/focus styles inside dropdowns */
-.navbar .submenu a:hover,
-.navbar .submenu a:focus-visible {
-  background: rgba(255,255,255,.12);
-  outline: none;
-}
-
-/* ===== Responsive ===== */
+/* responsive */
 @media (max-width: 640px) {
   .navbar { justify-content: center; }
   .navbar ul { flex-wrap: wrap; justify-content: center; }
-
-  /* Let dropdowns stack in-flow on mobile so they are easy to tap */
-  .navbar .submenu {
-    position: static;
-    display: block;       /* visible when stacked */
-    box-shadow: none;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-  }
-  .navbar .submenu li a {
-    padding: .4rem .6rem;
-    border-radius: .4rem;
-    background: rgba(0,0,0,.08);
-    margin: .15rem;
-  }
-  .navbar .submenu .submenu { position: static; }
 }
