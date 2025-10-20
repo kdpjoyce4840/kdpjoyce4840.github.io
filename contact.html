@@ -12,20 +12,30 @@
 </head>
 <body>
 
-  <!-- ===== Header / Primary Nav ===== -->
-  <header>
-    <nav class="navbar" aria-label="Primary">
-      <a href="index.html" class="brand">KJ Portfolio</a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="reflections.html">Reflections</a></li>
-        <li class="active"><a href="contact.html" aria-current="page">Contact</a></li>
-        <li><a href="about.html#resume-section">Resume</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="site-header">
+  <nav class="site-nav">
+    <a class="brand" href="index.html">KJ Portfolio</a>
+
+    <ul class="menu" role="menubar">
+      <li><a href="index.html" role="menuitem">Home</a></li>
+      <li><a href="about.html" role="menuitem">About</a></li>
+
+      <!-- Dropdown (two-tier) -->
+      <li class="has-sub" aria-haspopup="true">
+        <a href="projects.html" role="menuitem" aria-expanded="false">Projects</a>
+        <ul class="sub" role="menu">
+          <li><a href="projects.html#islt7361" role="menuitem">ISLT 7361 Web Portfolio</a></li>
+          <li><a href="final-proposal.html" role="menuitem">Final Proposal (HTML)</a></li>
+          <li><a href="final-proposal.pdf" role="menuitem" target="_blank" rel="noopener">Final Proposal (PDF)</a></li>
+        </ul>
+      </li>
+
+      <li><a href="reflections.html" role="menuitem">Reflections</a></li>
+      <li><a href="contact.html" role="menuitem">Contact</a></li>
+      <li><a class="resume" href="Resume10.2.25.pdf" role="menuitem" target="_blank" rel="noopener">Resume (PDF)</a></li>
+    </ul>
+  </nav>
+</header>
 
   <!-- ===== Main ===== -->
   <main>
