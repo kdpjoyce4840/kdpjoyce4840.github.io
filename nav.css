@@ -88,7 +88,7 @@ header {
   border-radius: .5rem;
   box-shadow: 0 10px 24px rgba(0,0,0,.18);
   z-index: 50;
-  display: none;
+  display: none;                 /* hidden by default */
 }
 
 .navbar .submenu li { position: relative; }
@@ -113,11 +113,21 @@ header {
   display: block;
 }
 
-/* Second tier flies out to the right */
+/* Keep dropdowns open while hovering nested menus (APPLIES AT ALL SIZES) */
+.navbar li.has-submenu:hover > .submenu,
+.navbar li.has-submenu:focus-within > .submenu {
+  display: block;
+}
+.navbar .submenu li.has-submenu:hover > .submenu,
+.navbar .submenu li.has-submenu:focus-within > .submenu {
+  display: block;
+}
+
+/* Second tier flies out to the right — remove gaps so hover doesn’t break */
 .navbar .submenu .has-submenu > .submenu {
   top: 0;
-  left: 100%;
-  margin-left: .25rem;
+  left: calc(100% - 2px); /* overlap by 2px to avoid a hover gap */
+  margin-left: 0;
 }
 
 /* Optional caret indicators */
@@ -157,15 +167,4 @@ header {
   }
 
   .navbar .submenu .submenu a { padding-left: 1.5rem; }
-/* Keep dropdown open when hovering nested submenus */
-.navbar li.has-submenu:hover > .submenu,
-.navbar li.has-submenu:focus-within > .submenu {
-  display: block;
-}
-
-.navbar .submenu li.has-submenu:hover > .submenu,
-.navbar .submenu li.has-submenu:focus-within > .submenu {
-  display: block;
-}
-
 }
