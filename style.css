@@ -337,3 +337,45 @@ footer a:focus{
   footer{ padding:22px 12px; }
   footer .contact-row{ gap:18px; }
 }
+
+/* ===== Print Styles (About Page) ===== */
+@media print {
+  body {
+    font-family: "Times New Roman", serif; /* Serif for print */
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide everything not needed in print */
+  header, nav, img, video, .hero, .cta, .project, .ref-block {
+    display: none !important;
+  }
+
+  main {
+    margin: 1in;  /* 1-inch margins for print */
+    padding: 0;
+  }
+
+  h1, h2, h3 {
+    color: #000;
+    font-size: 18pt;
+    margin-bottom: 0.5rem;
+  }
+
+  p, li {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Footer simplified */
+  footer {
+    display: block;
+    text-align: center;
+    font-size: 12pt;
+    color: #000;
+    margin-top: 2rem;
+  }
+  footer img { display: none; } /* hide icons */
+}
