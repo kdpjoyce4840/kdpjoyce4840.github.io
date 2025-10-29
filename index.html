@@ -2,87 +2,109 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home | Krystal Joyce</title>
 
   <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <!-- External Stylesheets -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="nav.css" />
 </head>
 <body>
-  <!-- ===== Header / Nav ===== -->
-<header>
-  <nav class="navbar" aria-label="Primary">
-    <a href="index.html" class="brand">
-      <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
-      KJ Portfolio
-    </a>
-    <ul>
-      <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="reflections.html">Reflections</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
-    </ul>
-  </nav>
-</header>
 
-<!-- ===== Hero ===== -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-text">
-      <span class="kicker">Instructional Design • Web Design & Dev</span>
-      <h1>Hi, I’m Krystal Joyce.</h1>
-      <p class="lead">
-        I design clear, accessible learning experiences. My work blends research-informed
-        practice with clean, usable interfaces—so learners can focus on what matters.
-      </p>
-      <div class="cta">
-        <a class="btn btn-primary" href="projects.html">View Projects</a>
-        <a class="btn btn-ghost" href="reflections.html">Read Reflections</a>
+  <!-- ===== Header / Primary Nav w/ 2-tier dropdown ===== -->
+  <header>
+    <nav class="navbar" aria-label="Primary">
+      <a href="index.html" class="brand">
+        <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo" />
+        KJ Portfolio
+      </a>
+
+      <ul class="menu">
+        <li class="active">
+          <a href="index.html" aria-current="page">Home</a>
+        </li>
+        <li><a href="about.html">About</a></li>
+
+        <!-- 2-tier dropdown START -->
+        <li class="has-submenu">
+          <a href="projects.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <ul class="submenu" aria-label="Projects submenu">
+            <li><a href="projects.html#portfolio">Portfolio Items</a></li>
+            <li class="has-submenu">
+              <a href="projects.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
+              <ul class="submenu">
+                <li><a href="final-proposal.html">Research Proposal (page)</a></li>
+                <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
+                <li><a href="https://sites.google.com/view/krystalislt7361/home" target="_blank" rel="noopener">Web-Based Portfolio</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- 2-tier dropdown END -->
+
+        <li><a href="reflections.html">Reflections</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="kicker">Instructional Design • Web Design & Dev</span>
+        <h1>Hi, I’m Krystal Joyce.</h1>
+        <p class="lead">
+          I design clear, accessible learning experiences. My work blends research-informed
+          practice with clean, usable interfaces—so learners can focus on what matters.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="projects.html">View Projects</a>
+          <a class="btn btn-ghost" href="reflections.html">Read Reflections</a>
+        </div>
       </div>
-    </div>
-    <figure class="hero-media">
-      <img src="headshot.jpg" alt="Headshot of Krystal Joyce" class="headshot">
-    </figure>
-  </div>
-</section>
 
-<!-- ===== Main ===== -->
-<main>
-  <section class="intro">
-    <div class="intro-text">
-      <h2>Design with empathy. Iterate with evidence.</h2>
-      <p>
-        I’ve worked across education and behavioral health, which taught me the value of
-        compassionate communication and pragmatic design. I’m currently pursuing an M.S.
-        in Learning Technologies & Design at the University of Missouri.
-      </p>
+      <figure class="hero-media">
+        <img src="headshot.jpg" alt="Headshot of Krystal Joyce" class="headshot" />
+      </figure>
     </div>
   </section>
-</main>
 
-<!-- ===== Footer with Icons ===== -->
-<footer>
-  <p>© 2025 Krystal Joyce</p>
-  <div class="contact-info">
-    <p>
-      <img src="icons8-phone-50.png" alt="Phone Icon" class="icon">
-      870-656-0047
-    </p>
-    <p>
-      <img src="icons8-email-50.png" alt="Email Icon" class="icon">
-      <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
-    </p>
-  </div>
-</footer>
+  <!-- ===== Main ===== -->
+  <main>
+    <section class="intro">
+      <div class="intro-text">
+        <h2>Design with empathy. Iterate with evidence.</h2>
+        <p>
+          I’ve worked across education and behavioral health, which taught me the value of
+          compassionate communication and pragmatic design. I’m currently pursuing an M.S.
+          in Learning Technologies & Design at the University of Missouri.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer with Icons ===== -->
+  <footer>
+    <p>© 2025 Krystal Joyce</p>
+    <div class="contact-info">
+      <p class="contact-item">
+        <img src="icons8-phone-50.png" alt="Phone Icon" class="icon" />
+        870-656-0047
+      </p>
+      <p class="contact-item">
+        <img src="icons8-email-50.png" alt="Email Icon" class="icon" />
+        <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
+      </p>
+    </div>
+  </footer>
 
 </body>
 </html>
