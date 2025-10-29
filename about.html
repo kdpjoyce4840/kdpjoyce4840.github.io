@@ -7,25 +7,48 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="nav.css" />
 </head>
-<body>
-
-  <!-- ===== Header / Nav ===== -->
- <header>
+<body class="about">
+<!-- ===== Header / Primary Nav w/ 2-tier dropdown ===== -->
+<header>
   <nav class="navbar" aria-label="Primary">
     <a href="index.html" class="brand">
       <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
       KJ Portfolio
     </a>
-    <ul>
+
+    <ul class="menu">
       <li><a href="index.html">Home</a></li>
-      <li class="active"><a href="about.html" aria-current="page">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
+
+      <li class="active">
+        <a href="about.html" aria-current="page">About</a>
+      </li>
+
+      <!-- 2-tier dropdown START -->
+      <li class="has-submenu">
+        <a href="projects.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <ul class="submenu" aria-label="Projects submenu">
+          <li><a href="projects.html#portfolio">Portfolio Items</a></li>
+
+          <!-- second tier inside Projects → Learn -->
+          <li class="has-submenu">
+            <a href="projects.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
+            <ul class="submenu">
+              <li><a href="final-proposal.html">Research Proposal (page)</a></li>
+              <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
+              <li><a href="https://sites.google.com/view/krystalislt7361/home" target="_blank" rel="noopener">Web-Based Portfolio</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <!-- 2-tier dropdown END -->
+
       <li><a href="reflections.html">Reflections</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
     </ul>
   </nav>
 </header>
+
 
   <!-- ===== Main ===== -->
   <main>
@@ -120,22 +143,50 @@
       </p>
     </section>
 
-  </main>
+    <!-- ===== Print-only resume card (for assignment) ===== -->
+    <section class="print-only" aria-hidden="true">
+      <h1>Krystal Joyce</h1>
 
-<!-- ===== Footer with Icons ===== -->
+      <p class="print-desc">
+        I am an instructional designer-in-training with a decade of classroom experience
+        and a background in adolescent counseling and supervision. I design clear,
+        inclusive learning materials that balance evidence-based pedagogy with practical
+        constraints. My process emphasizes plain language, accessibility, and measurable
+        behaviors aligned to goals—so learners can focus on what matters and stakeholders
+        can see impact.
+      </p>
+
+      <h2>Education</h2>
+      <ul class="print-list">
+        <li><strong>M.S., Learning Technologies &amp; Design</strong> (in progress),
+            University of Missouri — Expected 2027</li>
+        <li><strong>B.S.E., Elementary Education</strong>, Arkansas State University — 2010</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p class="print-contact">
+        Phone: 870-656-0047 &nbsp; • &nbsp;
+        Email: krystaldpoole@gmail.com
+      </p>
+    </section>
+
+  </main>
 <footer>
-  <p>© 2025 Krystal Joyce</p>
-  <div class="contact-info">
-    <p>
-      <img src="icons8-phone-50.png" alt="Phone Icon" class="icon">
-      870-656-0047
-    </p>
-    <p>
-      <img src="icons8-email-50.png" alt="Email Icon" class="icon">
-      <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
-    </p>
+  <div class="footer-inner">
+    <div class="fine">© 2025 Krystal Joyce</div>
+    <div class="contact-row">
+      <div class="contact-item">
+        <img src="icons8-phone-50.png" alt="Phone">
+        870-656-0047
+      </div>
+      <div class="contact-item">
+        <img src="icons8-email-50.png" alt="Email">
+        <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
+      </div>
+    </div>
   </div>
 </footer>
+
 
 </body>
 </html>
