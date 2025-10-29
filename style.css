@@ -161,7 +161,6 @@ hr {
   margin-bottom: 1.5rem;
 }
 
-/* Pseudo-elements for assignment requirements */
 .ref-block p::first-letter {
   font-size: 1.5rem;
   font-weight: bold;
@@ -174,3 +173,12 @@ hr {
 
 /* ===== Resume buttons (bottom links styled as buttons) ===== */
 .pdf-btn,
+.pdf-btn:link,
+.pdf-btn:visited {
+  display: inline-block;
+  background: #009999;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration
