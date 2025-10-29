@@ -1,192 +1,381 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Krystal Joyce</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="nav.css" />
-</head>
-<body class="about">
-<!-- ===== Header / Primary Nav w/ 2-tier dropdown ===== -->
-<header>
-  <nav class="navbar" aria-label="Primary">
-    <a href="index.html" class="brand">
-      <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
-      KJ Portfolio
-    </a>
+/* ===== Base Styles ===== */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background: #fff;
+}
 
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
+h1, h2, h3 {
+  font-weight: 700;
+  color: #111;
+}
 
-      <li class="active">
-        <a href="about.html" aria-current="page">About</a>
-      </li>
+/* Keep images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-      <!-- 2-tier dropdown START -->
-      <li class="has-submenu">
-        <a href="projects.html" aria-haspopup="true" aria-expanded="false">Projects</a>
-        <ul class="submenu" aria-label="Projects submenu">
-          <li><a href="projects.html#portfolio">Portfolio Items</a></li>
+main {
+  padding-top: 14px;
+}
 
-          <!-- second tier inside Projects → Learn -->
-          <li class="has-submenu">
-            <a href="projects.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
-            <ul class="submenu">
-              <li><a href="final-proposal.html">Research Proposal (page)</a></li>
-              <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
-              <li><a href="https://sites.google.com/view/krystalislt7361/home" target="_blank" rel="noopener">Web-Based Portfolio</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <!-- 2-tier dropdown END -->
+/* ===== Navbar / Brand Logo ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #009999;
+  padding: 0.75rem 1.25rem;
+}
 
-      <li><a href="reflections.html">Reflections</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
-    </ul>
-  </nav>
-</header>
+.navbar .brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #fff;
+  text-decoration: none;
+}
 
+.brand-logo {
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
 
-  <!-- ===== Main ===== -->
-  <main>
+/* Nav Menu */
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
 
-    <!-- Tagline / Intro -->
-    <section class="tagline section-divider">
-      <h2>Instructional Design | Education | Technology</h2>
-      <p class="intro">
-        Welcome! My name is Krystal Joyce, and I’m excited to share my professional journey with you.
-        Here you’ll find my background, projects, and reflections as I continue developing skills in
-        instructional design and technology.
-      </p>
+.navbar .menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
 
-      <!-- CTA Buttons -->
-      <p class="cta">
-        <a class="btn btn-primary" href="projects.html">View Projects</a>
-        <a class="btn btn-ghost" href="reflections.html">Read Reflections</a>
-      </p>
-    </section>
+.navbar .menu li a:hover,
+.navbar .menu li a:focus {
+  color: #fffae6;
+}
 
-    <!-- Intro Video -->
-    <section class="about-video section-divider" aria-labelledby="intro-video-title">
-      <h3 id="intro-video-title">Intro Video</h3>
+.navbar .menu li.active a {
+  font-weight: 700;
+  border-bottom: 2px solid #fff;
+}
 
-      <div class="video-card">
-        <div class="video-wrap">
-          <video class="video-player" controls playsinline preload="metadata"
-                 poster="intro-poster-light.jpg" aria-label="Introduction by Krystal Joyce">
-            <source src="IntroVideo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <p class="video-caption">A brief introduction by Krystal Joyce.</p>
-      </div>
-    </section>
+/* Dropdown Menus */
+.has-submenu {
+  position: relative;
+}
 
-    <!-- Professional Background -->
-    <section class="content section-divider">
-      <h3>Professional Background</h3>
-      <p>
-        I hold a BSE in Elementary Education and have over 10 years of experience teaching across multiple
-        grade levels. I later transitioned into nonprofit counseling, working with adolescents facing
-        substance-use challenges and eventually serving as a supervisor.
-      </p>
-      <p>
-        Currently, I am pursuing a Master’s in Learning Technologies and Design at the University of Missouri,
-        where I’m building skills in instructional design, technology integration, and creating accessible
-        learning experiences.
-      </p>
-    </section>
+.submenu {
+  display: none;
+  position: absolute;
+  background: #007777;
+  padding: 0.5rem 0;
+  list-style: none;
+  margin: 0;
+  border-radius: 0.4rem;
+  min-width: 180px;
+  z-index: 1000;
+}
 
-    <!-- Highlights -->
-    <section class="content section-divider" aria-labelledby="highlights-title">
-      <h3 id="highlights-title">Highlights</h3>
-      <ul class="highlights-list">
-        <li>10+ years teaching (elementary, multiple grades)</li>
-        <li>Nonprofit adolescent counseling & supervision</li>
-        <li>L1 Support Technician, SightView Software (2023–Present)</li>
-        <li>Currently pursuing M.S. in Learning Technologies & Design (MU)</li>
-      </ul>
-    </section>
+.submenu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
 
-    <!-- Resume -->
-    <section class="content section-divider" id="resume-section" aria-labelledby="resume-title">
-      <h2 id="resume-title">Resume</h2>
-      <p>You can view or download my full resume below:</p>
+.submenu li a:hover {
+  background: #008c8c;
+}
 
-      <div class="pdf-card" role="region" aria-labelledby="resume-download-title">
-        <h3 id="resume-download-title">Download Resume (PDF)</h3>
-        <p>Download a PDF copy of my current resume for a detailed overview of my education, experience, and skills.</p>
-        <a class="pdf-btn" href="Resume10.2.25.pdf" target="_blank" rel="noopener">Open PDF</a>
-      </div>
-    </section>
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu {
+  display: block;
+}
 
-    <!-- Educational Experiences -->
-    <section class="content section-divider">
-      <h3>Educational Experiences</h3>
-      <p>
-        BSE in Elementary Education (Arkansas State University, 2010) • 10 years classroom teaching (K, 1st, 6th) •
-        Nonprofit adolescent counselor & supervisor (2015–2023) • Frontline healthcare/vision care support (2018–2020) •
-        L1 Support Technician, SightView Software (2023–Present) • M.S. in Learning Technologies & Design,
-        University of Missouri (Expected 2027)
-      </p>
-    </section>
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(180deg, #008c8c 0%, #007777 100%);
+  color: #fff;
+  padding: 3.25rem 2rem;
+  box-shadow: 0 2px 18px rgba(0,0,0,.12);
+}
 
-    <!-- Reflections -->
-    <section class="content section-divider">
-      <h3>Reflections</h3>
-      <p>
-        My work is guided by a belief in the power of education and technology to create meaningful change.
-        I strive to design learning experiences that are inclusive, engaging, and impactful for all learners.
-      </p>
-    </section>
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-    <!-- ===== Print-only resume card (for assignment) ===== -->
-    <section class="print-only" aria-hidden="true">
-      <h1>Krystal Joyce</h1>
+.hero-text {
+  flex: 1 1 50%;
+}
 
-      <p class="print-desc">
-        I am an instructional designer-in-training with a decade of classroom experience
-        and a background in adolescent counseling and supervision. I design clear,
-        inclusive learning materials that balance evidence-based pedagogy with practical
-        constraints. My process emphasizes plain language, accessibility, and measurable
-        behaviors aligned to goals—so learners can focus on what matters and stakeholders
-        can see impact.
-      </p>
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  letter-spacing: .2px;
+}
 
-      <h2>Education</h2>
-      <ul class="print-list">
-        <li><strong>M.S., Learning Technologies &amp; Design</strong> (in progress),
-            University of Missouri — Expected 2027</li>
-        <li><strong>B.S.E., Elementary Education</strong>, Arkansas State University — 2010</li>
-      </ul>
+.hero-text .lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #f3ffff;
+  opacity: .95;
+}
 
-      <h2>Contact</h2>
-      <p class="print-contact">
-        Phone: 870-656-0047 &nbsp; • &nbsp;
-        Email: krystaldpoole@gmail.com
-      </p>
-    </section>
+.kicker {
+  display: inline-block;
+  font-size: .9rem;
+  text-transform: uppercase;
+  color: #e6ffff;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
 
-  </main>
-<footer>
-  <div class="footer-inner">
-    <div class="fine">© 2025 Krystal Joyce</div>
-    <div class="contact-row">
-      <div class="contact-item">
-        <img src="icons8-phone-50.png" alt="Phone">
-        870-656-0047
-      </div>
-      <div class="contact-item">
-        <img src="icons8-email-50.png" alt="Email">
-        <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
-      </div>
-    </div>
-  </div>
-</footer>
+.hero-media {
+  flex: 0 0 260px;
+  text-align: center;
+}
 
+.hero .headshot {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  outline: 3px solid rgba(255,255,255,.45);
+  outline-offset: 4px;
+}
 
-</body>
-</html>
+/* CTA buttons inside hero */
+.cta a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  background: #00b3b3;
+  border: 1px solid rgba(255,255,255,.35);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+.cta a:hover {
+  background: #00c3c3;
+}
+
+.btn.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.6);
+  color: #fff;
+}
+.btn.btn-ghost:hover {
+  background: rgba(255,255,255,.12);
+}
+
+/* Responsive Hero */
+@media (max-width: 720px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ===== Projects page buttons ===== */
+.project-links a {
+  display: inline-block;
+  margin-right: .5rem;
+  padding: .45rem .75rem;
+  border-radius: .5rem;
+  border: 1px solid #008989;
+  text-decoration: none;
+  background: #009999;
+  color: #fff;
+  font-weight: 600;
+}
+.project-links a:hover {
+  background:#00a9a9;
+}
+
+.project {
+  margin-bottom: 1.5rem;
+}
+.project h3 {
+  margin-top: .25rem;
+}
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: .5rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e8eef0;
+  margin: 1.25rem 0;
+}
+
+/* ===== Reflections Page ===== */
+.ref-block {
+  background: #f5ffff;
+  border: 2px solid #009999;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.ref-block p::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #006666;
+}
+.ref-block p {
+  text-indent: 1.5em;
+}
+
+/* ===== Resume Button ===== */
+.pdf-btn,
+.pdf-btn:link,
+.pdf-btn:visited {
+  display: inline-block;
+  background: #009999;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+.pdf-btn:hover {
+  background: #00b3b3;
+}
+
+/* ===== Footer (compact, centered, tidy) ===== */
+footer{
+  background:#008a8a;                 /* teal to match site */
+  color:#fff;
+  padding:28px 16px;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+
+footer .footer-inner{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+
+footer .fine{
+  font-size:.9rem;
+  opacity:.9;
+}
+
+footer .contact-row{
+  display:flex;
+  gap:28px;                           /* space between phone/email */
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+}
+
+footer .contact-item{
+  display:flex;
+  align-items:center;
+  gap:10px;                           /* space between icon and text */
+  font-weight:600;
+}
+
+footer .contact-item img{
+  width:20px;
+  height:20px;
+  /* make PNG icons white so they read on teal */
+  filter: brightness(0) invert(1);
+  opacity:.9;
+}
+
+footer a{
+  color:#fff;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+}
+
+footer a:hover,
+footer a:focus{
+  border-bottom-color:rgba(255,255,255,.6);
+  outline:none;
+}
+
+/* tiny screens */
+@media (max-width:480px){
+  footer{ padding:22px 12px; }
+  footer .contact-row{ gap:18px; }
+}
+
+/* ===== Print Styles (About Page) ===== */
+@media print {
+  body {
+    font-family: "Times New Roman", serif; /* Serif for print */
+    color: #000;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide everything not needed in print */
+  header, nav, img, video, .hero, .cta, .project, .ref-block {
+    display: none !important;
+  }
+
+  main {
+    margin: 1in;  /* 1-inch margins for print */
+    padding: 0;
+  }
+
+  h1, h2, h3 {
+    color: #000;
+    font-size: 18pt;
+    margin-bottom: 0.5rem;
+  }
+
+  p, li {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Footer simplified */
+  footer {
+    display: block;
+    text-align: center;
+    font-size: 12pt;
+    color: #000;
+    margin-top: 2rem;
+  }
+  footer img { display: none; } /* hide icons */
+}
