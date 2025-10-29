@@ -1,38 +1,339 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Krystal Joyce</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="nav.css" />
-</head>
-<body class="about">
-<!-- ===== Header / Primary Nav w/ 2-tier dropdown ===== -->
-<header>
-  <nav class="navbar" aria-label="Primary">
-    <a href="index.html" class="brand">
-      <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
-      KJ Portfolio
-    </a>
+/* ===== Base Styles ===== */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background: #fff;
+}
 
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
+h1, h2, h3 {
+  font-weight: 700;
+  color: #111;
+}
 
-      <li class="active">
-        <a href="about.html" aria-current="page">About</a>
-      </li>
+/* Keep images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-      <!-- 2-tier dropdown START -->
-      <li class="has-submenu">
-        <a href="projects.html" aria-haspopup="true" aria-expanded="false">Projects</a>
-        <ul class="submenu" aria-label="Projects submenu">
-          <li><a href="projects.html#portfolio">Portfolio Items</a></li>
+main {
+  padding-top: 14px;
+}
 
-          <!-- second tier inside Projects → Learn -->
-          <li class="has-submenu">
-            <a href="projects.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
-            <ul class="submenu">
-              <li><a href="final-proposal.html">Research Proposal (page)</a></li>
-              <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
-              <li><a href="htt
+/* ===== Navbar / Brand Logo ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #009999;
+  padding: 0.75rem 1.25rem;
+}
+
+.navbar .brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Nav Menu */
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar .menu li a:hover,
+.navbar .menu li a:focus {
+  color: #fffae6;
+}
+
+.navbar .menu li.active a {
+  font-weight: 700;
+  border-bottom: 2px solid #fff;
+}
+
+/* Dropdown Menus */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background: #007777;
+  padding: 0.5rem 0;
+  list-style: none;
+  margin: 0;
+  border-radius: 0.4rem;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background: #008c8c;
+}
+
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu {
+  display: block;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(180deg, #008c8c 0%, #007777 100%);
+  color: #fff;
+  padding: 3.25rem 2rem;
+  box-shadow: 0 2px 18px rgba(0,0,0,.12);
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1 1 50%;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  letter-spacing: .2px;
+}
+
+.hero-text .lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #f3ffff;
+  opacity: .95;
+}
+
+.kicker {
+  display: inline-block;
+  font-size: .9rem;
+  text-transform: uppercase;
+  color: #e6ffff;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.hero-media {
+  flex: 0 0 260px;
+  text-align: center;
+}
+
+.hero .headshot {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  outline: 3px solid rgba(255,255,255,.45);
+  outline-offset: 4px;
+}
+
+/* CTA buttons inside hero */
+.cta a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  background: #00b3b3;
+  border: 1px solid rgba(255,255,255,.35);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+.cta a:hover {
+  background: #00c3c3;
+}
+
+.btn.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.6);
+  color: #fff;
+}
+.btn.btn-ghost:hover {
+  background: rgba(255,255,255,.12);
+}
+
+/* Responsive Hero */
+@media (max-width: 720px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ===== Projects page buttons ===== */
+.project-links a {
+  display: inline-block;
+  margin-right: .5rem;
+  padding: .45rem .75rem;
+  border-radius: .5rem;
+  border: 1px solid #008989;
+  text-decoration: none;
+  background: #009999;
+  color: #fff;
+  font-weight: 600;
+}
+.project-links a:hover {
+  background:#00a9a9;
+}
+
+.project {
+  margin-bottom: 1.5rem;
+}
+.project h3 {
+  margin-top: .25rem;
+}
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: .5rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e8eef0;
+  margin: 1.25rem 0;
+}
+
+/* ===== Reflections Page ===== */
+.ref-block {
+  background: #f5ffff;
+  border: 2px solid #009999;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.ref-block p::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #006666;
+}
+.ref-block p {
+  text-indent: 1.5em;
+}
+
+/* ===== Resume Button ===== */
+.pdf-btn,
+.pdf-btn:link,
+.pdf-btn:visited {
+  display: inline-block;
+  background: #009999;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+.pdf-btn:hover {
+  background: #00b3b3;
+}
+
+/* ===== Footer (compact, centered, tidy) ===== */
+footer{
+  background:#008a8a;                 /* teal to match site */
+  color:#fff;
+  padding:28px 16px;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+
+footer .footer-inner{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+
+footer .fine{
+  font-size:.9rem;
+  opacity:.9;
+}
+
+footer .contact-row{
+  display:flex;
+  gap:28px;                           /* space between phone/email */
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+}
+
+footer .contact-item{
+  display:flex;
+  align-items:center;
+  gap:10px;                           /* space between icon and text */
+  font-weight:600;
+}
+
+footer .contact-item img{
+  width:20px;
+  height:20px;
+  /* make PNG icons white so they read on teal */
+  filter: brightness(0) invert(1);
+  opacity:.9;
+}
+
+footer a{
+  color:#fff;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+}
+
+footer a:hover,
+footer a:focus{
+  border-bottom-color:rgba(255,255,255,.6);
+  outline:none;
+}
+
+/* tiny screens */
+@media (max-width:480px){
+  footer{ padding:22px 12px; }
+  footer .contact-row{ gap:18px; }
+}
