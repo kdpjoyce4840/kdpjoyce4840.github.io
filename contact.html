@@ -13,23 +13,42 @@
 <body>
 
   <!-- ===== Header / Primary Nav ===== -->
+<!-- ===== Header / Primary Nav ===== -->
+<header>
+  <nav class="navbar" aria-label="Primary">
+    <a href="index.html" class="brand">
+      <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
+      KJ Portfolio
+    </a>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
 
-  <header>
-    <nav class="navbar" aria-label="Primary">
-      <a href="index.html" class="brand">KJ Portfolio</a>
-      <ul>
-        <li><a href="in
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="reflections.html">Reflections</a></li>
-        <li class="active"><a href="contact.html" aria-current="page">Contact</a></li>
-        <li><a href="about.html#resume-section">Resume</a></li>
-      </ul>
-    </nav>
+      <!-- 2-tier dropdown START -->
+      <li class="has-submenu">
+        <a href="projects.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <ul class="submenu" aria-label="Projects submenu">
+          <li><a href="projects.html#portfolio">Portfolio Items</a></li>
+          <li class="has-submenu">
+            <a href="projects.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
+            <ul class="submenu">
+              <li><a href="final-proposal.html">Research Proposal (page)</a></li>
+              <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
+              <li><a href="https://sites.google.com/view/krystalislt7361/home" target="_blank" rel="noopener">Web-Based Portfolio</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <!-- 2-tier dropdown END -->
+
+      <li><a href="reflections.html">Reflections</a></li>
+      <li class="active"><a href="contact.html" aria-current="page">Contact</a></li>
+      <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+    </ul>
+  </nav>
+</header>
 
 
-  </header>
 
   <!-- ===== Main ===== -->
   <main>
