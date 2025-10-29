@@ -14,10 +14,10 @@ h1, h2, h3 {
 }
 
 /* keep images responsive everywhere */
-img { 
-  max-width: 100%; 
-  height: auto; 
-  display: block; 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* soft breathing room under the header on all screens */
@@ -25,7 +25,7 @@ main { padding-top: 14px; }
 
 /* ===== Hero Section ===== */
 .hero {
-  background: linear-gradient(180deg, #008c8c 0%, #007777 100%); /* darker teal gradient */
+  background: linear-gradient(180deg, #008c8c 0%, #007777 100%);
   color: #fff;
   padding: 3.25rem 2rem;
   border-bottom: 0;
@@ -42,14 +42,12 @@ main { padding-top: 14px; }
   margin: 0 auto;
 }
 
-.hero-text {
-  flex: 1 1 50%;
-}
+.hero-text { flex: 1 1 50%; }
 
-.hero-text h1 { 
-  font-size: 2.8rem; 
+.hero-text h1 {
+  font-size: 2.8rem;
   margin-bottom: 1rem;
-  color: #fff; 
+  color: #fff;
   letter-spacing: .2px;
 }
 
@@ -111,9 +109,7 @@ main { padding-top: 14px; }
   border: 1px solid rgba(255,255,255,.6);
   color: #fff;
 }
-.btn.btn-ghost:hover {
-  background: rgba(255,255,255,.12);
-}
+.btn.btn-ghost:hover { background: rgba(255,255,255,.12); }
 
 /* Small screen hero */
 @media (max-width: 720px) {
@@ -140,16 +136,16 @@ main { padding-top: 14px; }
 /* ===== Projects page polish ===== */
 .project { margin-bottom: 1.5rem; }
 .project h3 { margin-top: .25rem; }
-.project-links { 
-  display: flex; 
-  gap: 12px; 
-  flex-wrap: wrap; 
-  margin-top: .5rem; 
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: .5rem;
 }
-hr { 
-  border: 0; 
-  border-top: 1px solid #e8eef0; 
-  margin: 1.25rem 0; 
+hr {
+  border: 0;
+  border-top: 1px solid #e8eef0;
+  margin: 1.25rem 0;
 }
 
 /* ===== Reflections page (box model) ===== */
@@ -160,16 +156,12 @@ hr {
   padding: 1rem 1.25rem;
   margin-bottom: 1.5rem;
 }
-
 .ref-block p::first-letter {
   font-size: 1.5rem;
   font-weight: bold;
   color: #006666;
 }
-
-.ref-block p {
-  text-indent: 1.5em;
-}
+.ref-block p { text-indent: 1.5em; }
 
 /* ===== Resume buttons (bottom links styled as buttons) ===== */
 .pdf-btn,
@@ -181,4 +173,53 @@ hr {
   font-weight: 600;
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
-  text-decoration
+  text-decoration: none;
+  transition: background .2s ease, transform .05s ease-in-out;
+}
+.pdf-btn:hover { background:#00b3b3; }
+.pdf-btn:active { transform: scale(.98); }
+
+/* ===== Footer Styles ===== */
+footer {
+  background: #008c8c;           /* teal to match your theme */
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer .contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+footer .contact-item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+footer .contact-item img {
+  width: 24px;
+  height: 24px;
+}
+
+footer .contact-item a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer .contact-item a:hover,
+footer .contact-item a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* small-screen padding tweak for footer */
+@media (max-width: 480px) {
+  footer { padding: 1.25rem .75rem; }
+}
