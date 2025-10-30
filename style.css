@@ -309,7 +309,77 @@ footer a:focus{
   footer{ padding:22px 12px; }
   footer .contact-row{ gap:18px; }
 }
+/* ===== Contact Form Styles (matches site look) ===== */
+.contact-form {
+  max-width: 680px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f5ffff;
+  border: 2px solid #009999;
+  border-radius: 12px;
+}
 
+.contact-form h2 {
+  margin: 0 0 1rem 0;
+  color: #007777;
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #009999;
+  box-shadow: 0 0 0 3px rgba(0,153,153,.15);
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-actions { margin-top: 0.5rem; }
+
+.btn-submit {
+  background: #009999;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+.btn-submit:hover { background: #00b3b3; }
+
+/* Mobile nicety */
+@media (max-width: 480px) {
+  .contact-form { padding: 1.25rem; }
+}
 /* ===== Print Styles — About page only (strong) ===== */
 @media print {
   @page { margin: 1in; }
