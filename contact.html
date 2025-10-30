@@ -6,93 +6,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Krystal Joyce</title>
 
-  <!-- Link BOTH stylesheets -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="nav.css">
+  <!-- Link BOTH stylesheets (cache-bust optional) -->
+  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="nav.css?v=5">
 </head>
 <body>
 
   <!-- ===== Header / Primary Nav ===== -->
-<!-- ===== Header / Primary Nav ===== -->
-<header>
-  <nav class="navbar" aria-label="Primary">
-    <a href="index.html" class="brand">
-      <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
-      KJ Portfolio
-    </a>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+  <header>
+    <nav class="navbar" aria-label="Primary">
+      <a href="index.html" class="brand">
+        <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
+        KJ Portfolio
+      </a>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
 
-      <!-- 2-tier dropdown START -->
-      <li class="has-submenu">
-        <a href="projects.html" aria-haspopup="true" aria-expanded="false">Projects</a>
-        <ul class="submenu" aria-label="Projects submenu">
-          <li><a href="projects.html#portfolio">Portfolio Items</a></li>
-          <li class="has-submenu">
-            <a href="projects.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
-            <ul class="submenu">
-              <li><a href="final-proposal.html">Research Proposal (page)</a></li>
-              <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
-              <li><a href="https://sites.google.com/view/krystalislt7361/home" target="_blank" rel="noopener">Web-Based Portfolio</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <!-- 2-tier dropdown END -->
+        <!-- 2-tier dropdown START -->
+        <li class="has-submenu">
+          <a href="projects.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <ul class="submenu" aria-label="Projects submenu">
+            <li><a href="projects.html#portfolio">Portfolio Items</a></li>
+            <li class="has-submenu">
+              <a href="projects.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
+              <ul class="submenu">
+                <li><a href="final-proposal.html">Research Proposal (page)</a></li>
+                <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
+                <li><a href="https://sites.google.com/view/krystalislt7361/home" target="_blank" rel="noopener">Web-Based Portfolio</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- 2-tier dropdown END -->
 
-      <li><a href="reflections.html">Reflections</a></li>
-      <li class="active"><a href="contact.html" aria-current="page">Contact</a></li>
-      <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
-    </ul>
-  </nav>
-</header>
-
-
+        <li><a href="reflections.html">Reflections</a></li>
+        <li class="active"><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- ===== Main ===== -->
   <main>
-    <section class="tagline">
+    <section class="tagline section-divider">
       <h2>Let’s Connect</h2>
-      <p>Reach out for collaboration, project inquiries, or networking.</p>
+      <p>Have a project or question? Send a message and I’ll get back to you.</p>
     </section>
 
-    <hr class="rule" />
+    <!-- Contact Form -->
+    <section class="contact-form section-divider" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact Form</h2>
 
-    <section class="content">
-      <h3>Details</h3>
-      <ul>
-        <li>Email: <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/krystal-joyce-b64b69166/" target="_blank" rel="noopener">linkedin.com/in/krystal-joyce-b64b69166/</a></li>
-        <li>Location: Missouri (CST)</li>
-      </ul>
+      <form action="#" method="post" novalidate>
+        <!-- Title dropdown -->
+        <div class="form-row">
+          <label for="title">Title</label>
+          <select id="title" name="title" required>
+            <option value="">Select…</option>
+            <option value="mr">Mr.</option>
+            <option value="ms">Ms.</option>
+            <option value="mx">Mx.</option>
+            <option value="dr">Dr.</option>
+          </select>
+        </div>
 
-      <!-- Optional form (uncomment if needed for grading) -->
-      <!--
-      <form class="contact-form">
-        <label>Name<input type="text" required></label>
-        <label>Email<input type="email" required></label>
-        <label>Message<textarea rows="5" required></textarea></label>
-        <button type="submit">Send</button>
+        <!-- Full name -->
+        <div class="form-row">
+          <label for="fullname">Full Name</label>
+          <input id="fullname" name="fullname" type="text" placeholder="Enter your name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-row">
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Message -->
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+        </div>
+
+        <!-- Select (you choose the content) -->
+        <div class="form-row">
+          <label for="inquiry">Inquiry Type</label>
+          <select id="inquiry" name="inquiry" required>
+            <option value="">Select…</option>
+            <option value="general">General Inquiry</option>
+            <option value="project">Project Request</option>
+            <option value="collab">Collaboration</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <!-- Submit -->
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">Submit</button>
+        </div>
       </form>
-      -->
     </section>
   </main>
-<footer>
-  <div class="footer-inner">
-    <div class="fine">© 2025 Krystal Joyce</div>
-    <div class="contact-row">
-      <div class="contact-item">
-        <img src="icons8-phone-50.png" alt="Phone">
-        870-656-0047
-      </div>
-      <div class="contact-item">
-        <img src="icons8-email-50.png" alt="Email">
-        <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="fine">© 2025 Krystal Joyce</div>
+      <div class="contact-row">
+        <div class="contact-item">
+          <img src="icons8-phone-50.png" alt="Phone">
+          870-656-0047
+        </div>
+        <div class="contact-item">
+          <img src="icons8-email-50.png" alt="Email">
+          <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
-
+  </footer>
 </body>
 </html>
