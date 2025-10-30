@@ -24,6 +24,9 @@ main {
   padding-top: 14px;
 }
 
+/* ===== Ensure print-only section hidden by default ===== */
+.print-only { display: none; }
+
 /* ===== Navbar / Brand Logo ===== */
 .navbar {
   display: flex;
@@ -277,7 +280,7 @@ hr {
 
 /* ===== Footer (compact, centered, tidy) ===== */
 footer{
-  background:#008a8a;                 /* teal to match site */
+  background:#008a8a;                 
   color:#fff;
   padding:28px 16px;
   border-top:1px solid rgba(255,255,255,.12);
@@ -299,7 +302,7 @@ footer .fine{
 
 footer .contact-row{
   display:flex;
-  gap:28px;                           /* space between phone/email */
+  gap:28px;                           
   flex-wrap:wrap;
   align-items:center;
   justify-content:center;
@@ -308,14 +311,13 @@ footer .contact-row{
 footer .contact-item{
   display:flex;
   align-items:center;
-  gap:10px;                           /* space between icon and text */
+  gap:10px;                           
   font-weight:600;
 }
 
 footer .contact-item img{
   width:20px;
   height:20px;
-  /* make PNG icons white so they read on teal */
   filter: brightness(0) invert(1);
   opacity:.9;
 }
@@ -338,44 +340,34 @@ footer a:focus{
   footer .contact-row{ gap:18px; }
 }
 
-/* ===== Print Styles (About Page) ===== */
+/* ===== Print Styles — About page only ===== */
 @media print {
-  body {
-    font-family: "Times New Roman", serif; /* Serif for print */
-    color: #000;
+  @page { margin: 1in; }
+
+  body.about { 
+    font-family: "Times New Roman", Georgia, serif;
+    color: #000; 
     background: #fff;
-    margin: 0;
-    padding: 0;
   }
 
-  /* Hide everything not needed in print */
-  header, nav, img, video, .hero, .cta, .project, .ref-block {
+  body.about header,
+  body.about nav,
+  body.about img,
+  body.about video,
+  body.about .hero,
+  body.about .tagline,
+  body.about .about-video,
+  body.about .section-divider,
+  body.about .content,
+  body.about .cta,
+  body.about .project,
+  body.about .ref-block {
     display: none !important;
   }
 
-  main {
-    margin: 1in;  /* 1-inch margins for print */
-    padding: 0;
-  }
+  body.about main > :not(.print-only) { display: none !important; }
+  body.about .print-only { display: block !important; }
 
-  h1, h2, h3 {
-    color: #000;
-    font-size: 18pt;
-    margin-bottom: 0.5rem;
-  }
-
-  p, li {
-    font-size: 12pt;
-    line-height: 1.5;
-  }
-
-  /* Footer simplified */
-  footer {
-    display: block;
-    text-align: center;
-    font-size: 12pt;
-    color: #000;
-    margin-top: 2rem;
-  }
-  footer img { display: none; } /* hide icons */
-}
+  body.about .print-only h1 { font-size: 22pt; margin: 0 0 .2in 0; color:#000; }
+  body.about .print-only h2 { font-size: 14pt; margin: .15in 0 .05in; color:#000; }
+  body.about .
