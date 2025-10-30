@@ -13,62 +13,173 @@ h1, h2, h3 {
   color: #111;
 }
 
-img { max-width: 100%; height: auto; display: block; }
+/* Keep images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-main { padding-top: 14px; }
+main {
+  padding-top: 14px;
+}
 
-/* ===== Print-only hidden by default ===== */
+/* ===== Ensure print-only section hidden by default ===== */
 .print-only { display: none; }
 
-/* ... [all your existing nav, hero, buttons, footer styles stay the same] ... */
-
-/* ===== Print Styles — About page only (strong) ===== */
-@media print {
-  @page { margin: 1in; }
-
-  body.about {
-    font-family: "Times New Roman", Georgia, serif !important;
-    color: #000 !important;
-    background: #fff !important;
-  }
-  body.about * {
-    background: transparent !important;
-    box-shadow: none !important;
-    color: #000 !important;
-  }
-
-  /* Hide all non-print content */
-  body.about header,
-  body.about nav,
-  body.about img,
-  body.about video,
-  body.about .hero,
-  body.about .tagline,
-  body.about .about-video,
-  body.about .section-divider,
-  body.about .content,
-  body.about .cta,
-  body.about .project,
-  body.about .ref-block { display: none !important; }
-
-  body.about main > *:not(.print-only) { display: none !important; }
-  body.about .print-only { display: block !important; page-break-inside: avoid; }
-
-  /* Typography for print */
-  body.about .print-only h1 { font-size: 22pt; margin: 0 0 .2in 0; }
-  body.about .print-only h2 { font-size: 14pt; margin: .15in 0 .05in; }
-  body.about .print-only p,
-  body.about .print-only li { font-size: 11pt; line-height: 1.45; }
-  body.about .print-only .print-list { margin: 0 0 .15in 1.1em; }
-
-  /* Footer plain text only */
-  body.about footer {
-    display: block !important;
-    text-align: center;
-    font-size: 11pt;
-    color: #000 !important;
-    margin-top: .35in;
-  }
-  body.about footer .fine,
-  body.about footer img { display: none !important; }
+/* ===== Navbar / Brand Logo ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #009999;
+  padding: 0.75rem 1.25rem;
 }
+
+.navbar .brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Nav Menu */
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar .menu li a:hover,
+.navbar .menu li a:focus {
+  color: #fffae6;
+}
+
+.navbar .menu li.active a {
+  font-weight: 700;
+  border-bottom: 2px solid #fff;
+}
+
+/* Dropdown Menus */
+.has-submenu { position: relative; }
+
+.submenu {
+  display: none;
+  position: absolute;
+  background: #007777;
+  padding: 0.5rem 0;
+  list-style: none;
+  margin: 0;
+  border-radius: 0.4rem;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.submenu li a:hover { background: #008c8c; }
+
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu { display: block; }
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(180deg, #008c8c 0%, #007777 100%);
+  color: #fff;
+  padding: 3.25rem 2rem;
+  box-shadow: 0 2px 18px rgba(0,0,0,.12);
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-text { flex: 1 1 50%; }
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  letter-spacing: .2px;
+}
+
+.hero-text .lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #f3ffff;
+  opacity: .95;
+}
+
+.kicker {
+  display: inline-block;
+  font-size: .9rem;
+  text-transform: uppercase;
+  color: #e6ffff;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.hero-media { flex: 0 0 260px; text-align: center; }
+
+.hero .headshot {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  outline: 3px solid rgba(255,255,255,.45);
+  outline-offset: 4px;
+}
+
+/* CTA buttons inside hero */
+.cta a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  background: #00b3b3;
+  border: 1px solid rgba(255,255,255,.35);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+.cta a:hover { background: #00c3c3; }
+
+.btn.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.6);
