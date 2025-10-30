@@ -339,17 +339,24 @@ footer a:focus{
   footer{ padding:22px 12px; }
   footer .contact-row{ gap:18px; }
 }
-
-/* ===== Print Styles — About page only ===== */
+/* ===== Print Styles — About page only (strong) ===== */
 @media print {
   @page { margin: 1in; }
 
-  body.about { 
-    font-family: "Times New Roman", Georgia, serif;
-    color: #000; 
-    background: #fff;
+  /* Base print look */
+  body.about {
+    font-family: "Times New Roman", Georgia, serif !important;
+    color: #000 !important;
+    background: #fff !important;
+  }
+  /* Nuke screen layout */
+  body.about * {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;          /* all black text */
   }
 
+  /* Hide EVERYTHING except the print card + footer */
   body.about header,
   body.about nav,
   body.about img,
@@ -361,9 +368,30 @@ footer a:focus{
   body.about .content,
   body.about .cta,
   body.about .project,
-  body.about .ref-block {
-    display: none !important;
+  body.about .ref-block { display: none !important; }
+
+  /* Only show the print card */
+  body.about main > *:not(.print-only) { display: none !important; }
+  body.about .print-only { display: block !important; page-break-inside: avoid; }
+
+  /* Type sizes so it fits on 1 page */
+  body.about .print-only h1 { font-size: 22pt; margin: 0 0 .2in 0; }
+  body.about .print-only h2 { font-size: 14pt; margin: .15in 0 .05in; }
+  body.about .print-only p,
+  body.about .print-only li { font-size: 11pt; line-height: 1.45; }
+  body.about .print-only .print-list { margin: 0 0 .15in 1.1em; }
+
+  /* Footer text only (no icons/logos) */
+  body.about footer { 
+    display: block !important; 
+    text-align: center; 
+    font-size: 11pt; 
+    color: #000 !important; 
+    margin-top: .35in; 
   }
+  body.about footer .fine,
+  body.about footer img { display: none !important; }
+}
 
   body.about main > :not(.print-only) { display: none !important; }
   body.about .print-only { display: block !important; }
