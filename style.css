@@ -183,3 +183,182 @@ main {
 .btn.btn-ghost {
   background: transparent;
   border: 1px solid rgba(255,255,255,.6);
+  color: #fff;
+}
+.btn.btn-ghost:hover { background: rgba(255,255,255,.12); }
+
+/* Responsive Hero */
+@media (max-width: 720px) {
+  .hero-inner { flex-direction: column; text-align: center; }
+}
+
+/* ===== Projects page buttons ===== */
+.project-links a {
+  display: inline-block;
+  margin-right: .5rem;
+  padding: .45rem .75rem;
+  border-radius: .5rem;
+  border: 1px solid #008989;
+  text-decoration: none;
+  background: #009999;
+  color: #fff;
+  font-weight: 600;
+}
+.project-links a:hover { background:#00a9a9; }
+
+.project { margin-bottom: 1.5rem; }
+.project h3 { margin-top: .25rem; }
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: .5rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e8eef0;
+  margin: 1.25rem 0;
+}
+
+/* ===== Reflections Page ===== */
+.ref-block {
+  background: #f5ffff;
+  border: 2px solid #009999;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.ref-block p::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #006666;
+}
+.ref-block p { text-indent: 1.5em; }
+
+/* ===== Resume Button ===== */
+.pdf-btn,
+.pdf-btn:link,
+.pdf-btn:visited {
+  display: inline-block;
+  background: #009999;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+.pdf-btn:hover { background: #00b3b3; }
+
+/* ===== Footer (compact, centered, tidy) ===== */
+footer{
+  background:#008a8a;                 /* teal to match site */
+  color:#fff;
+  padding:28px 16px;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+
+footer .footer-inner{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+
+footer .fine{ font-size:.9rem; opacity:.9; }
+
+footer .contact-row{
+  display:flex;
+  gap:28px;                           /* space between phone/email */
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+}
+
+footer .contact-item{
+  display:flex;
+  align-items:center;
+  gap:10px;                           /* space between icon and text */
+  font-weight:600;
+}
+
+footer .contact-item img{
+  width:20px;
+  height:20px;
+  /* make PNG icons white so they read on teal */
+  filter: brightness(0) invert(1);
+  opacity:.9;
+}
+
+footer a{
+  color:#fff;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+}
+
+footer a:hover,
+footer a:focus{
+  border-bottom-color:rgba(255,255,255,.6);
+  outline:none;
+}
+
+/* tiny screens */
+@media (max-width:480px){
+  footer{ padding:22px 12px; }
+  footer .contact-row{ gap:18px; }
+}
+
+/* ===== Print Styles — About page only (strong) ===== */
+@media print {
+  @page { margin: 1in; }
+
+  /* Base print look */
+  body.about { 
+    font-family: "Times New Roman", Georgia, serif !important;
+    color: #000 !important; 
+    background: #fff !important;
+  }
+  body.about * {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;          /* all black text */
+  }
+
+  /* Hide EVERYTHING except the print card + footer */
+  body.about header,
+  body.about nav,
+  body.about img,
+  body.about video,
+  body.about .hero,
+  body.about .tagline,
+  body.about .about-video,
+  body.about .section-divider,
+  body.about .content,
+  body.about .cta,
+  body.about .project,
+  body.about .ref-block { display: none !important; }
+
+  /* Only show the print card */
+  body.about main > *:not(.print-only) { display: none !important; }
+  body.about .print-only { display: block !important; page-break-inside: avoid; }
+
+  /* Type sizes so it fits on 1 page */
+  body.about .print-only h1 { font-size: 22pt; margin: 0 0 .2in 0; }
+  body.about .print-only h2 { font-size: 14pt; margin: .15in 0 .05in; }
+  body.about .print-only p,
+  body.about .print-only li { font-size: 11pt; line-height: 1.45; }
+  body.about .print-only .print-list { margin: 0 0 .15in 1.1em; }
+
+  /* Footer: contact text only (no icons/logos) */
+  body.about footer { 
+    display: block !important;
+    text-align: center; 
+    font-size: 11pt; 
+    color: #000 !important; 
+    margin-top: .35in;
+  }
+  body.about footer .fine,
+  body.about footer img { display: none !important; }
+}
