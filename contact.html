@@ -1,4 +1,4 @@
-<!-- Krystal Joyce — contact.html -->
+<!-- Krystal Joyce — contact.html (FormSubmit version) -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,8 +7,8 @@
   <title>Contact | Krystal Joyce</title>
 
   <!-- Link BOTH stylesheets (cache-bust optional) -->
-  <link rel="stylesheet" href="style.css?v=5">
-  <link rel="stylesheet" href="nav.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="nav.css?v=6">
 </head>
 <body>
 
@@ -58,7 +58,13 @@
     <section class="contact-form section-divider" aria-labelledby="contact-title">
       <h2 id="contact-title">Contact Form</h2>
 
-      <form action="#" method="post" novalidate>
+      <!-- ✅ FORM SUBMIT SETUP -->
+      <form action="https://formsubmit.co/krystaldpoole@gmail.com" method="POST" class="contact-form">
+        <!-- Hidden config -->
+        <input type="hidden" name="_subject" value="New message from KJ Portfolio">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://kdpjoyce4840.github.io/thanks.html">
+
         <!-- Title dropdown -->
         <div class="form-row">
           <label for="title">Title</label>
@@ -89,7 +95,7 @@
           <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
         </div>
 
-        <!-- Select (you choose the content) -->
+        <!-- Inquiry type -->
         <div class="form-row">
           <label for="inquiry">Inquiry Type</label>
           <select id="inquiry" name="inquiry" required>
@@ -125,5 +131,6 @@
       </div>
     </div>
   </footer>
+
 </body>
 </html>
