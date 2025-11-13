@@ -1,56 +1,89 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Joyce Template</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <title>Joyce Template | KJ Portfolio</title>
+
+  <!-- Required for mobile layout -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-  <!-- Site styles -->
-  <link rel="stylesheet" href="nav.css">
-  <link rel="stylesheet" href="style.css">
+  <!-- Site styles: keep SAME order as other pages -->
+  <link rel="stylesheet" href="style.css?v=7" />
+  <link rel="stylesheet" href="nav.css?v=7" />
 </head>
 <body>
+
+  <!-- ===== Header / Responsive Primary Nav ===== -->
   <header>
-    <nav class="navbar" aria-label="Primary Navigation">
-      <!-- Logo -->
-      <a class="brand" href="index.html">
-        <img src="logo.png" alt="KJ Portfolio Logo">
+    <nav class="navbar" aria-label="Primary">
+      <!-- Brand / Logo -->
+      <a href="joyceTemplate.html" class="brand">
+        <img src="logo.png" alt="KJ Portfolio Logo" class="brand-logo">
+        KJ Portfolio
       </a>
-      <!-- Navigation links -->
-      <ul>
-        <li><a href="index.html">Home</a></li>
+
+      <!-- Hidden checkbox that controls the mobile menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+      <!-- Hamburger button tied to the checkbox -->
+      <label for="nav-toggle" class="hamburger">&#9776;</label>
+
+      <!-- Main nav links -->
+      <ul class="menu">
+        <li class="active">
+          <a href="joyceTemplate.html" aria-current="page">Home</a>
+        </li>
         <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
+
+        <!-- Simple Projects dropdown just to show it works -->
+        <li class="has-submenu">
+          <a href="projects.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <ul class="submenu" aria-label="Projects submenu">
+            <li><a href="projects.html#portfolio">Portfolio Items</a></li>
+            <li><a href="projects.html#learn">Learn</a></li>
+          </ul>
+        </li>
+
         <li><a href="reflections.html">Reflections</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <!-- ===== Main Content ===== -->
+  <main style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
     <h1>Welcome to My Template Page</h1>
-    <p>This page demonstrates the required navigation bar with Flexbox layout and logo.</p>
+    <p>
+      This page is used for practicing mobile-friendly navigation. On large screens,
+      the full navigation bar is visible. On small screens, the hamburger icon appears
+      and the menu is hidden until it’s toggled.
+    </p>
+    <p>
+      Created by Krystal Joyce – September 15, 2025.
+    </p>
   </main>
 
-  <!-- ===== Footer with contact icons ===== -->
+  <!-- ===== Footer (reuse same style as other pages) ===== -->
   <footer>
-    <div class="contact-info">
-      <!-- Phone -->
-      <div class="contact-item">
-        <img src="icons8-phone-50.png" alt="Phone icon">
-        <a href="tel:+18706560047">(870) 656-0047</a>
-      </div>
-      <!-- Email -->
-      <div class="contact-item">
-        <img src="icons8-email-50.png" alt="Email icon">
-        <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
+    <div class="footer-inner">
+      <div class="fine">© 2025 Krystal Joyce</div>
+      <div class="contact-row">
+        <div class="contact-item">
+          <img src="icons8-phone-50.png" alt="Phone">
+          870-656-0047
+        </div>
+        <div class="contact-item">
+          <img src="icons8-email-50.png" alt="Email">
+          <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
+        </div>
       </div>
     </div>
   </footer>
+
 </body>
 </html>
