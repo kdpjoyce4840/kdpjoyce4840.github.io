@@ -14,12 +14,19 @@
   <!-- ===== Header / Primary Nav ===== -->
   <header>
     <nav class="navbar" aria-label="Primary">
-      <a href="index.html" class="brand">
-        <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
-        KJ Portfolio
-      </a>
-<div class="hamburger">&#9776;</div>
-      <ul class="menu">
+     <a href="index.html" class="brand">
+  <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
+  KJ Portfolio
+</a>
+
+<!-- Hidden checkbox that controls the menu -->
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+<!-- Hamburger button tied to the checkbox -->
+<label for="nav-toggle" class="hamburger">&#9776;</label>
+
+<ul class="menu">
+
         <li><a href="index.html">Home</a></li>
         <li class="active"><a href="about.html" aria-current="page">About</a></li>
 
