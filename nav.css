@@ -188,8 +188,8 @@ header {
     z-index: 1000;
   }
 
-  /* Show menu when checkbox is checked */
-  .nav-toggle:checked + .hamburger + .menu {
+  /* ⭐ Show menu when checkbox is checked (brand & label can be in between) */
+  .nav-toggle:checked ~ .menu {
     display: flex;
   }
 
@@ -283,16 +283,6 @@ body.template-page main h1 {
   /* Remove dropdown caret on Projects on this page */
   body.template-page .has-submenu > a::after {
     content: "";
-  }
-
-  /* Ensure menu is hidden by default on this page too */
-  body.template-page .navbar .menu {
-    display: none;
-  }
-
-  /* And only shown when the checkbox is checked */
-  body.template-page .nav-toggle:checked + .hamburger + .menu {
-    display: flex;
   }
 
   /* Slightly tighter top margin/padding on mobile
