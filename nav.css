@@ -191,7 +191,7 @@ header {
     display: flex;
   }
 
-  /* Dropdowns: keep same show/hide behavior,
+  /* Dropdowns: keep show/hide behavior,
      but stack visually when they ARE open */
   .navbar .submenu {
     position: static;
@@ -199,7 +199,7 @@ header {
     box-shadow: none;
     padding: 0;
     margin: 0;
-    /* NOTE: no display: block here on purpose */
+    /* no display:block here on purpose */
   }
 
   .navbar .submenu a {
@@ -246,14 +246,14 @@ body.template-page .brand {
   gap: 0.4rem;
 }
 
-/* Remove homepage hero layout */
+/* Remove homepage hero layout on template page */
 body.template-page .hero,
 body.template-page main.hero,
 body.template-page .hero-inner {
   all: unset;
 }
 
-/* Template-page clean centered content */
+/* Template-page clean centered content (desktop/tablet) */
 body.template-page main {
   max-width: 800px;
   margin: 2.5rem auto;
@@ -263,3 +263,32 @@ body.template-page main {
   background: #ffffff;
 }
 
+/* Make sure the H1 doesn't get pushed off-screen */
+body.template-page main h1 {
+  margin-top: 0;
+}
+
+/* ===========================
+   TEMPLATE PAGE — MOBILE NAV & SPACING
+   =========================== */
+
+@media (max-width: 768px) {
+
+  /* Keep menu behavior the same but hide deep submenus
+     so the JoyceTemplate menu is short and clean */
+  body.template-page .navbar .submenu {
+    display: none !important;
+  }
+
+  /* Remove dropdown caret on Projects on this page */
+  body.template-page .has-submenu > a::after {
+    content: "";
+  }
+
+  /* Slightly tighter top margin/padding on mobile
+     so the title is visible with the nav */
+  body.template-page main {
+    margin: 1.5rem auto;
+    padding: 1rem 1.25rem 1.5rem;
+  }
+}
