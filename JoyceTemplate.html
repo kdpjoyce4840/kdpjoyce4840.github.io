@@ -21,17 +21,19 @@
   <header>
     <nav class="navbar" aria-label="Primary Navigation">
 
-      <!-- Hidden checkbox for hamburger -->
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-
-      <!-- Logo / Brand -->
+      <!-- Logo / Brand FIRST -->
       <a class="brand" href="index.html">
         <img src="logo.png" alt="KJ Portfolio Logo">
         KJ Portfolio
       </a>
 
-      <!-- Hamburger Button -->
-      <label for="nav-toggle" class="hamburger">&#9776;</label>
+      <!-- Hidden checkbox for hamburger -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+      <!-- Hamburger Button (label tied to checkbox) -->
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+        &#9776;
+      </label>
 
       <!-- Navigation Links -->
       <ul class="menu">
