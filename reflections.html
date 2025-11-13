@@ -7,8 +7,8 @@
   <title>Reflections | Krystal Joyce</title>
 
   <!-- Link BOTH stylesheets -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="nav.css?v=7">
 
   <!-- Page-scoped tweaks to satisfy rubric exactly -->
   <style>
@@ -25,13 +25,24 @@
 </head>
 <body>
 
-<!-- ===== Header / Primary Nav w/ 2-tier dropdown ===== -->
+<!-- ===== Header / Primary Nav w/ Hamburger ===== -->
 <header>
   <nav class="navbar" aria-label="Primary">
+    <!-- Brand -->
     <a href="index.html" class="brand">
       <img src="icons8-home-100.png" alt="Home" class="brand-logo">
       KJ Portfolio
     </a>
+
+    <!-- Hidden checkbox for mobile toggle -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+    <!-- Hamburger icon -->
+    <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+      &#9776;
+    </label>
+
+    <!-- Main menu -->
     <ul class="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -46,7 +57,12 @@
             <ul class="submenu">
               <li><a href="final-proposal.html">Research Proposal (page)</a></li>
               <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
-              <li><a href="https://sites.google.com/view/krystalislt7361/home" target="_blank" rel="noopener">Web-Based Portfolio</a></li>
+              <li>
+                <a href="https://sites.google.com/view/krystalislt7361/home"
+                   target="_blank" rel="noopener">
+                  Web-Based Portfolio
+                </a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -60,66 +76,67 @@
   </nav>
 </header>
 
-  <main>
-    <h1>Reflections</h1>
-    <p class="tagline">Learning, practice, and growth across design and technology.</p>
+<main>
+  <h1>Reflections</h1>
+  <p class="tagline">Learning, practice, and growth across design and technology.</p>
 
-    <!-- Each section below wraps paragraphs inside a “box model” element -->
-    <section class="ref-block" aria-labelledby="acc-first">
-      <h2 id="acc-first">Designing for Accessibility First</h2>
-      <p class="ref-first">
-        I’ve adopted an accessibility-first mindset. On every page and activity, I run a quick checklist so that clarity and access aren’t “nice to haves” but the default.
-      </p>
-      <p class="ref-other">
-        My checklist includes descriptive page titles, a logical heading order (H1 → H2 → H3), strong color contrast, meaningful alt text, keyboard navigability with visible focus states, and clear, consistent link styles.
-      </p>
-      <p class="ref-other">
-        The impact has been visible: fewer questions about “where to click,” easier scanning for all users, and content that holds up better on small screens or assistive tech.
-      </p>
-    </section>
+  <!-- Each section below wraps paragraphs inside a “box model” element -->
+  <section class="ref-block" aria-labelledby="acc-first">
+    <h2 id="acc-first">Designing for Accessibility First</h2>
+    <p class="ref-first">
+      I’ve adopted an accessibility-first mindset. On every page and activity, I run a quick checklist so that clarity and access aren’t “nice to haves” but the default.
+    </p>
+    <p class="ref-other">
+      My checklist includes descriptive page titles, a logical heading order (H1 → H2 → H3), strong color contrast, meaningful alt text, keyboard navigability with visible focus states, and clear, consistent link styles.
+    </p>
+    <p class="ref-other">
+      The impact has been visible: fewer questions about “where to click,” easier scanning for all users, and content that holds up better on small screens or assistive tech.
+    </p>
+  </section>
 
-    <section class="ref-block" aria-labelledby="structure">
-      <h2 id="structure">Structuring Content for Sense-Making</h2>
-      <p class="ref-first">
-        I’ve leaned into chunking and progressive disclosure—short intros, explicit objectives, and “do-able” steps that reduce cognitive load.
-      </p>
-      <p class="ref-other">
-        Using consistent spacing, gentle dividers, and predictable patterns makes the interface feel calmer. Learners don’t spend energy figuring out the layout; they spend it on the task.
-      </p>
-    </section>
+  <section class="ref-block" aria-labelledby="structure">
+    <h2 id="structure">Structuring Content for Sense-Making</h2>
+    <p class="ref-first">
+      I’ve leaned into chunking and progressive disclosure—short intros, explicit objectives, and “do-able” steps that reduce cognitive load.
+    </p>
+    <p class="ref-other">
+      Using consistent spacing, gentle dividers, and predictable patterns makes the interface feel calmer. Learners don’t spend energy figuring out the layout; they spend it on the task.
+    </p>
+  </section>
 
-    <section class="ref-block" aria-labelledby="feedback">
-      <h2 id="feedback">Iterating with Feedback</h2>
-      <p class="ref-first">
-        Feedback loops are now part of my normal workflow. I prototype quickly, test with a few people, and iterate in tight cycles.
-      </p>
-      <p class="ref-other">
-        My rhythm looks like this: sketch for structure → apply palette and spacing for style → refine language and interactions → verify accessibility. Each pass gets me closer to something that’s clear and usable.
-      </p>
-    </section>
+  <section class="ref-block" aria-labelledby="feedback">
+    <h2 id="feedback">Iterating with Feedback</h2>
+    <p class="ref-first">
+      Feedback loops are now part of my normal workflow. I prototype quickly, test with a few people, and iterate in tight cycles.
+    </p>
+    <p class="ref-other">
+      My rhythm looks like this: sketch for structure → apply palette and spacing for style → refine language and interactions → verify accessibility. Each pass gets me closer to something that’s clear and usable.
+    </p>
+  </section>
 
-    <section class="ref-block" aria-labelledby="tools">
-      <h2 id="tools">Tools & Workflow</h2>
-      <p class="ref-first">
-        Beyond HTML/CSS and GitHub Pages, I’m building a small toolkit for reliable delivery: version control with Git, quick wireframes in Figma (or pencil!), contrast checks, keyboard testing, and lightweight style guides.
-      </p>
-      <p class="ref-other">
-        The goal is speed with quality—get something in front of users fast, then keep polishing.
-      </p>
-    </section>
+  <section class="ref-block" aria-labelledby="tools">
+    <h2 id="tools">Tools & Workflow</h2>
+    <p class="ref-first">
+      Beyond HTML/CSS and GitHub Pages, I’m building a small toolkit for reliable delivery: version control with Git, quick wireframes in Figma (or pencil!), contrast checks, keyboard testing, and lightweight style guides.
+    </p>
+    <p class="ref-other">
+      The goal is speed with quality—get something in front of users fast, then keep polishing.
+    </p>
+  </section>
 
-    <section class="ref-block" aria-labelledby="next">
-      <h2 id="next">What’s Next</h2>
-      <p class="ref-first">
-        I plan to extend this site with interactive learning components, richer project write-ups, and clearer links to standards and outcomes.
-      </p>
-      <p class="ref-other">
-        If you’re interested in collaborating or trading ideas, I’d love to connect:
-        <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a> ·
-        <a href="https://www.linkedin.com/in/krystal-joyce-b64b69166/" target="_blank" rel="noopener">LinkedIn</a>.
-      </p>
-    </section>
-  </main>
+  <section class="ref-block" aria-labelledby="next">
+    <h2 id="next">What’s Next</h2>
+    <p class="ref-first">
+      I plan to extend this site with interactive learning components, richer project write-ups, and clearer links to standards and outcomes.
+    </p>
+    <p class="ref-other">
+      If you’re interested in collaborating or trading ideas, I’d love to connect:
+      <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a> ·
+      <a href="https://www.linkedin.com/in/krystal-joyce-b64b69166/" target="_blank" rel="noopener">LinkedIn</a>.
+    </p>
+  </section>
+</main>
+
 <footer>
   <div class="footer-inner">
     <div class="fine">© 2025 Krystal Joyce</div>
