@@ -167,4 +167,28 @@ header {
   }
 
   .navbar .submenu .submenu a { padding-left: 1.5rem; }
+   /* ===== Responsive Navigation (Mobile Hamburger) ===== */
+
+/* Hide hamburger by default (desktop) */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+
+  /* Hide the normal nav menu */
+  .navbar .menu {
+    display: none;
+  }
+
+  /* Show hamburger icon */
+  .hamburger {
+    display: block;
+  }
+}
+
 }
