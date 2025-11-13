@@ -167,9 +167,14 @@ header {
   }
 
   .navbar .submenu .submenu a { padding-left: 1.5rem; }
-   /* ===== Responsive Navigation (Mobile Hamburger) ===== */
+  /* ===== Responsive Navigation (Mobile Hamburger) ===== */
 
-/* Hide hamburger by default (desktop) */
+/* Hide the checkbox itself */
+.nav-toggle {
+  display: none;
+}
+
+/* Hamburger icon base styles (desktop: hidden) */
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -180,15 +185,34 @@ header {
 /* Mobile View */
 @media (max-width: 768px) {
 
-  /* Hide the normal nav menu */
-  .navbar .menu {
-    display: none;
+  .navbar {
+    position: relative;
+    align-items: center;
   }
 
-  /* Show hamburger icon */
+  /* Show hamburger icon on small screens */
   .hamburger {
     display: block;
+    margin-left: auto;          /* push to the right side */
   }
+
+  /* Hide the normal nav menu by default (mobile) */
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+    background-color: #009999;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 56px;                  /* just under the navbar bar */
+    padding: 0.75rem 1.25rem 1rem;
+    z-index: 1000;
+  }
+
+  /* When the checkbox is checked, show the menu */
+.nav-toggle:checked + .hamburger + .menu {
+  display: flex;
 }
 
 }
