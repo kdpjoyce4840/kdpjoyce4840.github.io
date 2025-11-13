@@ -217,41 +217,48 @@ header {
    TEMPLATE PAGE FIXES
    =========================== */
 
-.template-page header {
+/* Body reset only for template page */
+body.template-page {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+/* Header + Navbar */
+body.template-page header,
+body.template-page .navbar {
   background-color: #009999;
 }
 
-.template-page .brand img {
+/* Brand + Logo */
+body.template-page .brand img {
   width: 38px;
   height: auto;
   margin-right: 8px;
 }
 
-.template-page .brand {
+body.template-page .brand {
   font-size: 1.1rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-/* Remove hero layout inheritance */
-.template-page .hero,
-.template-page main.hero,
-.template-page .hero-inner {
+/* Remove homepage hero layout */
+body.template-page .hero,
+body.template-page main.hero,
+body.template-page .hero-inner {
   all: unset;
 }
 
-/* Center clean layout */
-.template-page main {
+/* Template-page clean centered content */
+body.template-page main {
+  max-width: 800px;
+  margin: 2.5rem auto;
+  padding: 1.5rem;
+  text-align: center;
+  line-height: 1.6;
   background: #ffffff;
-  padding-top: 2rem;
 }
-
-/* Navbar stays normal */
-.template-page .navbar {
-  background-color: #009999;
-}
-
-/* No giant homepage spacing */
-.template-page body {
-  margin: 0;
-  padding: 0;
 }
