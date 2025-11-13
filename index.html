@@ -12,19 +12,30 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <!-- External Stylesheets -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="style.css?v=7" />
+  <link rel="stylesheet" href="nav.css?v=7" />
 </head>
 <body>
 
   <!-- ===== Header / Primary Nav w/ 2-tier dropdown ===== -->
   <header>
     <nav class="navbar" aria-label="Primary">
+
+      <!-- Brand / logo -->
       <a href="index.html" class="brand">
         <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo" />
         KJ Portfolio
       </a>
 
+      <!-- Hidden checkbox that controls the mobile menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+      <!-- Hamburger button tied to the checkbox -->
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+        &#9776;
+      </label>
+
+      <!-- Main navigation menu -->
       <ul class="menu">
         <li class="active">
           <a href="index.html" aria-current="page">Home</a>
@@ -41,7 +52,12 @@
               <ul class="submenu">
                 <li><a href="final-proposal.html">Research Proposal (page)</a></li>
                 <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
-                <li><a href="https://sites.google.com/view/krystalislt7361/home" target="_blank" rel="noopener">Web-Based Portfolio</a></li>
+                <li>
+                  <a href="https://sites.google.com/view/krystalislt7361/home"
+                     target="_blank" rel="noopener">
+                    Web-Based Portfolio
+                  </a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -91,22 +107,21 @@
     </section>
   </main>
 
-<footer>
-  <div class="footer-inner">
-    <div class="fine">© 2025 Krystal Joyce</div>
-    <div class="contact-row">
-      <div class="contact-item">
-        <img src="icons8-phone-50.png" alt="Phone">
-        870-656-0047
-      </div>
-      <div class="contact-item">
-        <img src="icons8-email-50.png" alt="Email">
-        <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
+  <footer>
+    <div class="footer-inner">
+      <div class="fine">© 2025 Krystal Joyce</div>
+      <div class="contact-row">
+        <div class="contact-item">
+          <img src="icons8-phone-50.png" alt="Phone">
+          870-656-0047
+        </div>
+        <div class="contact-item">
+          <img src="icons8-email-50.png" alt="Email">
+          <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
-
+  </footer>
 
 </body>
 </html>
