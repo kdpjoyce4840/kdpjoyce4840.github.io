@@ -6,19 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Krystal Joyce</title>
 
-  <!-- Link BOTH stylesheets (cache-bust optional) -->
-  <link rel="stylesheet" href="style.css?v=6">
-  <link rel="stylesheet" href="nav.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="nav.css?v=7">
 </head>
 <body>
 
-  <!-- ===== Header / Primary Nav ===== -->
+  <!-- ===== Header / Primary Nav (with hamburger) ===== -->
   <header>
     <nav class="navbar" aria-label="Primary">
+
+      <!-- Brand -->
       <a href="index.html" class="brand">
         <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
         KJ Portfolio
       </a>
+
+      <!-- Hidden mobile checkbox -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+      <!-- Hamburger button -->
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+        &#9776;
+      </label>
+
+      <!-- Main nav menu -->
       <ul class="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -28,14 +39,23 @@
           <a href="projects.html" aria-haspopup="true" aria-expanded="false">Projects</a>
           <ul class="submenu" aria-label="Projects submenu">
             <li><a href="projects.html#portfolio">Portfolio Items</a></li>
+
             <li class="has-submenu">
               <a href="projects.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
+
               <ul class="submenu">
                 <li><a href="final-proposal.html">Research Proposal (page)</a></li>
                 <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
-                <li><a href="https://sites.google.com/view/krystalislt7361/home" target="_blank" rel="noopener">Web-Based Portfolio</a></li>
+                <li>
+                  <a href="https://sites.google.com/view/krystalislt7361/home"
+                     target="_blank"
+                     rel="noopener">
+                     Web-Based Portfolio
+                  </a>
+                </li>
               </ul>
             </li>
+
           </ul>
         </li>
         <!-- 2-tier dropdown END -->
@@ -44,6 +64,7 @@
         <li class="active"><a href="contact.html" aria-current="page">Contact</a></li>
         <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
       </ul>
+
     </nav>
   </header>
 
@@ -58,14 +79,14 @@
     <section class="contact-form section-divider" aria-labelledby="contact-title">
       <h2 id="contact-title">Contact Form</h2>
 
-      <!-- ✅ FORM SUBMIT SETUP -->
+      <!-- FORM SUBMIT SETUP -->
       <form action="https://formsubmit.co/krystaldpoole@gmail.com" method="POST" class="contact-form">
+
         <!-- Hidden config -->
         <input type="hidden" name="_subject" value="New message from KJ Portfolio">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_next" value="https://kdpjoyce4840.github.io/thanks.html">
 
-        <!-- Title dropdown -->
         <div class="form-row">
           <label for="title">Title</label>
           <select id="title" name="title" required>
@@ -77,25 +98,21 @@
           </select>
         </div>
 
-        <!-- Full name -->
         <div class="form-row">
           <label for="fullname">Full Name</label>
           <input id="fullname" name="fullname" type="text" placeholder="Enter your name" required>
         </div>
 
-        <!-- Email -->
         <div class="form-row">
           <label for="email">Email Address</label>
           <input id="email" name="email" type="email" placeholder="Enter your email" required>
         </div>
 
-        <!-- Message -->
         <div class="form-row">
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
         </div>
 
-        <!-- Inquiry type -->
         <div class="form-row">
           <label for="inquiry">Inquiry Type</label>
           <select id="inquiry" name="inquiry" required>
@@ -107,10 +124,10 @@
           </select>
         </div>
 
-        <!-- Submit -->
         <div class="form-actions">
           <button type="submit" class="btn-submit">Submit</button>
         </div>
+
       </form>
     </section>
   </main>
