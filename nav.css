@@ -145,11 +145,10 @@ header {
    RESPONSIVE NAVIGATION
    =========================== */
 
-/* Hide checkbox (but keep it clickable via label) */
+/* Hide checkbox visually but keep it clickable */
 .nav-toggle {
   position: absolute;
   opacity: 0;
-  pointer-events: none;
 }
 
 /* Hamburger (desktop hidden) */
@@ -188,8 +187,8 @@ header {
     z-index: 1000;
   }
 
-  /* ⭐ Show menu when checkbox is checked (brand & label can be in between) */
-  .nav-toggle:checked ~ .menu {
+  /* ⭐ Show menu when the checkbox with id="nav-toggle" is checked */
+  #nav-toggle:checked ~ .menu {
     display: flex;
   }
 
