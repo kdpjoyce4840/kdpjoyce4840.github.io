@@ -191,14 +191,15 @@ header {
     display: flex;
   }
 
-  /* Dropdowns become simple stacked blocks */
+  /* Dropdowns: keep same show/hide behavior,
+     but stack visually when they ARE open */
   .navbar .submenu {
     position: static;
-    display: block;
     background: transparent;
     box-shadow: none;
     padding: 0;
     margin: 0;
+    /* NOTE: no display: block here on purpose */
   }
 
   .navbar .submenu a {
@@ -260,5 +261,4 @@ body.template-page main {
   text-align: center;
   line-height: 1.6;
   background: #ffffff;
-}
 }
