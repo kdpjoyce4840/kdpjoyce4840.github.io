@@ -5,44 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | Krystal Joyce</title>
 
-  <!-- Make sure these filenames match your repo exactly -->
+  <!-- Link both stylesheets -->
   <link rel="stylesheet" href="style.css?v=7" />
   <link rel="stylesheet" href="nav.css?v=7" />
 </head>
+
 <body class="about">
 
-  <!-- ===== Header / Primary Nav ===== -->
+  <!-- ===== Header / Primary Navigation ===== -->
   <header>
     <nav class="navbar" aria-label="Primary">
 
-      <!-- Brand / logo -->
+      <!-- Brand -->
       <a href="index.html" class="brand">
         <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
         KJ Portfolio
       </a>
 
-      <!-- Hidden checkbox that controls the mobile menu -->
+      <!-- Hidden toggle for mobile -->
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
-      <!-- Hamburger button tied to the checkbox -->
-      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
-        &#9776;
-      </label>
+      <!-- Hamburger -->
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">&#9776;</label>
 
-      <!-- Main navigation menu -->
+      <!-- Main nav -->
       <ul class="menu">
         <li><a href="index.html">Home</a></li>
+
         <li class="active">
           <a href="about.html" aria-current="page">About</a>
         </li>
 
-        <!-- 2-tier dropdown START -->
+        <!-- Projects dropdown -->
         <li class="has-submenu">
-          <a href="projects.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <a href="project.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+
           <ul class="submenu" aria-label="Projects submenu">
-            <li><a href="projects.html#portfolio">Portfolio Items</a></li>
+            <li><a href="project.html#portfolio">Portfolio Items</a></li>
+
             <li class="has-submenu">
-              <a href="projects.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
+              <a href="project.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
+
               <ul class="submenu">
                 <li><a href="final-proposal.html">Research Proposal (page)</a></li>
                 <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
@@ -56,7 +59,6 @@
             </li>
           </ul>
         </li>
-        <!-- 2-tier dropdown END -->
 
         <li><a href="reflections.html">Reflections</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -65,11 +67,12 @@
     </nav>
   </header>
 
-  <!-- ===== Main (Grid) ===== -->
+  <!-- ===== Main (Grid Layout) ===== -->
   <main class="about-grid">
 
-    <!-- Left column: text -->
+    <!-- LEFT COLUMN — TEXT -->
     <div class="about-text">
+
       <section class="tagline section-divider">
         <h2>Instructional Design | Education | Technology</h2>
         <p class="intro">
@@ -78,7 +81,7 @@
           instructional design and technology.
         </p>
         <p class="cta">
-          <a class="btn btn-primary" href="projects.html">View Projects</a>
+          <a class="btn btn-primary" href="project.html">View Projects</a>
           <a class="btn btn-ghost" href="reflections.html">Read Reflections</a>
         </p>
       </section>
@@ -86,14 +89,15 @@
       <section class="content section-divider">
         <h3>Professional Background</h3>
         <p>
-          I hold a BSE in Elementary Education and have over 10 years of experience teaching across multiple
-          grade levels. I later transitioned into nonprofit counseling, working with adolescents facing
-          substance-use challenges and eventually serving as a supervisor.
+          I hold a BSE in Elementary Education and have over 10 years of experience teaching
+          across multiple grade levels. I later transitioned into nonprofit counseling, working
+          with adolescents facing substance-use challenges and eventually serving as a supervisor.
         </p>
+
         <p>
-          Currently, I am pursuing a Master’s in Learning Technologies and Design at the University of Missouri,
-          where I’m building skills in instructional design, technology integration, and creating accessible
-          learning experiences.
+          Currently, I am pursuing a Master’s in Learning Technologies and Design at the University
+          of Missouri, where I’m building skills in instructional design, technology integration,
+          and creating accessible learning experiences.
         </p>
       </section>
 
@@ -110,16 +114,17 @@
       <section class="content section-divider">
         <h3>Educational Experiences</h3>
         <p>
-          BSE in Elementary Education (Arkansas State University, 2010) • 10 years classroom teaching (K, 1st, 6th) •
-          Nonprofit adolescent counselor & supervisor (2015–2023) • Frontline healthcare/vision care support (2018–2020) •
-          L1 Support Technician, SightView Software (2023–Present) • M.S. in Learning Technologies & Design,
-          University of Missouri (Expected 2027)
+          BSE in Elementary Education (Arkansas State University, 2010) • 10 years classroom teaching
+          (K, 1st, 6th) • Nonprofit adolescent counselor & supervisor (2015–2023) • Frontline healthcare/
+          vision care support (2018–2020) • L1 Support Technician, SightView Software (2023–Present) •
+          M.S. in Learning Technologies & Design, University of Missouri (Expected 2027)
         </p>
       </section>
     </div>
 
-    <!-- Right column: headshot + video -->
+    <!-- RIGHT COLUMN — MEDIA -->
     <div class="about-media">
+
       <section class="about-headshot section-divider">
         <img src="headshot.jpg" alt="Headshot of Krystal Joyce" class="headshot-img">
         <p style="text-align:center; margin-top:8px;">Hello! I'm Krystal 👋</p>
@@ -127,10 +132,15 @@
 
       <section class="about-video section-divider" aria-labelledby="intro-video-title">
         <h3 id="intro-video-title">Intro Video</h3>
+
         <div class="video-card">
           <div class="video-wrap">
-            <video class="video-player" controls playsinline preload="metadata"
-                   poster="intro-poster-light.jpg" aria-label="Introduction by Krystal Joyce">
+            <video class="video-player"
+                   controls
+                   playsinline
+                   preload="metadata"
+                   poster="intro-poster-light.jpg"
+                   aria-label="Introduction by Krystal Joyce">
               <source src="IntroVideo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -140,18 +150,21 @@
       </section>
     </div>
 
-    <!-- Print-only card for assignment -->
+    <!-- PRINT-ONLY CARD -->
     <section class="print-only" aria-hidden="true">
       <h1>Krystal Joyce</h1>
       <p class="print-desc">
-        I am an instructional designer-in-training with a decade of classroom experience and a background in adolescent counseling and supervision.
-        I design clear, inclusive learning materials that balance evidence-based pedagogy with practical constraints.
+        I am an instructional designer-in-training with a decade of classroom experience and a
+        background in adolescent counseling and supervision. I design clear, inclusive learning
+        materials that balance evidence-based pedagogy with practical constraints.
       </p>
+
       <h2>Education</h2>
       <ul class="print-list">
         <li><strong>M.S., Learning Technologies &amp; Design</strong> (in progress), University of Missouri — Expected 2027</li>
         <li><strong>B.S.E., Elementary Education</strong>, Arkansas State University — 2010</li>
       </ul>
+
       <h2>Contact</h2>
       <p class="print-contact">Phone: 870-656-0047 • Email: krystaldpoole@gmail.com</p>
     </section>
@@ -162,11 +175,13 @@
   <footer>
     <div class="footer-inner">
       <div class="fine">© 2025 Krystal Joyce</div>
+
       <div class="contact-row">
         <div class="contact-item">
           <img src="icons8-phone-50.png" alt="Phone">
           870-656-0047
         </div>
+
         <div class="contact-item">
           <img src="icons8-email-50.png" alt="Email">
           <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
