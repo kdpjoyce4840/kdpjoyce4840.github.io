@@ -145,7 +145,7 @@ header {
    RESPONSIVE NAVIGATION
    =========================== */
 
-/* Hide checkbox visually but keep it clickable via label */
+/* Hide checkbox visually but keep it functional */
 .nav-toggle {
   position: absolute;
   opacity: 0;
@@ -167,26 +167,21 @@ header {
     align-items: center;
   }
 
-  /* Show hamburger and keep it ABOVE the menu */
+  /* Show hamburger */
   .hamburger {
     display: block;
     margin-left: auto;
-    position: relative;
-    z-index: 1100;   /* 👈 this keeps it clickable when menu is open */
   }
 
-  /* Hide menu by default on mobile */
+  /* Hide menu by default on mobile – static layout (no overlay) */
   .navbar .menu {
     display: none;
     flex-direction: column;
     gap: 0.75rem;
+    width: 100%;
+    margin-top: 0.75rem;
     background-color: #009999;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 56px;
     padding: 0.75rem 1.25rem 1rem;
-    z-index: 1000;
   }
 
   /* Show menu when the checkbox with id="nav-toggle" is checked */
