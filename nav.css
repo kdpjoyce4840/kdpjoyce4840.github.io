@@ -24,9 +24,12 @@ header {
   font-size: 1.25rem;
   color: #fff;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
 }
 
-/* Top-level list — supports both .menu and any .navbar ul as fallback */
+/* Top-level list */
 .navbar .menu,
 .navbar > ul {
   list-style: none;
@@ -36,20 +39,20 @@ header {
   gap: 1rem;
 }
 
-/* Ensure nested uls inside navbar are also reset */
+/* Reset nested lists */
 .navbar ul ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Top-level items */
+/* Top-level menu items */
 .navbar .menu > li,
 .navbar > ul > li {
-  position: relative;           /* needed for positioned submenus */
+  position: relative;
 }
 
-/* Links (all levels) */
+/* All nav links */
 .navbar a {
   color: #fff;
   text-decoration: none;
@@ -61,11 +64,11 @@ header {
 
 .navbar a:hover,
 .navbar a:focus-visible {
-  background: rgba(255,255,255,.15);
+  background: rgba(255,255,255,0.15);
   outline: none;
 }
 
-/* Current page indicator */
+/* Highlight active page */
 .navbar .active > a,
 .navbar a[aria-current="page"] {
   background: #007777;
@@ -88,10 +91,12 @@ header {
   border-radius: .5rem;
   box-shadow: 0 10px 24px rgba(0,0,0,.18);
   z-index: 50;
-  display: none;                 /* hidden by default */
+  display: none; /* hidden default */
 }
 
-.navbar .submenu li { position: relative; }
+.navbar .submenu li {
+  position: relative;
+}
 
 .navbar .submenu a {
   display: block;
@@ -104,7 +109,6 @@ header {
 .navbar .submenu a:hover,
 .navbar .submenu a:focus-visible {
   background: rgba(255,255,255,.12);
-  outline: none;
 }
 
 /* Show submenu on hover OR keyboard focus */
@@ -113,68 +117,40 @@ header {
   display: block;
 }
 
-/* Keep dropdowns open while hovering nested menus (APPLIES AT ALL SIZES) */
-.navbar li.has-submenu:hover > .submenu,
-.navbar li.has-submenu:focus-within > .submenu {
-  display: block;
-}
+/* Keep nested submenus open */
 .navbar .submenu li.has-submenu:hover > .submenu,
 .navbar .submenu li.has-submenu:focus-within > .submenu {
   display: block;
 }
 
-/* Second tier flies out to the right — remove gaps so hover doesn’t break */
+/* Second-tier flyout */
 .navbar .submenu .has-submenu > .submenu {
   top: 0;
-  left: calc(100% - 2px); /* overlap by 2px to avoid a hover gap */
-  margin-left: 0;
+  left: calc(100% - 2px);
 }
 
-/* Optional caret indicators */
+/* Carets */
 .navbar .has-submenu > a::after {
   content: "▾";
   margin-left: .4rem;
   font-size: .8em;
 }
+
 .navbar .submenu .has-submenu > a::after {
   content: "▸";
   margin-left: .5rem;
 }
 
 /* ===========================
-   Responsive
+   RESPONSIVE NAVIGATION
    =========================== */
-@media (max-width: 680px) {
-  .navbar { justify-content: center; }
-  .navbar .menu,
-  .navbar > ul { flex-wrap: wrap; justify-content: center; gap: .5rem 1rem; }
 
-  /* Stack dropdowns in-flow for easy tapping */
-  .navbar .submenu {
-    position: static;
-    display: block;
-    box-shadow: none;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-  }
-
-  .navbar .submenu a {
-    background: rgba(0,0,0,.08);
-    border-radius: .4rem;
-    margin: .15rem 0;
-    padding: .5rem .75rem;
-  }
-
-  .navbar .submenu .submenu a { padding-left: 1.5rem; }
-  /* ===== Responsive Navigation (Mobile Hamburger) ===== */
-
-/* Hide the checkbox itself */
+/* Hide checkbox */
 .nav-toggle {
   display: none;
 }
 
-/* Hamburger icon base styles (desktop: hidden) */
+/* Hamburger (desktop hidden) */
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -182,7 +158,7 @@ header {
   color: #fff;
 }
 
-/* Mobile View */
+/* ---------- MOBILE VIEW ---------- */
 @media (max-width: 768px) {
 
   .navbar {
@@ -190,13 +166,13 @@ header {
     align-items: center;
   }
 
-  /* Show hamburger icon on small screens */
+  /* Show hamburger */
   .hamburger {
     display: block;
-    margin-left: auto;          /* push to the right side */
+    margin-left: auto;
   }
 
-  /* Hide the normal nav menu by default (mobile) */
+  /* Hide menu by default */
   .navbar .menu {
     display: none;
     flex-direction: column;
@@ -205,14 +181,77 @@ header {
     position: absolute;
     left: 0;
     right: 0;
-    top: 56px;                  /* just under the navbar bar */
+    top: 56px;
     padding: 0.75rem 1.25rem 1rem;
     z-index: 1000;
   }
 
-  /* When the checkbox is checked, show the menu */
-.nav-toggle:checked + .hamburger + .menu {
-  display: flex;
+  /* Show menu when toggled */
+  .nav-toggle:checked + .hamburger + .menu {
+    display: flex;
+  }
+
+  /* Dropdowns become simple stacked blocks */
+  .navbar .submenu {
+    position: static;
+    display: block;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar .submenu a {
+    background: rgba(0,0,0,.08);
+    border-radius: 0.4rem;
+    margin: 0.15rem 0;
+    padding: .5rem .75rem;
+  }
+
+  .navbar .submenu .submenu a {
+    padding-left: 1.5rem;
+  }
 }
 
+/* ===========================
+   TEMPLATE PAGE FIXES
+   =========================== */
+
+.template-page header {
+  background-color: #009999;
+}
+
+.template-page .brand img {
+  width: 38px;
+  height: auto;
+  margin-right: 8px;
+}
+
+.template-page .brand {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Remove hero layout inheritance */
+.template-page .hero,
+.template-page main.hero,
+.template-page .hero-inner {
+  all: unset;
+}
+
+/* Center clean layout */
+.template-page main {
+  background: #ffffff;
+  padding-top: 2rem;
+}
+
+/* Navbar stays normal */
+.template-page .navbar {
+  background-color: #009999;
+}
+
+/* No giant homepage spacing */
+.template-page body {
+  margin: 0;
+  padding: 0;
 }
