@@ -145,9 +145,11 @@ header {
    RESPONSIVE NAVIGATION
    =========================== */
 
-/* Hide checkbox */
+/* Hide checkbox (but keep it clickable via label) */
 .nav-toggle {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Hamburger (desktop hidden) */
@@ -172,7 +174,7 @@ header {
     margin-left: auto;
   }
 
-  /* Hide menu by default */
+  /* Hide menu by default on mobile */
   .navbar .menu {
     display: none;
     flex-direction: column;
@@ -186,20 +188,18 @@ header {
     z-index: 1000;
   }
 
-  /* Show menu when toggled */
+  /* Show menu when checkbox is checked */
   .nav-toggle:checked + .hamburger + .menu {
     display: flex;
   }
 
-  /* Dropdowns: keep show/hide behavior,
-     but stack visually when they ARE open */
+  /* Dropdowns: stack nicely when they ARE open */
   .navbar .submenu {
     position: static;
     background: transparent;
     box-shadow: none;
     padding: 0;
     margin: 0;
-    /* no display:block here on purpose */
   }
 
   .navbar .submenu a {
@@ -274,8 +274,8 @@ body.template-page main h1 {
 
 @media (max-width: 768px) {
 
-  /* Keep menu behavior the same but hide deep submenus
-     so the JoyceTemplate menu is short and clean */
+  /* Hide ALL submenus on JoyceTemplate mobile
+     so the menu is short and clean */
   body.template-page .navbar .submenu {
     display: none !important;
   }
@@ -283,6 +283,16 @@ body.template-page main h1 {
   /* Remove dropdown caret on Projects on this page */
   body.template-page .has-submenu > a::after {
     content: "";
+  }
+
+  /* Ensure menu is hidden by default on this page too */
+  body.template-page .navbar .menu {
+    display: none;
+  }
+
+  /* And only shown when the checkbox is checked */
+  body.template-page .nav-toggle:checked + .hamburger + .menu {
+    display: flex;
   }
 
   /* Slightly tighter top margin/padding on mobile
