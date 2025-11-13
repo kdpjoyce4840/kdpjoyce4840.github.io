@@ -14,21 +14,27 @@
   <!-- ===== Header / Primary Nav ===== -->
   <header>
     <nav class="navbar" aria-label="Primary">
-     <a href="index.html" class="brand">
-  <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
-  KJ Portfolio
-</a>
 
-<!-- Hidden checkbox that controls the menu -->
-<input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <!-- Brand / logo -->
+      <a href="index.html" class="brand">
+        <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
+        KJ Portfolio
+      </a>
 
-<!-- Hamburger button tied to the checkbox -->
-<label for="nav-toggle" class="hamburger">&#9776;</label>
+      <!-- Hidden checkbox that controls the mobile menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
-<ul class="menu">
+      <!-- Hamburger button tied to the checkbox -->
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+        &#9776;
+      </label>
 
+      <!-- Main navigation menu -->
+      <ul class="menu">
         <li><a href="index.html">Home</a></li>
-        <li class="active"><a href="about.html" aria-current="page">About</a></li>
+        <li class="active">
+          <a href="about.html" aria-current="page">About</a>
+        </li>
 
         <!-- 2-tier dropdown START -->
         <li class="has-submenu">
@@ -40,7 +46,12 @@
               <ul class="submenu">
                 <li><a href="final-proposal.html">Research Proposal (page)</a></li>
                 <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
-                <li><a href="https://sites.google.com/view/krystalislt7361/home" target="_blank" rel="noopener">Web-Based Portfolio</a></li>
+                <li>
+                  <a href="https://sites.google.com/view/krystalislt7361/home"
+                     target="_blank" rel="noopener">
+                    Web-Based Portfolio
+                  </a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -110,7 +121,6 @@
     <!-- Right column: headshot + video -->
     <div class="about-media">
       <section class="about-headshot section-divider">
-        <!-- use the JPG you kept in the repo -->
         <img src="headshot.jpg" alt="Headshot of Krystal Joyce" class="headshot-img">
         <p style="text-align:center; margin-top:8px;">Hello! I'm Krystal 👋</p>
       </section>
