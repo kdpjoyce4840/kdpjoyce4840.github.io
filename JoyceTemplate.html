@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Joyce Template | Responsive Navigation</title>
+  <title>Krystal Joyce | Sample Template Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Favicons -->
@@ -13,9 +13,51 @@
   <!-- Site styles -->
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Template-only CSS overrides -->
+  <style>
+    /* Make template page unaffected by the homepage hero */
+    .template-page main,
+    .template-page header,
+    .template-page body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    /* Smaller, cleaner logo */
+    .template-page .brand img {
+      width: 38px;
+      height: auto;
+      margin-right: 8px;
+    }
+
+    .template-page .brand {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Clean main content box */
+    .template-page main {
+      max-width: 800px;
+      margin: 2.5rem auto;
+      padding: 1.5rem;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* Ensure navbar background stays correct */
+    .template-page .navbar {
+      background-color: #009999;
+    }
+  </style>
 </head>
 
-<body>
+<body class="template-page">
 
   <!-- ===== Header / Primary Nav ===== -->
   <header>
@@ -37,10 +79,13 @@
       <ul class="menu">
         <li class="active"><a href="JoyceTemplate.html" aria-current="page">Home</a></li>
         <li><a href="about.html">About</a></li>
+
+        <!-- Projects + 2nd tier dropdown -->
         <li class="has-submenu">
           <a href="projects.html" aria-haspopup="true">Projects</a>
           <ul class="submenu">
             <li><a href="projects.html#portfolio">Portfolio Items</a></li>
+
             <li class="has-submenu">
               <a href="#">Learn</a>
               <ul class="submenu">
@@ -51,6 +96,7 @@
             </li>
           </ul>
         </li>
+
         <li><a href="reflections.html">Reflections</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -59,36 +105,39 @@
   </header>
 
   <!-- ===== Main Content ===== -->
-  <main class="section-divider" style="max-width: 800px; margin: 0 auto; padding: 2rem;">
-    <h1 style="text-align:center;">Welcome to My Template Page</h1>
+  <main>
+    <h1>Welcome to My Page</h1>
 
-    <p style="text-align:center; max-width:700px; margin:0 auto;">
-      This page is part of my web design coursework and is used specifically to demonstrate 
-      <strong>responsive navigation</strong>, including a mobile-friendly hamburger menu created
-      with pure HTML and CSS.  
+    <p>
+      This page is part of my web design coursework and is used specifically to demonstrate
+      <strong>responsive navigation</strong>, including a mobile-friendly hamburger menu created with pure
+      HTML and CSS.
     </p>
 
-    <p style="text-align:center; max-width:700px; margin:1rem auto 0;">
-      While this page isn’t part of my final portfolio, it reflects foundational skills I’m building 
-      as I create user-friendly, accessible web experiences. Feel free to explore the navigation at 
-      the top of the page and resize your browser to see how the menu adapts.
+    <p>
+      While this page isn’t part of my final portfolio, it reflects foundational skills I’m building
+      as I create user-friendly, accessible web experiences. Feel free to explore the navigation at the top
+      of the page and resize your browser to see how the menu adapts.
     </p>
 
-    <p style="text-align:center; margin-top:1.5rem; font-size:0.9rem;">
+    <p style="font-size:0.9rem; margin-top:1.5rem;">
       Created by Krystal Joyce — September 15, 2025.
     </p>
   </main>
 
   <!-- ===== Footer ===== -->
   <footer>
-    <div class="contact-info">
-      <div class="contact-item">
-        <img src="icons8-phone-50.png" alt="Phone icon">
-        <a href="tel:+18706560047">(870) 656-0047</a>
-      </div>
-      <div class="contact-item">
-        <img src="icons8-email-50.png" alt="Email icon">
-        <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
+    <div class="footer-inner" style="text-align:center; padding:1rem 0;">
+      <div class="fine">© 2025 Krystal Joyce</div>
+      <div class="contact-row" style="margin-top:0.5rem;">
+        <div class="contact-item">
+          <img src="icons8-phone-50.png" alt="Phone" style="width:16px;">
+          <a href="tel:+18706560047">(870) 656-0047</a>
+        </div>
+        <div class="contact-item">
+          <img src="icons8-email-50.png" alt="Email" style="width:16px;">
+          <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
+        </div>
       </div>
     </div>
   </footer>
