@@ -1,3 +1,4 @@
+<!-- Krystal Joyce — JoyceTemplate.html (Sample Template Page) -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,9 +11,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-  <!-- Site styles -->
-  <link rel="stylesheet" href="nav.css">
-  <link rel="stylesheet" href="style.css">
+  <!-- Site styles (with cache-busting like other pages) -->
+  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="nav.css?v=7">
 </head>
 
 <body class="template-page">
@@ -37,21 +38,28 @@
 
       <!-- Navigation Links -->
       <ul class="menu">
-        <li class="active"><a href="JoyceTemplate.html" aria-current="page">Home</a></li>
+        <li class="active">
+          <a href="JoyceTemplate.html" aria-current="page">Home</a>
+        </li>
         <li><a href="about.html">About</a></li>
 
         <!-- Projects + 2nd tier dropdown -->
         <li class="has-submenu">
-          <a href="projects.html" aria-haspopup="true">Projects</a>
-          <ul class="submenu">
+          <a href="projects.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <ul class="submenu" aria-label="Projects submenu">
             <li><a href="projects.html#portfolio">Portfolio Items</a></li>
 
             <li class="has-submenu">
-              <a href="#">Learn</a>
+              <a href="projects.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
               <ul class="submenu">
                 <li><a href="final-proposal.html">Research Proposal (page)</a></li>
-                <li><a href="final-proposal.pdf" target="_blank">Research Proposal (PDF)</a></li>
-                <li><a href="https://sites.google.com/view/krystalislt7361/home" target="_blank">Web-Based Portfolio</a></li>
+                <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
+                <li>
+                  <a href="https://sites.google.com/view/krystalislt7361/home"
+                     target="_blank" rel="noopener">
+                    Web-Based Portfolio
+                  </a>
+                </li>
               </ul>
             </li>
           </ul>
