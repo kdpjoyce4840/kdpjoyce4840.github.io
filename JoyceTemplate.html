@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Joyce Template</title>
+  <title>Joyce Template | Responsive Navigation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Favicons -->
@@ -14,73 +14,82 @@
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- HEADER / NAV -->
+  <!-- ===== Header / Primary Nav ===== -->
   <header>
     <nav class="navbar" aria-label="Primary Navigation">
-      <!-- Logo -->
+
+      <!-- Hidden checkbox for hamburger -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+      <!-- Logo / Brand -->
       <a class="brand" href="index.html">
         <img src="logo.png" alt="KJ Portfolio Logo">
+        KJ Portfolio
       </a>
 
-      <!-- Navigation links -->
+      <!-- Hamburger Button -->
+      <label for="nav-toggle" class="hamburger">&#9776;</label>
+
+      <!-- Navigation Links -->
       <ul class="menu">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li class="active"><a href="JoyceTemplate.html" aria-current="page">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li class="has-submenu">
+          <a href="projects.html" aria-haspopup="true">Projects</a>
+          <ul class="submenu">
+            <li><a href="projects.html#portfolio">Portfolio Items</a></li>
+            <li class="has-submenu">
+              <a href="#">Learn</a>
+              <ul class="submenu">
+                <li><a href="final-proposal.html">Research Proposal (page)</a></li>
+                <li><a href="final-proposal.pdf" target="_blank">Research Proposal (PDF)</a></li>
+                <li><a href="https://sites.google.com/view/krystalislt7361/home" target="_blank">Web-Based Portfolio</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
         <li><a href="reflections.html">Reflections</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+
     </nav>
   </header>
 
-  <!-- ===== MAIN CONTENT ===== -->
-  <main>
-    <section class="tagline section-divider">
-      <h1>Design With Empathy. Build With Purpose.</h1>
-      <p class="lead">
-        My background in education and behavioral health taught me one thing above all:
-        learning should feel supportive, not stressful. This portfolio highlights my journey
-        as an instructional designer—blending creativity, evidence-based practice, and 
-        accessibility to create meaningful learning experiences that help real people in real contexts.
-      </p>
-    </section>
+  <!-- ===== Main Content ===== -->
+  <main class="section-divider" style="max-width: 800px; margin: 0 auto; padding: 2rem;">
+    <h1 style="text-align:center;">Welcome to My Template Page</h1>
 
-    <section class="content section-divider">
-      <h3>What You’ll Find Here</h3>
-      <ul>
-        <li><strong>Projects</strong> — instructional materials, multimedia artifacts, UX work</li>
-        <li><strong>Reflections</strong> — insights from my graduate coursework (Mizzou IS_LT)</li>
-        <li><strong>About</strong> — my background across education, counseling, and technology</li>
-        <li><strong>Contact</strong> — ways to connect or collaborate</li>
-      </ul>
+    <p style="text-align:center; max-width:700px; margin:0 auto;">
+      This page is part of my web design coursework and is used specifically to demonstrate 
+      <strong>responsive navigation</strong>, including a mobile-friendly hamburger menu created
+      with pure HTML and CSS.  
+    </p>
 
-      <p>
-        I'm passionate about designing learning that supports people where they are and helps
-        them move forward with clarity, confidence, and curiosity.  
-        Thanks for visiting — I hope you enjoy exploring my work.
-      </p>
-    </section>
+    <p style="text-align:center; max-width:700px; margin:1rem auto 0;">
+      While this page isn’t part of my final portfolio, it reflects foundational skills I’m building 
+      as I create user-friendly, accessible web experiences. Feel free to explore the navigation at 
+      the top of the page and resize your browser to see how the menu adapts.
+    </p>
+
+    <p style="text-align:center; margin-top:1.5rem; font-size:0.9rem;">
+      Created by Krystal Joyce — September 15, 2025.
+    </p>
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===== Footer ===== -->
   <footer>
     <div class="contact-info">
-      <!-- Phone -->
       <div class="contact-item">
         <img src="icons8-phone-50.png" alt="Phone icon">
         <a href="tel:+18706560047">(870) 656-0047</a>
       </div>
-      <!-- Email -->
       <div class="contact-item">
         <img src="icons8-email-50.png" alt="Email icon">
         <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
       </div>
-    </div>
-
-    <div class="fine" style="text-align:center; margin-top:10px;">
-      © 2025 Krystal Joyce
     </div>
   </footer>
 
