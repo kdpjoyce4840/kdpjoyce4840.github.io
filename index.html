@@ -16,65 +16,67 @@
   <link rel="stylesheet" href="nav.css?v=7" />
 </head>
 <body>
+<!-- ===== Header / Primary Nav with Hamburger ===== -->
+<header>
+  <nav class="navbar" aria-label="Primary">
 
-  <!-- ===== Header / Primary Nav w/ 2-tier dropdown ===== -->
-  <header>
-    <nav class="navbar" aria-label="Primary">
+    <!-- Brand -->
+    <a href="index.html" class="brand">
+      <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
+      KJ Portfolio
+    </a>
 
-      <!-- Brand / logo -->
-      <a href="index.html" class="brand">
-        <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo" />
-        KJ Portfolio
-      </a>
+    <!-- Hidden mobile checkbox -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
-      <!-- Hidden checkbox that controls the mobile menu -->
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <!-- Hamburger icon -->
+    <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+      &#9776;
+    </label>
 
-      <!-- Hamburger button tied to the checkbox -->
-      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
-        &#9776;
-      </label>
+    <!-- Main menu -->
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
 
-      <!-- Main navigation menu -->
-      <ul class="menu">
-        <li class="active">
-          <a href="index.html" aria-current="page">Home</a>
-        </li>
+      <!-- 2-tier dropdown START -->
+      <li class="has-submenu">
+        <a href="project.html" aria-haspopup="true" aria-expanded="false">Projects</a>
 
-        <li><a href="about.html">About</a></li>
+        <ul class="submenu" aria-label="Projects submenu">
+          <!-- Anchor link to first grid section -->
+          <li><a href="project.html#portfolio">Portfolio Items</a></li>
 
-        <!-- 2-tier dropdown START -->
-        <li class="has-submenu">
-          <a href="project.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <!-- second tier inside Projects → Learn -->
+          <li class="has-submenu">
+            <a href="project.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
+            <ul class="submenu">
+              <li><a href="final-proposal.html">Research Proposal (page)</a></li>
+              <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
+              <li>
+                <a href="https://sites.google.com/view/krystalislt7361/home"
+                   target="_blank" rel="noopener">
+                  Web-Based Portfolio
+                </a>
+              </li>
+            </ul>
+          </li>
 
-          <ul class="submenu" aria-label="Projects submenu">
-            <li><a href="project.html#portfolio">Portfolio Items</a></li>
+          <!-- Extra anchor links to SOP sections -->
+          <li><a href="project.html#sops">Support SOPs</a></li>
+          <li><a href="project.html#support-training">Support Training Guide</a></li>
+        </ul>
+      </li>
+      <!-- 2-tier dropdown END -->
 
-            <li class="has-submenu">
-              <a href="project.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
+      <li><a href="reflections.html">Reflections</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+    </ul>
 
-              <ul class="submenu">
-                <li><a href="final-proposal.html">Research Proposal (page)</a></li>
-                <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
-                <li>
-                  <a href="https://sites.google.com/view/krystalislt7361/home"
-                     target="_blank" rel="noopener">
-                    Web-Based Portfolio
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <!-- 2-tier dropdown END -->
-
-        <li><a href="reflections.html">Reflections</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
-      </ul>
-    </nav>
-  </header>
-
+  </nav>
+</header>
+  
   <!-- ===== Hero ===== -->
   <section class="hero">
     <div class="hero-inner">
