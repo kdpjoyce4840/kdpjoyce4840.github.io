@@ -39,22 +39,11 @@
       <li class="has-submenu active">
         <a href="project.html" aria-haspopup="true" aria-expanded="true" aria-current="page">Projects</a>
         <ul class="submenu" aria-label="Projects submenu">
-          <li><a href="project.html#portfolio">Portfolio Items</a></li>
-
-          <!-- second tier inside Projects → Learn -->
-          <li class="has-submenu">
-            <a href="project.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
-            <ul class="submenu">
-              <li><a href="final-proposal.html">Research Proposal (page)</a></li>
-              <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
-              <li>
-                <a href="https://sites.google.com/view/krystalislt7361/home"
-                   target="_blank" rel="noopener">
-                  Web-Based Portfolio
-                </a>
-              </li>
-            </ul>
-          </li>
+          <li><a href="project.html#portfolio">Portfolio Overview</a></li>
+          <li><a href="project.html#web-portfolio">Web-Based Portfolio</a></li>
+          <li><a href="project.html#learn">Grandfamilies Study</a></li>
+          <li><a href="project.html#ticket-guide">Ticket Handling Guide</a></li>
+          <li><a href="project.html#texting-sop">Texting SOP</a></li>
         </ul>
       </li>
       <!-- 2-tier dropdown END -->
@@ -76,11 +65,12 @@
     </p>
   </section>
 
-  <section class="content section-divider" id="portfolio">
+  <!-- Projects laid out in a responsive grid -->
+  <section class="content section-divider projects-grid" id="portfolio">
     <h2>Portfolio Items</h2>
 
-    <!-- Project 1 -->
-    <article class="project">
+    <!-- Project 1: Web-Based Portfolio -->
+    <article class="project" id="web-portfolio">
       <h3>ISLT 7361 · Web-Based Portfolio</h3>
       <p>
         A course portfolio demonstrating an online learning experience with objectives, content sequencing,
@@ -88,26 +78,31 @@
       </p>
       <ul>
         <li>Introduces the topic &amp; learner</li>
-        <li>States learning objectives</li>
+        <li>States learning objectives clearly</li>
         <li>Integrates images and audio/video I created</li>
         <li>Explains media principles and tool selection</li>
       </ul>
       <p class="project-links">
-        <a class="btn btn-primary" href="https://sites.google.com/view/krystalislt7361/home"
-           target="_blank" rel="noopener">View Project</a>
+        <a class="btn btn-primary"
+           href="https://sites.google.com/view/krystalislt7361/home"
+           target="_blank" rel="noopener">
+          View Project
+        </a>
       </p>
       <p><em>Note:</em> All media I created is identified in the site; any third-party items are credited.</p>
     </article>
 
-    <hr>
-
-    <!-- Project 2 -->
+    <!-- Project 2: Grandfamilies Study -->
     <article class="project" id="learn">
       <h3>Grandfamilies Study (Adolescents Raised by Grandparents)</h3>
-      <p><strong>Course:</strong> ISLT 9450 · Research Methods &nbsp; | &nbsp; <strong>Date:</strong> April 2025</p>
       <p>
-        Mixed-methods proposal on adolescents raised by grandparents due to parental incarceration/substance use.
-        Explanatory sequential design: quantitative SDQ → qualitative interviews to surface lived experience.
+        <strong>Course:</strong> ISLT 9450 · Research Methods &nbsp; | &nbsp;
+        <strong>Date:</strong> April 2025
+      </p>
+      <p>
+        Mixed-methods proposal on adolescents raised by grandparents due to parental incarceration or substance use.
+        The design uses an explanatory sequential approach: quantitative SDQ data followed by qualitative interviews
+        to surface lived experience in more depth.
       </p>
       <ul>
         <li>Identifies emotional, behavioral, and academic challenges in grandfamilies</li>
@@ -117,9 +112,57 @@
       </ul>
       <p class="project-links">
         <a class="btn btn-primary" href="final-proposal.html">View Project Page</a>
-        <a class="btn btn-ghost" href="final-proposal.pdf" target="_blank" rel="noopener">Download Project PDF</a>
+        <a class="btn btn-ghost" href="final-proposal.pdf" target="_blank" rel="noopener">
+          Download Project PDF
+        </a>
       </p>
     </article>
+
+    <!-- Project 3: L1 Ticket Handling Guide -->
+    <article class="project" id="ticket-guide">
+      <h3>L1 Ticket Handling Training Guide</h3>
+      <p>
+        A practical training guide for Level 1 Support ticket handling at SightView Software. It outlines a complete
+        workflow from initial intake to resolution, emphasizing accurate documentation and clear communication with clients.
+      </p>
+      <p>
+        The guide walks new agents through verifying practice details and account status, gathering evidence,
+        reproducing issues, and writing concise but thorough ticket summaries. It also covers escalation criteria,
+        follow-up expectations, and consistent use of HubSpot fields to keep tickets traceable and transparent.
+      </p>
+      <p class="project-links">
+        <!-- Make sure this filename matches what you upload to GitHub -->
+        <a class="btn btn-ghost"
+           href="L1_Ticket_Handling_Guide_with_Screenshots.pdf"
+           target="_blank" rel="noopener">
+          Download Ticket Handling Guide (PDF)
+        </a>
+      </p>
+    </article>
+
+    <!-- Project 4: L1 SOP – MVE Texting Issue -->
+    <article class="project" id="texting-sop">
+      <h3>L1 SOP – Fixing MVE Texting Issue via LogMeIn</h3>
+      <p>
+        A standard operating procedure for resolving texting failures in My Vision Express (MVE) when the issue is
+        workstation-specific. The SOP shows L1 agents how to connect via LogMeIn Rescue, transfer the repair file,
+        and run it with administrative privileges on the correct machine.
+      </p>
+      <p>
+        It includes step-by-step instructions, file path details, and post-fix validation steps to confirm that
+        texting is working again. The document also clarifies how to document the session (workstation, user, file
+        details, and confirmation) and when to treat an issue as a broader outage that must be escalated to L2.
+      </p>
+      <p class="project-links">
+        <!-- Make sure this filename also matches your GitHub file exactly -->
+        <a class="btn btn-ghost"
+           href="L1_SOP_MVE_Texting_Issue.pdf"
+           target="_blank" rel="noopener">
+          Download SOP (PDF)
+        </a>
+      </p>
+    </article>
+
   </section>
 </main>
 
