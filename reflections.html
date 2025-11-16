@@ -1,199 +1,65 @@
-<!-- Krystal Joyce — reflections.html -->
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Reflections | Krystal Joyce</title>
+/* =======================================
+   PROJECTS PAGE — GRID LAYOUT
+   ======================================= */
 
-  <!-- Link BOTH stylesheets -->
-  <link rel="stylesheet" href="style.css?v=7">
-  <link rel="stylesheet" href="nav.css?v=7">
+.project-main {
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  padding: 2rem 1.5rem 3rem;
+}
 
-  <!-- Page-specific styling for rubric -->
-  <style>
-    /* Reset indent */
-    .ref-block p { text-indent: 0; }
+/* Grid layout for project cards */
+.projects-grid {
+  display: grid;                /* GRID LAYOUT HERE */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
 
-    /* Alternate paragraphs indented */
-    .ref-block p.ref-other { text-indent: 1.5em; }
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem 1.5rem 1.75rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
 
-    /* First-letter style for first paragraph in each section */
-    .ref-first::first-letter {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #006666;
-    }
-  </style>
-</head>
-<body>
+.project-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
 
-<!-- ===== Header / Primary Nav with Hamburger ===== -->
-<header>
-  <nav class="navbar" aria-label="Primary">
+.project-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
 
-    <!-- Brand -->
-    <a href="index.html" class="brand">
-      <img src="icons8-home-100.png" alt="Home" class="brand-logo">
-      KJ Portfolio
-    </a>
+.project-card ul {
+  margin: 0.75rem 0 0.75rem 1.25rem;
+}
 
-    <!-- Hidden mobile toggle -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+.project-links {
+  margin-top: 0.75rem;
+}
 
-    <!-- Hamburger icon -->
-    <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">&#9776;</label>
+.project-note {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
 
-    <!-- Main navigation -->
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+/* =======================================
+   MEDIA QUERY — MOBILE STACK
+   ======================================= */
 
-      <!-- Projects dropdown -->
-      <li class="has-submenu">
-        <a href="project.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+@media (max-width: 800px) {
+  /* Mobile layout: stack project cards */
+  .projects-grid {
+    grid-template-columns: 1fr;    /* one column on small screens */
+  }
 
-        <ul class="submenu" aria-label="Projects submenu">
-          <li><a href="project.html#portfolio">Portfolio Items</a></li>
-
-          <li class="has-submenu">
-            <a href="project.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
-
-            <ul class="submenu">
-              <li><a href="final-proposal.html">Research Proposal (page)</a></li>
-              <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
-              <li>
-                <a href="https://sites.google.com/view/krystalislt7361/home"
-                   target="_blank" rel="noopener">
-                  Web-Based Portfolio
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <!-- Current page -->
-      <li class="active"><a href="reflections.html" aria-current="page">Reflections</a></li>
-
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
-    </ul>
-
-  </nav>
-</header>
-
-<!-- ===== Main Content ===== -->
-<main>
-  <h1>Reflections</h1>
-  <p class="tagline">Learning, practice, and growth across design and technology.</p>
-
-  <!-- Section 1 -->
-  <section class="ref-block" aria-labelledby="acc-first">
-    <h2 id="acc-first">Designing for Accessibility First</h2>
-
-    <p class="ref-first">
-      I’ve adopted an accessibility-first mindset. On every page and activity,
-      I run a quick checklist so that clarity and access aren’t “nice to haves” but the default.
-    </p>
-
-    <p class="ref-other">
-      My checklist includes descriptive page titles, a logical heading order (H1 → H2 → H3),
-      strong color contrast, meaningful alt text, keyboard navigability with visible focus states,
-      and clear, consistent link styles.
-    </p>
-
-    <p class="ref-other">
-      The impact has been visible: fewer questions about “where to click,”
-      easier scanning for all users, and content that holds up better on small screens
-      or assistive tech.
-    </p>
-  </section>
-
-  <!-- Section 2 -->
-  <section class="ref-block" aria-labelledby="structure">
-    <h2 id="structure">Structuring Content for Sense-Making</h2>
-
-    <p class="ref-first">
-      I’ve leaned into chunking and progressive disclosure—short intros,
-      explicit objectives, and “do-able” steps that reduce cognitive load.
-    </p>
-
-    <p class="ref-other">
-      Using consistent spacing, gentle dividers, and predictable patterns
-      makes the interface feel calmer. Learners don’t spend energy figuring out the layout;
-      they spend it on the task.
-    </p>
-  </section>
-
-  <!-- Section 3 -->
-  <section class="ref-block" aria-labelledby="feedback">
-    <h2 id="feedback">Iterating with Feedback</h2>
-
-    <p class="ref-first">
-      Feedback loops are now part of my normal workflow.
-      I prototype quickly, test with a few people, and iterate in tight cycles.
-    </p>
-
-    <p class="ref-other">
-      My rhythm looks like this:
-      sketch for structure → apply palette + spacing → refine language + interactions →
-      verify accessibility.
-      Each pass gets me closer to something clear and usable.
-    </p>
-  </section>
-
-  <!-- Section 4 -->
-  <section class="ref-block" aria-labelledby="tools">
-    <h2 id="tools">Tools & Workflow</h2>
-
-    <p class="ref-first">
-      Beyond HTML/CSS and GitHub Pages, I’m building a small toolkit for reliable delivery:
-      version control with Git, quick wireframes in Figma (or pencil!),
-      contrast checks, keyboard testing, and lightweight style guides.
-    </p>
-
-    <p class="ref-other">
-      The goal is speed with quality—get something in front of users fast, then keep polishing.
-    </p>
-  </section>
-
-  <!-- Section 5 -->
-  <section class="ref-block" aria-labelledby="next">
-    <h2 id="next">What’s Next</h2>
-
-    <p class="ref-first">
-      I plan to extend this site with interactive learning components,
-      richer project write-ups, and clearer links to standards and outcomes.
-    </p>
-
-    <p class="ref-other">
-      If you’re interested in collaborating or sharing ideas, feel free to reach out:
-      <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a> ·
-      <a href="https://www.linkedin.com/in/krystal-joyce-b64b69166/"
-         target="_blank" rel="noopener">LinkedIn</a>.
-    </p>
-  </section>
-</main>
-
-<!-- ===== Footer ===== -->
-<footer>
-  <div class="footer-inner">
-    <div class="fine">© 2025 Krystal Joyce</div>
-
-    <div class="contact-row">
-      <div class="contact-item">
-        <img src="icons8-phone-50.png" alt="Phone">
-        870-656-0047
-      </div>
-
-      <div class="contact-item">
-        <img src="icons8-email-50.png" alt="Email">
-        <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>
+  .project-main {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+}
