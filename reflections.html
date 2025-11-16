@@ -1,15 +1,30 @@
-<!-- Krystal Joyce — project.html
-     Projects page using CSS Grid for layout -->
+<!-- Krystal Joyce — reflections.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects | Krystal Joyce</title>
+  <title>Reflections | Krystal Joyce</title>
 
   <!-- Link BOTH stylesheets -->
   <link rel="stylesheet" href="style.css?v=7">
   <link rel="stylesheet" href="nav.css?v=7">
+
+  <!-- Page-specific styling for rubric -->
+  <style>
+    /* Reset indent */
+    .ref-block p { text-indent: 0; }
+
+    /* Alternate paragraphs indented */
+    .ref-block p.ref-other { text-indent: 1.5em; }
+
+    /* First-letter style for first paragraph in each section */
+    .ref-first::first-letter {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #006666;
+    }
+  </style>
 </head>
 <body>
 
@@ -19,33 +34,31 @@
 
     <!-- Brand -->
     <a href="index.html" class="brand">
-      <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
+      <img src="icons8-home-100.png" alt="Home" class="brand-logo">
       KJ Portfolio
     </a>
 
-    <!-- Hidden mobile checkbox -->
+    <!-- Hidden mobile toggle -->
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
     <!-- Hamburger icon -->
-    <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
-      &#9776;
-    </label>
+    <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">&#9776;</label>
 
-    <!-- Main menu -->
+    <!-- Main navigation -->
     <ul class="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
 
-      <!-- 2-tier dropdown START -->
-      <li class="has-submenu active">
-        <a href="project.html" aria-haspopup="true" aria-expanded="true" aria-current="page">Projects</a>
+      <!-- Projects dropdown -->
+      <li class="has-submenu">
+        <a href="project.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+
         <ul class="submenu" aria-label="Projects submenu">
-          <!-- Anchor link to first grid section -->
           <li><a href="project.html#portfolio">Portfolio Items</a></li>
 
-          <!-- second tier inside Projects → Learn -->
           <li class="has-submenu">
             <a href="project.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
+
             <ul class="submenu">
               <li><a href="final-proposal.html">Research Proposal (page)</a></li>
               <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
@@ -57,133 +70,123 @@
               </li>
             </ul>
           </li>
-
-          <!-- Extra anchor links to SOP sections -->
-          <li><a href="project.html#sops">Support SOPs</a></li>
-          <li><a href="project.html#support-training">Support Training Guide</a></li>
         </ul>
       </li>
-      <!-- 2-tier dropdown END -->
 
-      <li><a href="reflections.html">Reflections</a></li>
+      <!-- Current page -->
+      <li class="active"><a href="reflections.html" aria-current="page">Reflections</a></li>
+
       <li><a href="contact.html">Contact</a></li>
       <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
     </ul>
+
   </nav>
 </header>
 
-<!-- ===== Main (Grid layout) ===== -->
-<main class="project-main">
-  <section class="tagline section-divider">
-    <h1>Selected Work</h1>
-    <p>
-      A few instructional design, research, and technical documentation projects I’m proud of—each one focused on
-      accessibility, clarity, and learner-centered outcomes.
+<!-- ===== Main Content ===== -->
+<main>
+  <h1>Reflections</h1>
+  <p class="tagline">Learning, practice, and growth across design and technology.</p>
+
+  <!-- Section 1 -->
+  <section class="ref-block" aria-labelledby="acc-first">
+    <h2 id="acc-first">Designing for Accessibility First</h2>
+
+    <p class="ref-first">
+      I’ve adopted an accessibility-first mindset. On every page and activity,
+      I run a quick checklist so that clarity and access aren’t “nice to haves” but the default.
+    </p>
+
+    <p class="ref-other">
+      My checklist includes descriptive page titles, a logical heading order (H1 → H2 → H3),
+      strong color contrast, meaningful alt text, keyboard navigability with visible focus states,
+      and clear, consistent link styles.
+    </p>
+
+    <p class="ref-other">
+      The impact has been visible: fewer questions about “where to click,”
+      easier scanning for all users, and content that holds up better on small screens
+      or assistive tech.
     </p>
   </section>
 
-  <!-- Grid container -->
-  <section class="projects-grid section-divider" id="portfolio" aria-label="Project gallery">
+  <!-- Section 2 -->
+  <section class="ref-block" aria-labelledby="structure">
+    <h2 id="structure">Structuring Content for Sense-Making</h2>
 
-    <!-- Project 1: Web-Based Portfolio -->
-    <article class="project-card">
-      <h2>ISLT 7361 · Web-Based Portfolio</h2>
-      <p class="project-meta">Instructional Design · Web-Based Learning</p>
-      <p>
-        A course portfolio demonstrating an online learning experience with objectives, content sequencing,
-        and integrated media. I explain media principles, tool choices, and how artifacts map to outcomes.
-      </p>
-      <ul>
-        <li>Introduces the topic &amp; learner</li>
-        <li>States learning objectives</li>
-        <li>Integrates images and audio/video I created</li>
-        <li>Explains media principles and tool selection</li>
-      </ul>
-      <p class="project-links">
-        <a class="btn btn-primary" href="https://sites.google.com/view/krystalislt7361/home"
-           target="_blank" rel="noopener">View Project</a>
-      </p>
-      <p class="project-note"><em>Artifact:</em> Web-based portfolio site with embedded media and reflections.</p>
-    </article>
+    <p class="ref-first">
+      I’ve leaned into chunking and progressive disclosure—short intros,
+      explicit objectives, and “do-able” steps that reduce cognitive load.
+    </p>
 
-    <!-- Project 2: Grandfamilies Study -->
-    <article class="project-card" id="learn">
-      <h2>Grandfamilies Study (Adolescents Raised by Grandparents)</h2>
-      <p class="project-meta">ISLT 9450 · Research Methods · April 2025</p>
-      <p>
-        Mixed-methods proposal on adolescents raised by grandparents due to parental incarceration or substance use.
-        Explanatory sequential design: quantitative SDQ → qualitative interviews to surface lived experience.
-      </p>
-      <ul>
-        <li>Identifies emotional, behavioral, and academic challenges in grandfamilies</li>
-        <li>Explores systemic barriers (custody, finances, access to care)</li>
-        <li>Uses Phenomenology &amp; Resilience Theory frameworks</li>
-        <li>Proposes school-based interventions and community supports</li>
-      </ul>
-      <p class="project-links">
-        <a class="btn btn-primary" href="final-proposal.html">View Project Page</a>
-        <a class="btn btn-ghost" href="final-proposal.pdf" target="_blank" rel="noopener">Download Project PDF</a>
-      </p>
-      <p class="project-note"><em>Artifact:</em> Full research proposal with literature review, methods, and appendices.</p>
-    </article>
+    <p class="ref-other">
+      Using consistent spacing, gentle dividers, and predictable patterns
+      makes the interface feel calmer. Learners don’t spend energy figuring out the layout;
+      they spend it on the task.
+    </p>
+  </section>
 
-    <!-- Project 3: SOP for MVE Texting Fix -->
-    <article class="project-card" id="sops">
-      <h2>L1 SOP · Fixing MVE Texting Issue via LogMeIn</h2>
-      <p class="project-meta">Technical Documentation · EMR Support</p>
-      <p>
-        A step-by-step standard operating procedure that walks L1 support staff through applying a texting OCX fix
-        for My Vision Express clients using LogMeIn. Written to be clear, repeatable, and safe on production systems.
-      </p>
-      <ul>
-        <li>Defines scope, prerequisites, and risks</li>
-        <li>Outlines connection steps via LogMeIn</li>
-        <li>Details file replacement and verification tasks</li>
-        <li>Includes notes for escalation and documentation</li>
-      </ul>
-      <p class="project-links">
-        <!-- Update href after you upload the SOP PDF to your repo -->
-        <a class="btn btn-primary" href="sop-mve-texting-fix.pdf" target="_blank" rel="noopener">
-          View SOP (PDF)
-        </a>
-      </p>
-      <p class="project-note"><em>Artifact:</em> SOP used to train new support technicians on a recurring production issue.</p>
-    </article>
+  <!-- Section 3 -->
+  <section class="ref-block" aria-labelledby="feedback">
+    <h2 id="feedback">Iterating with Feedback</h2>
 
-    <!-- Project 4: L1 Ticket Handling Guide -->
-    <article class="project-card" id="support-training">
-      <h2>L1 Ticket Handling Guide with Screenshots</h2>
-      <p class="project-meta">Support Training · Workflow &amp; Communication</p>
-      <p>
-        A visual training guide for new L1 technicians that explains how to triage tickets, gather information,
-        communicate with clients, and know when to escalate to L2 or Customer Success.
-      </p>
-      <ul>
-        <li>Shows annotated screenshots from the ticketing system</li>
-        <li>Provides example language for client communication</li>
-        <li>Clarifies priorities, SLAs, and escalation paths</li>
-        <li>Reinforces documentation standards and professionalism</li>
-      </ul>
-      <p class="project-links">
-        <!-- Update href after you upload this guide as PDF -->
-        <a class="btn btn-primary" href="l1-ticket-handling-guide.pdf" target="_blank" rel="noopener">
-          View Training Guide (PDF)
-        </a>
-      </p>
-      <p class="project-note"><em>Artifact:</em> Internal training resource for onboarding new support staff.</p>
-    </article>
+    <p class="ref-first">
+      Feedback loops are now part of my normal workflow.
+      I prototype quickly, test with a few people, and iterate in tight cycles.
+    </p>
 
+    <p class="ref-other">
+      My rhythm looks like this:
+      sketch for structure → apply palette + spacing → refine language + interactions →
+      verify accessibility.
+      Each pass gets me closer to something clear and usable.
+    </p>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="ref-block" aria-labelledby="tools">
+    <h2 id="tools">Tools & Workflow</h2>
+
+    <p class="ref-first">
+      Beyond HTML/CSS and GitHub Pages, I’m building a small toolkit for reliable delivery:
+      version control with Git, quick wireframes in Figma (or pencil!),
+      contrast checks, keyboard testing, and lightweight style guides.
+    </p>
+
+    <p class="ref-other">
+      The goal is speed with quality—get something in front of users fast, then keep polishing.
+    </p>
+  </section>
+
+  <!-- Section 5 -->
+  <section class="ref-block" aria-labelledby="next">
+    <h2 id="next">What’s Next</h2>
+
+    <p class="ref-first">
+      I plan to extend this site with interactive learning components,
+      richer project write-ups, and clearer links to standards and outcomes.
+    </p>
+
+    <p class="ref-other">
+      If you’re interested in collaborating or sharing ideas, feel free to reach out:
+      <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a> ·
+      <a href="https://www.linkedin.com/in/krystal-joyce-b64b69166/"
+         target="_blank" rel="noopener">LinkedIn</a>.
+    </p>
   </section>
 </main>
 
+<!-- ===== Footer ===== -->
 <footer>
   <div class="footer-inner">
     <div class="fine">© 2025 Krystal Joyce</div>
+
     <div class="contact-row">
       <div class="contact-item">
         <img src="icons8-phone-50.png" alt="Phone">
         870-656-0047
       </div>
+
       <div class="contact-item">
         <img src="icons8-email-50.png" alt="Email">
         <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a>
