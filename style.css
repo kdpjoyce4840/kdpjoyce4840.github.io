@@ -1,3 +1,10 @@
+/*
+  Author: Krystal Joyce
+  Date: 16 Nov 2025
+  File: style.css
+  Description: Site-wide styling, responsive layout (hero, about grid, projects grid), forms, and print styles.
+*/
+
 /* ===== Base Styles ===== */
 body {
   font-family: Arial, sans-serif;
