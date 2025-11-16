@@ -1,4 +1,5 @@
-<!-- Krystal Joyce — project.html -->
+<!-- Krystal Joyce — project.html
+     Projects page using CSS Grid for layout -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -39,11 +40,27 @@
       <li class="has-submenu active">
         <a href="project.html" aria-haspopup="true" aria-expanded="true" aria-current="page">Projects</a>
         <ul class="submenu" aria-label="Projects submenu">
-          <li><a href="project.html#portfolio">Portfolio Overview</a></li>
-          <li><a href="project.html#web-portfolio">Web-Based Portfolio</a></li>
-          <li><a href="project.html#learn">Grandfamilies Study</a></li>
-          <li><a href="project.html#ticket-guide">Ticket Handling Guide</a></li>
-          <li><a href="project.html#texting-sop">Texting SOP</a></li>
+          <!-- Anchor link to first grid section -->
+          <li><a href="project.html#portfolio">Portfolio Items</a></li>
+
+          <!-- second tier inside Projects → Learn -->
+          <li class="has-submenu">
+            <a href="project.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
+            <ul class="submenu">
+              <li><a href="final-proposal.html">Research Proposal (page)</a></li>
+              <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
+              <li>
+                <a href="https://sites.google.com/view/krystalislt7361/home"
+                   target="_blank" rel="noopener">
+                  Web-Based Portfolio
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Extra anchor links to SOP sections -->
+          <li><a href="project.html#sops">Support SOPs</a></li>
+          <li><a href="project.html#support-training">Support Training Guide</a></li>
         </ul>
       </li>
       <!-- 2-tier dropdown END -->
@@ -55,54 +72,47 @@
   </nav>
 </header>
 
-<!-- ===== Main ===== -->
-<main>
+<!-- ===== Main (Grid layout) ===== -->
+<main class="project-main">
   <section class="tagline section-divider">
     <h1>Selected Work</h1>
     <p>
-      A few instructional design and learning-technology projects I’m proud of—each one focused on
+      A few instructional design, research, and technical documentation projects I’m proud of—each one focused on
       accessibility, clarity, and learner-centered outcomes.
     </p>
   </section>
 
-  <!-- Projects laid out in a responsive grid -->
-  <section class="content section-divider projects-grid" id="portfolio">
-    <h2>Portfolio Items</h2>
+  <!-- Grid container -->
+  <section class="projects-grid section-divider" id="portfolio" aria-label="Project gallery">
 
     <!-- Project 1: Web-Based Portfolio -->
-    <article class="project" id="web-portfolio">
-      <h3>ISLT 7361 · Web-Based Portfolio</h3>
+    <article class="project-card">
+      <h2>ISLT 7361 · Web-Based Portfolio</h2>
+      <p class="project-meta">Instructional Design · Web-Based Learning</p>
       <p>
         A course portfolio demonstrating an online learning experience with objectives, content sequencing,
         and integrated media. I explain media principles, tool choices, and how artifacts map to outcomes.
       </p>
       <ul>
         <li>Introduces the topic &amp; learner</li>
-        <li>States learning objectives clearly</li>
+        <li>States learning objectives</li>
         <li>Integrates images and audio/video I created</li>
         <li>Explains media principles and tool selection</li>
       </ul>
       <p class="project-links">
-        <a class="btn btn-primary"
-           href="https://sites.google.com/view/krystalislt7361/home"
-           target="_blank" rel="noopener">
-          View Project
-        </a>
+        <a class="btn btn-primary" href="https://sites.google.com/view/krystalislt7361/home"
+           target="_blank" rel="noopener">View Project</a>
       </p>
-      <p><em>Note:</em> All media I created is identified in the site; any third-party items are credited.</p>
+      <p class="project-note"><em>Artifact:</em> Web-based portfolio site with embedded media and reflections.</p>
     </article>
 
     <!-- Project 2: Grandfamilies Study -->
-    <article class="project" id="learn">
-      <h3>Grandfamilies Study (Adolescents Raised by Grandparents)</h3>
-      <p>
-        <strong>Course:</strong> ISLT 9450 · Research Methods &nbsp; | &nbsp;
-        <strong>Date:</strong> April 2025
-      </p>
+    <article class="project-card" id="learn">
+      <h2>Grandfamilies Study (Adolescents Raised by Grandparents)</h2>
+      <p class="project-meta">ISLT 9450 · Research Methods · April 2025</p>
       <p>
         Mixed-methods proposal on adolescents raised by grandparents due to parental incarceration or substance use.
-        The design uses an explanatory sequential approach: quantitative SDQ data followed by qualitative interviews
-        to surface lived experience in more depth.
+        Explanatory sequential design: quantitative SDQ → qualitative interviews to surface lived experience.
       </p>
       <ul>
         <li>Identifies emotional, behavioral, and academic challenges in grandfamilies</li>
@@ -112,55 +122,55 @@
       </ul>
       <p class="project-links">
         <a class="btn btn-primary" href="final-proposal.html">View Project Page</a>
-        <a class="btn btn-ghost" href="final-proposal.pdf" target="_blank" rel="noopener">
-          Download Project PDF
-        </a>
+        <a class="btn btn-ghost" href="final-proposal.pdf" target="_blank" rel="noopener">Download Project PDF</a>
       </p>
+      <p class="project-note"><em>Artifact:</em> Full research proposal with literature review, methods, and appendices.</p>
     </article>
 
-    <!-- Project 3: L1 Ticket Handling Guide -->
-    <article class="project" id="ticket-guide">
-      <h3>L1 Ticket Handling Training Guide</h3>
+    <!-- Project 3: SOP for MVE Texting Fix -->
+    <article class="project-card" id="sops">
+      <h2>L1 SOP · Fixing MVE Texting Issue via LogMeIn</h2>
+      <p class="project-meta">Technical Documentation · EMR Support</p>
       <p>
-        A practical training guide for Level 1 Support ticket handling at SightView Software. It outlines a complete
-        workflow from initial intake to resolution, emphasizing accurate documentation and clear communication with clients.
+        A step-by-step standard operating procedure that walks L1 support staff through applying a texting OCX fix
+        for My Vision Express clients using LogMeIn. Written to be clear, repeatable, and safe on production systems.
       </p>
-      <p>
-        The guide walks new agents through verifying practice details and account status, gathering evidence,
-        reproducing issues, and writing concise but thorough ticket summaries. It also covers escalation criteria,
-        follow-up expectations, and consistent use of HubSpot fields to keep tickets traceable and transparent.
-      </p>
+      <ul>
+        <li>Defines scope, prerequisites, and risks</li>
+        <li>Outlines connection steps via LogMeIn</li>
+        <li>Details file replacement and verification tasks</li>
+        <li>Includes notes for escalation and documentation</li>
+      </ul>
       <p class="project-links">
-        <!-- Make sure this filename matches what you upload to GitHub -->
-        <a class="btn btn-ghost"
-           href="L1_Ticket_Handling_Guide_with_Screenshots.pdf"
-           target="_blank" rel="noopener">
-          Download Ticket Handling Guide (PDF)
+        <!-- Update href after you upload the SOP PDF to your repo -->
+        <a class="btn btn-primary" href="sop-mve-texting-fix.pdf" target="_blank" rel="noopener">
+          View SOP (PDF)
         </a>
       </p>
+      <p class="project-note"><em>Artifact:</em> SOP used to train new support technicians on a recurring production issue.</p>
     </article>
 
-    <!-- Project 4: L1 SOP – MVE Texting Issue -->
-    <article class="project" id="texting-sop">
-      <h3>L1 SOP – Fixing MVE Texting Issue via LogMeIn</h3>
+    <!-- Project 4: L1 Ticket Handling Guide -->
+    <article class="project-card" id="support-training">
+      <h2>L1 Ticket Handling Guide with Screenshots</h2>
+      <p class="project-meta">Support Training · Workflow &amp; Communication</p>
       <p>
-        A standard operating procedure for resolving texting failures in My Vision Express (MVE) when the issue is
-        workstation-specific. The SOP shows L1 agents how to connect via LogMeIn Rescue, transfer the repair file,
-        and run it with administrative privileges on the correct machine.
+        A visual training guide for new L1 technicians that explains how to triage tickets, gather information,
+        communicate with clients, and know when to escalate to L2 or Customer Success.
       </p>
-      <p>
-        It includes step-by-step instructions, file path details, and post-fix validation steps to confirm that
-        texting is working again. The document also clarifies how to document the session (workstation, user, file
-        details, and confirmation) and when to treat an issue as a broader outage that must be escalated to L2.
-      </p>
+      <ul>
+        <li>Shows annotated screenshots from the ticketing system</li>
+        <li>Provides example language for client communication</li>
+        <li>Clarifies priorities, SLAs, and escalation paths</li>
+        <li>Reinforces documentation standards and professionalism</li>
+      </ul>
       <p class="project-links">
-        <!-- Make sure this filename also matches your GitHub file exactly -->
-        <a class="btn btn-ghost"
-           href="L1_SOP_MVE_Texting_Issue.pdf"
-           target="_blank" rel="noopener">
-          Download SOP (PDF)
+        <!-- Update href after you upload this guide as PDF -->
+        <a class="btn btn-primary" href="l1-ticket-handling-guide.pdf" target="_blank" rel="noopener">
+          View Training Guide (PDF)
         </a>
       </p>
+      <p class="project-note"><em>Artifact:</em> Internal training resource for onboarding new support staff.</p>
     </article>
 
   </section>
