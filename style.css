@@ -1,4 +1,4 @@
-/*  
+/*
   Author: Krystal Joyce
   Date: 16 Nov 2025
   File: style.css
@@ -513,9 +513,10 @@ footer a:focus{
 }
 
 /* ============================================================
-   ===== Accessible Table Styling (High Contrast – Option C) ===
+   ===== Accessible Table Styling (High Contrast – access-table)
    ============================================================ */
 
+/* Wrapper for scrollable table */
 .table-wrap {
   overflow-x: auto;
   margin: 2rem 0;
@@ -579,6 +580,8 @@ table.access-table tbody tr:nth-child(odd) {
   table.access-table {
     font-size: 0.9rem;
   }
+}
+
 /* ===== Artifact Summary Table Styling (Option A: Yellow Highlight) ===== */
 .project-table-section {
   margin-top: 3rem;
