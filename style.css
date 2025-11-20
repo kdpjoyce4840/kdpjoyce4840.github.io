@@ -579,4 +579,50 @@ table.access-table tbody tr:nth-child(odd) {
   table.access-table {
     font-size: 0.9rem;
   }
+/* ===== Artifact Summary Table Styling (Option A: Yellow Highlight) ===== */
+.project-table-section {
+  margin-top: 3rem;
+  padding: 1.5rem 1.75rem;
+  background: #fffce8; /* soft light yellow */
+  border: 3px solid #f2c200; /* golden/yellow border */
+  border-radius: 12px;
+  box-shadow: 0 0 14px rgba(0,0,0,0.08);
+}
+
+.project-table-section figcaption {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #444;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.artifact-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.artifact-table th,
+.artifact-table td {
+  border: 1px solid #e0d9a5;
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+.artifact-table th {
+  background: #f9eaa8; /* warm pale yellow */
+  font-weight: bold;
+  color: #444;
+  text-align: left;
+}
+
+.artifact-table tr:nth-child(even) {
+  background: #fffdf3;
+}
+
+.artifact-table tr:hover {
+  background: #fff8d7;
+  transition: 0.2s ease;
 }
