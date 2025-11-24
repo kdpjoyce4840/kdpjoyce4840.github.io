@@ -39,7 +39,7 @@ img {
   display: none;
 }
 
-/* Simple button styles (used on About page CTA) */
+/* Simple button styles (used on About / Home CTAs) */
 .btn {
   display: inline-block;
   padding: 0.55rem 1.4rem;
@@ -151,7 +151,7 @@ img {
 }
 
 /* ===========================
-   HOME INTRO (FIXED + POLISHED)
+   HOME INTRO
    =========================== */
 .home-intro {
   max-width: 1100px;
@@ -366,6 +366,93 @@ img {
   background: #f5ffff;
   border: 2px solid #009999;
   border-radius: 12px;
+}
+
+/* ===========================
+   REFLECTIONS PAGE
+   =========================== */
+
+/* Big centered panel that holds all reflections */
+.reflections-main {
+  max-width: 960px;
+  margin: 2.75rem auto 3.25rem;
+  padding: 2.25rem 2.5rem;
+  background: #f8ffff;          /* very light teal tint */
+  border-radius: 18px;
+  border: 3px solid #c0ecec;    /* soft teal border */
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.06);
+}
+
+/* Intro at top of panel */
+.reflections-intro {
+  margin-bottom: 1.75rem;
+}
+
+.reflections-intro h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 0.35rem;
+}
+
+.reflections-intro .tagline {
+  text-align: center;
+  font-size: 0.98rem;
+  color: #555;
+  margin: 0 0 0.5rem;
+}
+
+.reflections-intro p {
+  margin: 0.35rem auto 0;
+  max-width: 720px;
+  text-align: center;
+}
+
+/* Stack each reflection in the panel */
+.reflection-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Individual reflection “card” inside the big panel */
+.reflection-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e1f2f2;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.reflection-card h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.4rem;
+}
+
+.reflection-card p {
+  margin: 0.4rem 0;
+  font-size: 0.97rem;
+}
+
+/* Rubric-specific paragraph styling */
+.ref-block p { text-indent: 0; }
+.ref-block p.ref-other { text-indent: 1.5em; }
+
+.ref-first::first-letter {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #006666;
+}
+
+/* Mobile tweaks for Reflections */
+@media (max-width: 700px) {
+  .reflections-main {
+    margin: 1.5rem auto 2rem;
+    padding: 1.5rem 1.3rem;
+  }
+
+  .reflection-card {
+    padding: 1.1rem 1.1rem;
+  }
 }
 
 /* ===========================
