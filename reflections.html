@@ -6,27 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reflections | Krystal Joyce</title>
 
-  <!-- Link BOTH stylesheets -->
-  <link rel="stylesheet" href="style.css?v=8">
-  <link rel="stylesheet" href="nav.css?v=8">
-
-  <!-- Page-specific styling for rubric -->
-  <style>
-    /* Reset indent */
-    .ref-block p { text-indent: 0; }
-
-    /* Alternate paragraphs indented */
-    .ref-block p.ref-other { text-indent: 1.5em; }
-
-    /* First-letter style for first paragraph in each section */
-    .ref-first::first-letter {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #006666;
-    }
-  </style>
+  <!-- Site styles -->
+  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="nav.css?v=7">
 </head>
-<body>
+<body class="reflections-page">
 
 <!-- ===== Header / Primary Nav with Hamburger ===== -->
 <header>
@@ -78,7 +62,7 @@
       </li>
       <!-- 2-tier dropdown END -->
 
-      <li class="active"><a href="reflections.html">Reflections</a></li>
+      <li><a href="reflections.html">Reflections</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
     </ul>
@@ -89,137 +73,126 @@
 <!-- ===== Main Content ===== -->
 <main class="reflections-main">
 
-  <!-- Intro -->
-  <section class="reflections-intro">
+  <!-- Header block / intro card -->
+  <header class="ref-header">
     <h1>Reflections</h1>
-    <p class="tagline">
-      Learning, practice, and growth across design and technology.
+    <p class="tagline">Learning, practice, and growth across design and technology.</p>
+    <p class="intro">
+      My path into instructional design has moved from elementary classrooms and counseling rooms
+      to a software support desk. These reflections capture what I’m learning as I blend those
+      experiences into clearer, more compassionate learning experiences.
     </p>
-    <p>
-      My path into instructional design has moved through classrooms, counseling rooms,
-      and now a software support desk. These reflections capture what I’m learning as I
-      blend those experiences into clearer, more compassionate learning experiences.
+  </header>
+
+  <!-- Section 1 -->
+  <section class="ref-block" aria-labelledby="acc-first">
+    <h2 id="acc-first">Designing for Accessibility First</h2>
+
+    <p class="ref-first">
+      I’ve adopted an accessibility-first mindset. Whether I’m writing an SOP for our
+      My Vision Express users or building a module for grad school, I start by asking how
+      someone with limited time, energy, or access will experience it.
+    </p>
+
+    <p class="ref-other">
+      My checklist includes descriptive page titles, a logical heading order (H1 → H2 → H3),
+      strong color contrast, meaningful alt text, keyboard navigability with visible focus states,
+      and clear, consistent link styles.
+    </p>
+
+    <p class="ref-other">
+      I’ve noticed a real impact: fewer “where do I click?” questions from users, smoother
+      scanning for busy staff, and content that holds up better on small screens and assistive
+      tech. Accessibility work has started to feel less like a chore and more like a professional
+      habit.
     </p>
   </section>
 
-  <!-- Reflection Cards -->
-  <section class="reflection-grid" aria-label="Reflection topics">
+  <!-- Section 2 -->
+  <section class="ref-block" aria-labelledby="structure">
+    <h2 id="structure">Structuring Content for Sense-Making</h2>
 
-    <!-- Section 1 -->
-    <article class="reflection-card ref-block" aria-labelledby="acc-first">
-      <h2 id="acc-first">Designing for Accessibility First</h2>
+    <p class="ref-first">
+      Years of teaching elementary students and counseling adolescents taught me that people rarely
+      struggle because they’re “not trying.” More often, the instructions or structure simply ask
+      too much at once.
+    </p>
 
-      <p class="ref-first">
-        I’ve adopted an accessibility-first mindset. Whether I’m writing an SOP for our
-        My Vision Express users or building a module for grad school, I start by asking
-        how someone with limited time, energy, or access will experience it.
-      </p>
+    <p class="ref-other">
+      I’ve leaned into chunking and progressive disclosure—short intros, explicit objectives,
+      and “do-able” steps that reduce cognitive load. Using consistent spacing, gentle dividers,
+      and predictable patterns makes the interface feel calmer. Learners don’t spend energy
+      figuring out the layout; they spend it on the task.
+    </p>
 
-      <p class="ref-other">
-        My checklist includes descriptive page titles, a logical heading order (H1 → H2 → H3),
-        strong color contrast, meaningful alt text, keyboard navigability with visible focus states,
-        and clear, consistent link styles.
-      </p>
-
-      <p class="ref-other">
-        I’ve noticed a real impact: fewer “where do I click?” questions from users, smoother
-        scanning for busy staff, and content that holds up better on small screens and assistive tech.
-        Accessibility work has started to feel less like a chore and more like a professional habit.
-      </p>
-    </article>
-
-    <!-- Section 2 -->
-    <article class="reflection-card ref-block" aria-labelledby="structure">
-      <h2 id="structure">Structuring Content for Sense-Making</h2>
-
-      <p class="ref-first">
-        Years of teaching elementary students and counseling adolescents taught me that
-        people rarely struggle because they’re “not trying.” More often, the instructions
-        or structure simply ask too much at once.
-      </p>
-
-      <p class="ref-other">
-        I’ve leaned into chunking and progressive disclosure—short intros, explicit objectives,
-        and “do-able” steps that reduce cognitive load. Using consistent spacing, gentle dividers,
-        and predictable patterns makes the interface feel calmer. Learners don’t spend energy
-        figuring out the layout; they spend it on the task.
-      </p>
-
-      <p class="ref-other">
-        When I rewrite content for clarity, I hear fewer apologies like
-        “Sorry, I’m just bad with computers.” That’s when I know the structure is finally
-        doing some of the emotional labor instead of the learner.
-      </p>
-    </article>
-
-    <!-- Section 3 -->
-    <article class="reflection-card ref-block" aria-labelledby="feedback">
-      <h2 id="feedback">Iterating with Feedback</h2>
-
-      <p class="ref-first">
-        Feedback loops are now part of my normal workflow. In support, this might mean testing
-        a draft SOP with another tech. In my course work, it looks like sharing wireframes or
-        draft modules with classmates before I polish the visuals.
-      </p>
-
-      <p class="ref-other">
-        My rhythm looks like this: sketch for structure → apply palette + spacing →
-        refine language and interactions → verify accessibility. Each pass gets me closer
-        to something clear and usable instead of just “pretty.”
-      </p>
-
-      <p class="ref-other">
-        Coming from teaching, I used to feel pressure to get things “right” the first time.
-        Now I’m more comfortable treating every design as a living document that gets better
-        with each real interaction.
-      </p>
-    </article>
-
-    <!-- Section 4 -->
-    <article class="reflection-card ref-block" aria-labelledby="tools">
-      <h2 id="tools">Tools &amp; Workflow</h2>
-
-      <p class="ref-first">
-        Beyond HTML/CSS and GitHub Pages, I’m building a small toolkit for reliable delivery:
-        version control with Git, quick wireframes in Figma (or pencil!), contrast checks,
-        keyboard testing, and lightweight style guides.
-      </p>
-
-      <p class="ref-other">
-        At SightView, this mindset helps me translate complex technical steps into
-        repeatable, support-friendly processes. The goal is speed with quality—get something
-        in front of users fast, then keep polishing as their questions and patterns show up.
-      </p>
-
-      <p class="ref-other">
-        I’m learning that the right tools don’t just make things “look nicer.”
-        They give me the confidence to experiment, break things safely, and recover quickly
-        when I need to adjust.
-      </p>
-    </article>
-
-    <!-- Section 5 -->
-    <article class="reflection-card ref-block" aria-labelledby="next">
-      <h2 id="next">What’s Next</h2>
-
-      <p class="ref-first">
-        Looking ahead, I plan to extend this site with interactive learning components,
-        richer project write-ups, and clearer links between each artifact and specific
-        learning outcomes or competencies.
-      </p>
-
-      <p class="ref-other">
-        I’m especially interested in designing resources for adolescents affected by
-        substance use—an area that connects my counseling background with my current
-        focus on learning technologies. If you’re interested in collaborating or sharing ideas,
-        feel free to reach out:
-        <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a> ·
-        <a href="https://www.linkedin.com/in/krystal-joyce-b64b69166/"
-           target="_blank" rel="noopener">LinkedIn</a>.
-      </p>
-    </article>
-
+    <p class="ref-other">
+      When I rewrite content for clarity, I hear fewer apologies like “Sorry, I’m just bad with
+      computers.” That’s when I know the structure is finally doing some of the emotional labor
+      instead of the learner.
+    </p>
   </section>
+
+  <!-- Section 3 -->
+  <section class="ref-block" aria-labelledby="feedback">
+    <h2 id="feedback">Iterating with Feedback</h2>
+
+    <p class="ref-first">
+      Feedback loops are now part of my normal workflow. In support, this might mean testing a draft
+      SOP with another tech. In my course work, it looks like sharing wireframes or draft modules
+      with classmates before I polish the visuals.
+    </p>
+
+    <p class="ref-other">
+      My rhythm looks like this: sketch for structure → apply palette + spacing → refine language
+      and interactions → verify accessibility. Each pass gets me closer to something clear and
+      usable instead of just “pretty.”
+    </p>
+
+    <p class="ref-other">
+      Coming from teaching, I used to feel pressure to get things “right” the first time.
+      Now I’m more comfortable treating every design as a living document that gets better with
+      each real interaction.
+    </p>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="ref-block" aria-labelledby="tools">
+    <h2 id="tools">Tools &amp; Workflow</h2>
+
+    <p class="ref-first">
+      Beyond HTML/CSS and GitHub Pages, I’m building a small toolkit for reliable delivery:
+      version control with Git, quick wireframes in Figma (or pencil), contrast checks,
+      keyboard testing, and lightweight style guides.
+    </p>
+
+    <p class="ref-other">
+      The goal is speed with quality—get something in front of users fast, then keep polishing.
+      That mindset has helped me balance the realities of support tickets, deadlines, and grad
+      school projects without losing sight of the learner.
+    </p>
+  </section>
+
+  <!-- Section 5 -->
+  <section class="ref-block" aria-labelledby="next">
+    <h2 id="next">What’s Next</h2>
+
+    <p class="ref-first">
+      Looking ahead, I plan to extend this site with interactive learning components, richer
+      project write-ups, and clearer links between each artifact and specific learning outcomes
+      or competencies.
+    </p>
+
+    <p class="ref-other">
+      I’m especially interested in designing resources for adolescents affected by substance use
+      and for grandparents raising grandchildren—drawing on my counseling background with my
+      current focus on learning technologies. If you’re interested in collaborating or sharing
+      ideas, feel free to reach out:
+      <a href="mailto:krystaldpoole@gmail.com">krystaldpoole@gmail.com</a> ·
+      <a href="https://www.linkedin.com/in/krystal-joyce-b64b69166/"
+         target="_blank" rel="noopener">LinkedIn</a>.
+    </p>
+  </section>
+
 </main>
 
 <!-- ===== Footer ===== -->
