@@ -5,137 +5,158 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | Krystal Joyce</title>
 
-  <!-- Link both stylesheets -->
-  <link rel="stylesheet" href="style.css?v=7" />
-  <link rel="stylesheet" href="nav.css?v=7" />
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="nav.css?v=8" />
 </head>
 
 <body class="about">
 
- <!-- ===== Header / Primary Nav with Hamburger ===== -->
-<header>
-  <nav class="navbar" aria-label="Primary">
+  <!-- ===== Header / Primary Nav with Hamburger ===== -->
+  <header>
+    <nav class="navbar" aria-label="Primary navigation">
 
-    <!-- Brand -->
-    <a href="index.html" class="brand">
-      <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
-      KJ Portfolio
-    </a>
+      <!-- Brand -->
+      <a href="index.html" class="brand">
+        <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
+        KJ Portfolio
+      </a>
 
-    <!-- Hidden mobile checkbox -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <!-- Hidden mobile checkbox -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
-    <!-- Hamburger icon -->
-    <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
-      &#9776;
-    </label>
+      <!-- Hamburger icon -->
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+        &#9776;
+      </label>
 
-    <!-- Main menu -->
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <!-- Main menu -->
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="about.html">About</a></li>
 
-      <!-- 2-tier dropdown START -->
-      <li class="has-submenu">
-        <a href="project.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <!-- 2-tier dropdown START -->
+        <li class="has-submenu">
+          <a href="project.html" aria-haspopup="true" aria-expanded="false">Projects</a>
 
-        <ul class="submenu" aria-label="Projects submenu">
-          <!-- Anchor link to first grid section -->
-          <li><a href="project.html#portfolio">Portfolio Items</a></li>
+          <ul class="submenu" aria-label="Projects submenu">
+            <li><a href="project.html#portfolio">Portfolio Items</a></li>
 
-          <!-- second tier inside Projects → Learn -->
-          <li class="has-submenu">
-            <a href="project.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
-            <ul class="submenu">
-              <li><a href="final-proposal.html">Research Proposal (page)</a></li>
-              <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
-              <li>
-                <a href="https://sites.google.com/view/krystalislt7361/home"
-                   target="_blank" rel="noopener">
-                  Web-Based Portfolio
-                </a>
-              </li>
-            </ul>
-          </li>
+            <li class="has-submenu">
+              <a href="project.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
+              <ul class="submenu">
+                <li><a href="final-proposal.html">Research Proposal (page)</a></li>
+                <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
+                <li>
+                  <a href="https://sites.google.com/view/krystalislt7361/home"
+                     target="_blank" rel="noopener">
+                    Web-Based Portfolio
+                  </a>
+                </li>
+              </ul>
+            </li>
 
-          <!-- Extra anchor links to SOP sections -->
-          <li><a href="project.html#sops">Support SOPs</a></li>
-          <li><a href="project.html#support-training">Support Training Guide</a></li>
-        </ul>
-      </li>
-      <!-- 2-tier dropdown END -->
+            <li><a href="project.html#sops">Support SOPs</a></li>
+            <li><a href="project.html#support-training">Support Training Guide</a></li>
+          </ul>
+        </li>
+        <!-- 2-tier dropdown END -->
 
-      <li><a href="reflections.html">Reflections</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
-    </ul>
+        <li><a href="reflections.html">Reflections</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+      </ul>
 
-  </nav>
-</header>
+    </nav>
+  </header>
 
-  <!-- ===== Main (Grid Layout) ===== -->
+  <!-- ===== Main (Two-Column Grid) ===== -->
   <main class="about-grid">
 
     <!-- LEFT COLUMN — TEXT -->
     <div class="about-text">
 
+      <!-- Tagline / Intro -->
       <section class="tagline section-divider">
         <h2>Instructional Design | Education | Technology</h2>
+
         <p class="intro">
           Welcome! My name is Krystal Joyce, and I’m excited to share my professional journey with you.
           Here you’ll find my background, projects, and reflections as I continue developing skills in
           instructional design and technology.
         </p>
+
+        <p class="intro">
+          I care deeply about making learning experiences clear, accessible, and meaningful for a wide
+          range of learners.
+        </p>
+
         <p class="cta">
           <a class="btn btn-primary" href="project.html">View Projects</a>
           <a class="btn btn-ghost" href="reflections.html">Read Reflections</a>
         </p>
       </section>
 
+      <!-- Professional Background -->
       <section class="content section-divider">
         <h3>Professional Background</h3>
+
         <p>
-          I hold a BSE in Elementary Education and have over 10 years of experience teaching
-          across multiple grade levels. I later transitioned into nonprofit counseling, working
-          with adolescents facing substance-use challenges and eventually serving as a supervisor.
+          I hold a BSE in Elementary Education and have over 10 years of experience teaching across
+          multiple grade levels, including kindergarten, first grade, and sixth grade. During this time,
+          I focused on building strong relationships with students and creating classroom environments
+          where everyone felt seen and supported.
         </p>
 
         <p>
-          Currently, I am pursuing a Master’s in Learning Technologies and Design at the University
-          of Missouri, where I’m building skills in instructional design, technology integration,
-          and creating accessible learning experiences.
+          I later transitioned into nonprofit counseling, working with adolescents facing substance-use
+          challenges and complex life situations. In this role I provided direct counseling support and
+          eventually moved into a supervisory position, coaching other counselors and helping shape
+          program practices.
+        </p>
+
+        <p>
+          These experiences shaped how I think about learning, behavior change, and the importance of
+          clear communication—ideas that continue to guide my work in instructional design and
+          technology.
         </p>
       </section>
 
+      <!-- Highlights List -->
       <section class="content section-divider" aria-labelledby="highlights-title">
         <h3 id="highlights-title">Highlights</h3>
         <ul class="highlights-list">
-          <li>10+ years teaching (elementary, multiple grades)</li>
-          <li>Nonprofit adolescent counseling & supervision</li>
+          <li>10+ years classroom teaching experience (K, 1st, and 6th grades)</li>
+          <li>Nonprofit adolescent counseling and staff supervision</li>
+          <li>Frontline experience in healthcare and vision-care support</li>
           <li>L1 Support Technician, SightView Software (2023–Present)</li>
-          <li>Currently pursuing M.S. in Learning Technologies & Design (MU)</li>
+          <li>Currently pursuing an M.S. in Learning Technologies &amp; Design at the University of Missouri</li>
         </ul>
       </section>
 
+      <!-- Educational Experiences as a clean list -->
       <section class="content section-divider">
         <h3>Educational Experiences</h3>
-        <p>
-          BSE in Elementary Education (Arkansas State University, 2010) • 10 years classroom teaching
-          (K, 1st, 6th) • Nonprofit adolescent counselor & supervisor (2015–2023) • Frontline healthcare/
-          vision care support (2018–2020) • L1 Support Technician, SightView Software (2023–Present) •
-          M.S. in Learning Technologies & Design, University of Missouri (Expected 2027)
-        </p>
+        <ul class="highlights-list">
+          <li><strong>BSE in Elementary Education</strong>, Arkansas State University (2010)</li>
+          <li>10 years classroom teaching across multiple grade levels</li>
+          <li>Training and experience in adolescent counseling and supervision</li>
+          <li>Hands-on experience supporting healthcare and vision-care teams</li>
+          <li><strong>M.S. in Learning Technologies &amp; Design</strong>, University of Missouri (in progress; expected 2027)</li>
+        </ul>
       </section>
     </div>
 
     <!-- RIGHT COLUMN — MEDIA -->
     <div class="about-media">
 
+      <!-- Headshot -->
       <section class="about-headshot section-divider">
         <img src="headshot.jpg" alt="Headshot of Krystal Joyce" class="headshot-img">
         <p style="text-align:center; margin-top:8px;">Hello! I'm Krystal 👋</p>
       </section>
 
+      <!-- Intro Video -->
       <section class="about-video section-divider" aria-labelledby="intro-video-title">
         <h3 id="intro-video-title">Intro Video</h3>
 
@@ -151,7 +172,7 @@
               Your browser does not support the video tag.
             </video>
           </div>
-          <p class="video-caption">A brief introduction by Krystal Joyce.</p>
+          <p class="video-caption">A brief introduction to my background and interests in instructional design.</p>
         </div>
       </section>
     </div>
@@ -159,6 +180,7 @@
     <!-- PRINT-ONLY CARD -->
     <section class="print-only" aria-hidden="true">
       <h1>Krystal Joyce</h1>
+
       <p class="print-desc">
         I am an instructional designer-in-training with a decade of classroom experience and a
         background in adolescent counseling and supervision. I design clear, inclusive learning
