@@ -12,105 +12,118 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <!-- External Stylesheets -->
-  <link rel="stylesheet" href="style.css?v=7" />
-  <link rel="stylesheet" href="nav.css?v=7" />
+  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="nav.css?v=8" />
 </head>
 <body>
-<!-- ===== Header / Primary Nav with Hamburger ===== -->
-<header>
-  <nav class="navbar" aria-label="Primary">
 
-    <!-- Brand -->
-    <a href="index.html" class="brand">
-      <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
-      KJ Portfolio
-    </a>
+  <!-- ===== Header / Primary Nav with Hamburger ===== -->
+  <header>
+    <nav class="navbar" aria-label="Primary">
 
-    <!-- Hidden mobile checkbox -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <!-- Brand -->
+      <a href="index.html" class="brand">
+        <img src="icons8-home-100.png" alt="Home Icon" class="brand-logo">
+        KJ Portfolio
+      </a>
 
-    <!-- Hamburger icon -->
-    <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
-      &#9776;
-    </label>
+      <!-- Hidden mobile checkbox -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
-    <!-- Main menu -->
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <!-- Hamburger icon -->
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation">
+        &#9776;
+      </label>
 
-      <!-- 2-tier dropdown START -->
-      <li class="has-submenu">
-        <a href="project.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+      <!-- Main menu -->
+      <ul class="menu">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
 
-        <ul class="submenu" aria-label="Projects submenu">
-          <!-- Anchor link to first grid section -->
-          <li><a href="project.html#portfolio">Portfolio Items</a></li>
+        <!-- 2-tier dropdown START -->
+        <li class="has-submenu">
+          <a href="project.html" aria-haspopup="true" aria-expanded="false">Projects</a>
 
-          <!-- second tier inside Projects → Learn -->
-          <li class="has-submenu">
-            <a href="project.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
-            <ul class="submenu">
-              <li><a href="final-proposal.html">Research Proposal (page)</a></li>
-              <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
-              <li>
-                <a href="https://sites.google.com/view/krystalislt7361/home"
-                   target="_blank" rel="noopener">
-                  Web-Based Portfolio
-                </a>
-              </li>
-            </ul>
-          </li>
+          <ul class="submenu" aria-label="Projects submenu">
+            <!-- Anchor link to first grid section -->
+            <li><a href="project.html#portfolio">Portfolio Items</a></li>
 
-          <!-- Extra anchor links to SOP sections -->
-          <li><a href="project.html#sops">Support SOPs</a></li>
-          <li><a href="project.html#support-training">Support Training Guide</a></li>
-        </ul>
-      </li>
-      <!-- 2-tier dropdown END -->
+            <!-- second tier inside Projects → Learn -->
+            <li class="has-submenu">
+              <a href="project.html#learn" aria-haspopup="true" aria-expanded="false">Learn</a>
+              <ul class="submenu">
+                <li><a href="final-proposal.html">Research Proposal (page)</a></li>
+                <li><a href="final-proposal.pdf" target="_blank" rel="noopener">Research Proposal (PDF)</a></li>
+                <li>
+                  <a href="https://sites.google.com/view/krystalislt7361/home"
+                     target="_blank" rel="noopener">
+                    Web-Based Portfolio
+                  </a>
+                </li>
+              </ul>
+            </li>
 
-      <li><a href="reflections.html">Reflections</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
-    </ul>
+            <!-- Extra anchor links to SOP sections -->
+            <li><a href="project.html#sops">Support SOPs</a></li>
+            <li><a href="project.html#support-training">Support Training Guide</a></li>
+          </ul>
+        </li>
+        <!-- 2-tier dropdown END -->
 
-  </nav>
-</header>
-  
-  <!-- ===== Hero ===== -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <span class="kicker">Instructional Design • Web Design & Dev</span>
+        <li><a href="reflections.html">Reflections</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Resume10.2.25.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <!-- ===== Main Content ===== -->
+  <main>
+
+    <!-- Polished 2-column hero / intro section -->
+    <section class="home-intro">
+      <div class="home-text">
         <h1>Hi, I’m Krystal Joyce.</h1>
-        <p class="lead">
-          I design clear, accessible learning experiences. My work blends research-informed
-          practice with clean, usable interfaces—so learners can focus on what matters.
+        <p>
+          I design clear, accessible learning experiences. My work blends
+          research-informed practice with clean, usable interfaces—so learners
+          can focus on what matters.
         </p>
-        <div class="cta">
-          <a class="btn btn-primary" href="project.html">View Projects</a>
-          <a class="btn btn-ghost" href="reflections.html">Read Reflections</a>
+        <p>
+          I’ve worked across education and behavioral health, which taught me
+          the value of compassionate communication and pragmatic design. I’m
+          currently pursuing an M.S. in Learning Technologies &amp; Design at
+          the University of Missouri.
+        </p>
+
+        <div class="home-links">
+          <a href="project.html">View Projects</a>
+          <a href="reflections.html">Read Reflections</a>
         </div>
       </div>
 
-      <figure class="hero-media">
-        <img src="headshot.jpg" alt="Headshot of Krystal Joyce" class="headshot" />
-      </figure>
-    </div>
-  </section>
+      <div class="home-image">
+        <figure>
+          <img src="headshot.jpg" alt="Headshot of Krystal Joyce">
+          <figcaption>Hello! I’m Krystal ✨</figcaption>
+        </figure>
+      </div>
+    </section>
 
-  <!-- ===== Main ===== -->
-  <main>
+    <!-- Optional supporting section for extra context -->
     <section class="intro">
-      <div class="intro-text">
+      <div class="intro-text" style="max-width: 900px; margin: 0 auto 3rem; padding: 0 2rem;">
         <h2>Design with empathy. Iterate with evidence.</h2>
         <p>
-          I’ve worked across education and behavioral health, which taught me the value of
-          compassionate communication and pragmatic design. I’m currently pursuing an M.S.
-          in Learning Technologies & Design at the University of Missouri.
+          I’m interested in creating learning experiences that are inclusive,
+          practical, and grounded in the real constraints learners face. This
+          portfolio highlights sample projects, support materials, and
+          reflections from my graduate work and professional experience.
         </p>
       </div>
     </section>
+
   </main>
 
   <!-- ===== Footer ===== -->
