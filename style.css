@@ -24,9 +24,18 @@ body {
   background: #fff;
 }
 
+/* Base heading styles */
 h1, h2, h3 {
   font-weight: 700;
   color: #111;
+}
+
+/* Custom font from Google Fonts applied to all h1 and h2 elements */
+h1, h2 {
+  font-family: "Playwrite USA Traditional Guides", cursive;
+  letter-spacing: 0.75px;
+  color: #0b4f4f;
+  text-shadow: 1px 1px 0 rgba(0, 153, 153, 0.18);
 }
 
 img {
@@ -511,7 +520,6 @@ footer .contact-item:hover .email-icon {
 /* ===========================
    FOOTER ICON KEYFRAMES
    =========================== */
-
 @keyframes phone-bounce-teal {
   0% {
     transform: scale(1) translateY(0);
